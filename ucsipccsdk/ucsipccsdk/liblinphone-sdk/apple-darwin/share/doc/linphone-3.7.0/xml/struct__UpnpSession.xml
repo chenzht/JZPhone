@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__UpnpSession" kind="struct" prot="public">
+    <compoundname>_UpnpSession</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__UpnpSession_1a9a06aa87607d311800dba15f081d6f57" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+        <definition>LinphoneCall* _UpnpSession::call</definition>
+        <argsstring></argsstring>
+        <name>call</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" line="63" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__UpnpSession_1a0df36133b207042769f1c64f99af5c59" prot="public" static="no" mutable="no">
+        <type>UpnpStream *</type>
+        <definition>UpnpStream* _UpnpSession::audio</definition>
+        <argsstring></argsstring>
+        <name>audio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" line="64" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__UpnpSession_1a042a530eb4fb62c2ce5fe92f6cb8ae94" prot="public" static="no" mutable="no">
+        <type>UpnpStream *</type>
+        <definition>UpnpStream* _UpnpSession::video</definition>
+        <argsstring></argsstring>
+        <name>video</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" line="65" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__UpnpSession_1ac5d566528d97c8b8c996905ba06a2355" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1ga2c19554a0988f7600aec5c3a7588d61a" kindref="member">LinphoneUpnpState</ref></type>
+        <definition>LinphoneUpnpState _UpnpSession::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" line="66" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" line="62" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/upnp.c" bodystart="62" bodyend="67"/>
+    <listofallmembers>
+      <member refid="struct__UpnpSession_1a0df36133b207042769f1c64f99af5c59" prot="public" virt="non-virtual"><scope>_UpnpSession</scope><name>audio</name></member>
+      <member refid="struct__UpnpSession_1a9a06aa87607d311800dba15f081d6f57" prot="public" virt="non-virtual"><scope>_UpnpSession</scope><name>call</name></member>
+      <member refid="struct__UpnpSession_1ac5d566528d97c8b8c996905ba06a2355" prot="public" virt="non-virtual"><scope>_UpnpSession</scope><name>state</name></member>
+      <member refid="struct__UpnpSession_1a042a530eb4fb62c2ce5fe92f6cb8ae94" prot="public" virt="non-virtual"><scope>_UpnpSession</scope><name>video</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

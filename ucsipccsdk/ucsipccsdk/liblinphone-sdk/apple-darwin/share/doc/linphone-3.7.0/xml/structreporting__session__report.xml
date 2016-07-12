@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="structreporting__session__report" kind="struct" prot="public">
+    <compoundname>reporting_session_report</compoundname>
+    <includes local="no">quality_reporting.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structreporting__session__report_1af18f66b677e8d270b8c1e0f88674bc0f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::call_id</definition>
+        <argsstring></argsstring>
+        <name>call_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="115" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a96a31308dbed1ffb86093f92a9f4c8aa" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::orig_id</definition>
+        <argsstring></argsstring>
+        <name>orig_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="116" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a782d83430966220beeaedf4d3ca8d44d" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__addr" kindref="compound">reporting_addr_t</ref></type>
+        <definition>reporting_addr_t reporting_session_report::local_addr</definition>
+        <argsstring></argsstring>
+        <name>local_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="117" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a1ff1f8caac5e95f6b05f8543b4d354eb" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__addr" kindref="compound">reporting_addr_t</ref></type>
+        <definition>reporting_addr_t reporting_session_report::remote_addr</definition>
+        <argsstring></argsstring>
+        <name>remote_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="118" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a4eab22954b491f473eb235fcd2b00f92" prot="public" static="no" mutable="no">
+        <type>struct reporting_session_report::@7</type>
+        <definition>struct reporting_session_report::@7  reporting_session_report::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1aeb1598c78886fbcb3104fb951c685358" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__content__metrics" kindref="compound">reporting_content_metrics_t</ref></type>
+        <definition>reporting_content_metrics_t reporting_session_report::local_metrics</definition>
+        <argsstring></argsstring>
+        <name>local_metrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="121" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a85593694dc3c814d02f7229257b5609e" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__content__metrics" kindref="compound">reporting_content_metrics_t</ref></type>
+        <definition>reporting_content_metrics_t reporting_session_report::remote_metrics</definition>
+        <argsstring></argsstring>
+        <name>remote_metrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="122" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a8305dacf3e71a9625e91ca9848bf6451" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::dialog_id</definition>
+        <argsstring></argsstring>
+        <name>dialog_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="124" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a15e023ae02ab3887a201ccb0c6e38b6d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="130" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a8b82a9fe53e975654e226e5486ba903f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="131" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1ab7c70f3decf5c119d0b7d08ec5ded257" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::input_leg</definition>
+        <argsstring></argsstring>
+        <name>input_leg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="132" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a7596f7d0ae85987606669ae169bbac1c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="133" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1ae7a7e672d7aebd57e3489b0568200e99" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::output_leg</definition>
+        <argsstring></argsstring>
+        <name>output_leg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="134" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a65d3a83f233a7098d59333f71ad97a1b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* reporting_session_report::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="135" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1aea2160bbb84a628c979848c7fb404140" prot="public" static="no" mutable="no">
+        <type>struct reporting_session_report::@8</type>
+        <definition>struct reporting_session_report::@8  reporting_session_report::qos_analyzer</definition>
+        <argsstring></argsstring>
+        <name>qos_analyzer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a0de41c07e6b70b749575bfa4d792bd25" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t reporting_session_report::last_report_date</definition>
+        <argsstring></argsstring>
+        <name>last_report_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="139" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structreporting__session__report_1a49ec16e7696952f149cc3ec98a8a26c7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+        <definition>LinphoneCall* reporting_session_report::call</definition>
+        <argsstring></argsstring>
+        <name>call</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="140" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Linphone quality report main object created by function linphone_reporting_new(). It contains all fields required by RFC6035 </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="171">
+        <label>reporting_content_metrics</label>
+        <link refid="structreporting__content__metrics"/>
+      </node>
+      <node id="172">
+        <label>reporting_addr</label>
+        <link refid="structreporting__addr"/>
+      </node>
+      <node id="170">
+        <label>reporting_session_report</label>
+        <link refid="structreporting__session__report"/>
+        <childnode refid="171" relation="usage">
+          <edgelabel>local_metrics</edgelabel>
+          <edgelabel>remote_metrics</edgelabel>
+        </childnode>
+        <childnode refid="172" relation="usage">
+          <edgelabel>remote_addr</edgelabel>
+          <edgelabel>local_addr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" line="113" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/quality_reporting.h" bodystart="113" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structreporting__session__report_1a49ec16e7696952f149cc3ec98a8a26c7" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>call</name></member>
+      <member refid="structreporting__session__report_1af18f66b677e8d270b8c1e0f88674bc0f" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>call_id</name></member>
+      <member refid="structreporting__session__report_1a8305dacf3e71a9625e91ca9848bf6451" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>dialog_id</name></member>
+      <member refid="structreporting__session__report_1a4eab22954b491f473eb235fcd2b00f92" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>info</name></member>
+      <member refid="structreporting__session__report_1a7596f7d0ae85987606669ae169bbac1c" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>input</name></member>
+      <member refid="structreporting__session__report_1ab7c70f3decf5c119d0b7d08ec5ded257" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>input_leg</name></member>
+      <member refid="structreporting__session__report_1a0de41c07e6b70b749575bfa4d792bd25" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>last_report_date</name></member>
+      <member refid="structreporting__session__report_1a782d83430966220beeaedf4d3ca8d44d" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>local_addr</name></member>
+      <member refid="structreporting__session__report_1aeb1598c78886fbcb3104fb951c685358" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>local_metrics</name></member>
+      <member refid="structreporting__session__report_1a15e023ae02ab3887a201ccb0c6e38b6d" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>name</name></member>
+      <member refid="structreporting__session__report_1a96a31308dbed1ffb86093f92a9f4c8aa" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>orig_id</name></member>
+      <member refid="structreporting__session__report_1a65d3a83f233a7098d59333f71ad97a1b" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>output</name></member>
+      <member refid="structreporting__session__report_1ae7a7e672d7aebd57e3489b0568200e99" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>output_leg</name></member>
+      <member refid="structreporting__session__report_1aea2160bbb84a628c979848c7fb404140" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>qos_analyzer</name></member>
+      <member refid="structreporting__session__report_1a1ff1f8caac5e95f6b05f8543b4d354eb" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>remote_addr</name></member>
+      <member refid="structreporting__session__report_1a85593694dc3c814d02f7229257b5609e" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>remote_metrics</name></member>
+      <member refid="structreporting__session__report_1a8b82a9fe53e975654e226e5486ba903f" prot="public" virt="non-virtual"><scope>reporting_session_report</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

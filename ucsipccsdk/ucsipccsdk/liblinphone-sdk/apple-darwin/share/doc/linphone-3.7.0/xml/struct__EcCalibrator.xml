@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__EcCalibrator" kind="struct" prot="public">
+    <compoundname>_EcCalibrator</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__EcCalibrator_1a980efd8a28c6027d8c1d65b07a05bcaa" prot="public" static="no" mutable="no">
+        <type>ms_thread_t</type>
+        <definition>ms_thread_t _EcCalibrator::thread</definition>
+        <argsstring></argsstring>
+        <name>thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="837" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="837" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a8b0d66cc4f2af14a3d55d855a527073b" prot="public" static="no" mutable="no">
+        <type>MSSndCard *</type>
+        <definition>MSSndCard* _EcCalibrator::play_card</definition>
+        <argsstring></argsstring>
+        <name>play_card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="838" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a77055b80b9b113ca9cbc1e8246b95a67" prot="public" static="no" mutable="no">
+        <type>MSSndCard *</type>
+        <definition>MSSndCard * _EcCalibrator::capt_card</definition>
+        <argsstring></argsstring>
+        <name>capt_card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="838" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a929d016a431b82662673b7a6424be0e8" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _EcCalibrator::sndread</definition>
+        <argsstring></argsstring>
+        <name>sndread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="839" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a0c49dfdbd24c1f5fe40ab06695c523e4" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter * _EcCalibrator::det</definition>
+        <argsstring></argsstring>
+        <name>det</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="839" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1ac449c33ffff95ba83622774e7bcab34c" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter * _EcCalibrator::rec</definition>
+        <argsstring></argsstring>
+        <name>rec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="839" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1acb2b6bbe3bbaaa7a6eb655fdaab40bd8" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _EcCalibrator::play</definition>
+        <argsstring></argsstring>
+        <name>play</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="840" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a2053d2930916b4d00328742395da743b" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter * _EcCalibrator::gen</definition>
+        <argsstring></argsstring>
+        <name>gen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="840" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1aab49046030b18327e5ecd7c0d042ca48" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter * _EcCalibrator::sndwrite</definition>
+        <argsstring></argsstring>
+        <name>sndwrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="840" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a4cce10df775f3acbb9af3881d6f77f41" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _EcCalibrator::read_resampler</definition>
+        <argsstring></argsstring>
+        <name>read_resampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="841" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a537ec7ad55ea798e44497b2c64e1d63a" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter * _EcCalibrator::write_resampler</definition>
+        <argsstring></argsstring>
+        <name>write_resampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="841" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a5f0ce835ae915ac7189d071570769a3a" prot="public" static="no" mutable="no">
+        <type>MSTicker *</type>
+        <definition>MSTicker* _EcCalibrator::ticker</definition>
+        <argsstring></argsstring>
+        <name>ticker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="842" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="842" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a1e2cd9922fae7c9aab147f63ab6e2d9b" prot="public" static="no" mutable="no">
+        <type>LinphoneEcCalibrationCallback</type>
+        <definition>LinphoneEcCalibrationCallback _EcCalibrator::cb</definition>
+        <argsstring></argsstring>
+        <name>cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="843" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="843" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a32b765bf0fabd54c5c0bf11689e543ef" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _EcCalibrator::cb_data</definition>
+        <argsstring></argsstring>
+        <name>cb_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="844" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a09df3f10344bc033d46839a556c9ef13" prot="public" static="no" mutable="no">
+        <type>LinphoneEcCalibrationAudioInit</type>
+        <definition>LinphoneEcCalibrationAudioInit _EcCalibrator::audio_init_cb</definition>
+        <argsstring></argsstring>
+        <name>audio_init_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="845" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a5ab0c4ed92df2e9e363b631b19e36c2c" prot="public" static="no" mutable="no">
+        <type>LinphoneEcCalibrationAudioUninit</type>
+        <definition>LinphoneEcCalibrationAudioUninit _EcCalibrator::audio_uninit_cb</definition>
+        <argsstring></argsstring>
+        <name>audio_uninit_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="846" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a2bfad971ec5d77c0861264b49a3cd594" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t _EcCalibrator::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="847" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="847" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1aa32aea5b28106e160d86cc27c85402d7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _EcCalibrator::delay</definition>
+        <argsstring></argsstring>
+        <name>delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="848" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1ac858b88c0014f49b0ecde5fe2ee0291c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _EcCalibrator::rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="849" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="849" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a951f0f880223f002c4f45db7cc5724a9" prot="public" static="no" mutable="no">
+        <type>LinphoneEcCalibratorStatus</type>
+        <definition>LinphoneEcCalibratorStatus _EcCalibrator::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="850" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="850" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1a5443b6f06234af4f873e0155df19232e" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _EcCalibrator::freq1</definition>
+        <argsstring></argsstring>
+        <name>freq1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="851" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1aea749b0bf70a61cd53267e5fe9d21c31" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _EcCalibrator::freq2</definition>
+        <argsstring></argsstring>
+        <name>freq2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="851" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__EcCalibrator_1aa61f81ad9eddbe132b9cb15469d5bac1" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _EcCalibrator::freq3</definition>
+        <argsstring></argsstring>
+        <name>freq3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="851" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="836" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="836" bodyend="852"/>
+    <listofallmembers>
+      <member refid="struct__EcCalibrator_1a2bfad971ec5d77c0861264b49a3cd594" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>acc</name></member>
+      <member refid="struct__EcCalibrator_1a09df3f10344bc033d46839a556c9ef13" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>audio_init_cb</name></member>
+      <member refid="struct__EcCalibrator_1a5ab0c4ed92df2e9e363b631b19e36c2c" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>audio_uninit_cb</name></member>
+      <member refid="struct__EcCalibrator_1a77055b80b9b113ca9cbc1e8246b95a67" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>capt_card</name></member>
+      <member refid="struct__EcCalibrator_1a1e2cd9922fae7c9aab147f63ab6e2d9b" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>cb</name></member>
+      <member refid="struct__EcCalibrator_1a32b765bf0fabd54c5c0bf11689e543ef" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>cb_data</name></member>
+      <member refid="struct__EcCalibrator_1aa32aea5b28106e160d86cc27c85402d7" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>delay</name></member>
+      <member refid="struct__EcCalibrator_1a0c49dfdbd24c1f5fe40ab06695c523e4" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>det</name></member>
+      <member refid="struct__EcCalibrator_1a5443b6f06234af4f873e0155df19232e" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>freq1</name></member>
+      <member refid="struct__EcCalibrator_1aea749b0bf70a61cd53267e5fe9d21c31" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>freq2</name></member>
+      <member refid="struct__EcCalibrator_1aa61f81ad9eddbe132b9cb15469d5bac1" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>freq3</name></member>
+      <member refid="struct__EcCalibrator_1a2053d2930916b4d00328742395da743b" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>gen</name></member>
+      <member refid="struct__EcCalibrator_1acb2b6bbe3bbaaa7a6eb655fdaab40bd8" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>play</name></member>
+      <member refid="struct__EcCalibrator_1a8b0d66cc4f2af14a3d55d855a527073b" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>play_card</name></member>
+      <member refid="struct__EcCalibrator_1ac858b88c0014f49b0ecde5fe2ee0291c" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>rate</name></member>
+      <member refid="struct__EcCalibrator_1a4cce10df775f3acbb9af3881d6f77f41" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>read_resampler</name></member>
+      <member refid="struct__EcCalibrator_1ac449c33ffff95ba83622774e7bcab34c" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>rec</name></member>
+      <member refid="struct__EcCalibrator_1a929d016a431b82662673b7a6424be0e8" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>sndread</name></member>
+      <member refid="struct__EcCalibrator_1aab49046030b18327e5ecd7c0d042ca48" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>sndwrite</name></member>
+      <member refid="struct__EcCalibrator_1a951f0f880223f002c4f45db7cc5724a9" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>status</name></member>
+      <member refid="struct__EcCalibrator_1a980efd8a28c6027d8c1d65b07a05bcaa" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>thread</name></member>
+      <member refid="struct__EcCalibrator_1a5f0ce835ae915ac7189d071570769a3a" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>ticker</name></member>
+      <member refid="struct__EcCalibrator_1a537ec7ad55ea798e44497b2c64e1d63a" prot="public" virt="non-virtual"><scope>_EcCalibrator</scope><name>write_resampler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

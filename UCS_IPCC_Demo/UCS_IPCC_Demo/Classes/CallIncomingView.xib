@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallIncomingView">
+            <connections>
+                <outlet property="acceptButton" destination="7" id="LOD-VJ-1lA"/>
+                <outlet property="addressLabel" destination="78f-eb-xdx" id="Qjw-7G-oqG"/>
+                <outlet property="nameLabel" destination="hjQ-4P-bKP" id="Elh-o8-zM9"/>
+                <outlet property="portraitView" destination="25" id="6Gy-ZX-kTl"/>
+                <outlet property="speakButton" destination="1Dv-bo-UMW" id="lgT-1L-gQz"/>
+                <outlet property="tabBar" destination="4" id="9gd-FT-jaI"/>
+                <outlet property="view" destination="25" id="26"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6e0-76-KvA">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view tag="1" contentMode="scaleToFill" id="25">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" image="avatar.png" id="19" userLabel="avatarImage">
+                            <rect key="frame" x="87" y="294.5" width="200" height="213.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <accessibility key="accessibilityConfiguration" label="Contact avatar">
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在拨号..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="78f-eb-xdx" userLabel="addressLabel">
+                            <rect key="frame" x="0.0" y="223" width="375" height="36.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                            <color key="textColor" red="1" green="0.36862745099999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jozo Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="hjQ-4P-bKP" userLabel="nameLabel">
+                            <rect key="frame" x="0.0" y="159" width="375" height="55.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cro-ww-VIC" userLabel="headerBar">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                            <state key="normal" title="INCOMING CALL" backgroundImage="color_F.png">
+                                <color key="titleColor" red="1" green="0.36862745099999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <view tag="6" contentMode="scaleToFill" id="4" userLabel="tabBar">
+                            <rect key="frame" x="0.0" y="604" width="375" height="63"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_F.png" id="vPP-IW-pb1" userLabel="backgroundColor">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                </imageView>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6" userLabel="declineButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="188" height="63"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Decline"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="call_hangup_default.png" backgroundImage="color_D.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="call_hangup_disabled.png"/>
+                                    <state key="highlighted" backgroundImage="color_I.png"/>
+                                    <connections>
+                                        <action selector="onDeclineClick:" destination="-1" eventType="touchUpInside" id="16"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7" userLabel="acceptButton">
+                                    <rect key="frame" x="187" y="0.0" width="188" height="63"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Accept"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="call_audio_start_default.png" backgroundImage="color_A.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="call_audio_start_disabled.png"/>
+                                    <state key="highlighted" backgroundImage="color_L.png"/>
+                                    <connections>
+                                        <action selector="onAcceptClick:" destination="-1" eventType="touchUpInside" id="15"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Dv-bo-UMW" userLabel="speakerButton">
+                                    <rect key="frame" x="187" y="0.0" width="188" height="63"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Accept"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" image="speaker_default.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="speaker_disabled.png"/>
+                                    <state key="selected" image="speaker_selected.png"/>
+                                    <state key="highlighted" backgroundImage="color_E.png"/>
+                                    <connections>
+                                        <action selector="onSpeakClick:" destination="-1" eventType="touchUpInside" id="ex7-dc-F2b"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="-88.5" y="47.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar.png" width="255" height="255"/>
+        <image name="call_audio_start_default.png" width="36" height="36"/>
+        <image name="call_audio_start_disabled.png" width="36" height="36"/>
+        <image name="call_hangup_default.png" width="41" height="36"/>
+        <image name="call_hangup_disabled.png" width="41" height="36"/>
+        <image name="color_A.png" width="2" height="2"/>
+        <image name="color_D.png" width="2" height="2"/>
+        <image name="color_E.png" width="2" height="2"/>
+        <image name="color_F.png" width="2" height="2"/>
+        <image name="color_I.png" width="2" height="2"/>
+        <image name="color_L.png" width="2" height="2"/>
+        <image name="speaker_default.png" width="27" height="25"/>
+        <image name="speaker_disabled.png" width="27" height="25"/>
+        <image name="speaker_selected.png" width="27" height="25"/>
+    </resources>
+</document>

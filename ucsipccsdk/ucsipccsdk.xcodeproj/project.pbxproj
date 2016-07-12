@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB900701D23878D00ED431E /* ColorSpaceUtilites.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB900661D23878D00ED431E /* ColorSpaceUtilites.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABB900711D23878D00ED431E /* FastAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB900691D23878D00ED431E /* FastAddressBook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABB900721D23878D00ED431E /* LinphoneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9006B1D23878D00ED431E /* LinphoneManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABB900731D23878D00ED431E /* UILinphone.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9006D1D23878D00ED431E /* UILinphone.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABB900741D23878D00ED431E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9006F1D23878D00ED431E /* Utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABB900CE1D23889C00ED431E /* libantlr3c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900AC1D23889C00ED431E /* libantlr3c.a */; };
+		ABB900CF1D23889C00ED431E /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900AD1D23889C00ED431E /* libavcodec.a */; };
+		ABB900D01D23889C00ED431E /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900AE1D23889C00ED431E /* libavutil.a */; };
+		ABB900D11D23889C00ED431E /* libbellesip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900AF1D23889C00ED431E /* libbellesip.a */; };
+		ABB900D21D23889C00ED431E /* libbzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B01D23889C00ED431E /* libbzrtp.a */; };
+		ABB900D31D23889C00ED431E /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B11D23889C00ED431E /* libcunit.a */; };
+		ABB900D41D23889C00ED431E /* libgsm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B21D23889C00ED431E /* libgsm.a */; };
+		ABB900D51D23889C00ED431E /* libilbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B31D23889C00ED431E /* libilbc.a */; };
+		ABB900D61D23889C00ED431E /* liblinphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B41D23889C00ED431E /* liblinphone.a */; };
+		ABB900D71D23889C00ED431E /* liblinphonetester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B51D23889C00ED431E /* liblinphonetester.a */; };
+		ABB900D81D23889C00ED431E /* libmediastreamer_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B61D23889C00ED431E /* libmediastreamer_base.a */; };
+		ABB900D91D23889C00ED431E /* libmediastreamer_voip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B71D23889C00ED431E /* libmediastreamer_voip.a */; };
+		ABB900DA1D23889C00ED431E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B81D23889C00ED431E /* libopencore-amrnb.a */; };
+		ABB900DB1D23889C00ED431E /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B91D23889C00ED431E /* libopencore-amrwb.a */; };
+		ABB900DC1D23889C00ED431E /* libopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BA1D23889C00ED431E /* libopenh264.a */; };
+		ABB900DD1D23889C00ED431E /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BB1D23889C00ED431E /* libopus.a */; };
+		ABB900DE1D23889C00ED431E /* libortp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BC1D23889C00ED431E /* libortp.a */; };
+		ABB900DF1D23889C00ED431E /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BD1D23889C00ED431E /* libpolarssl.a */; };
+		ABB900E01D23889C00ED431E /* libSKP_SILK_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BE1D23889C00ED431E /* libSKP_SILK_SDK.a */; };
+		ABB900E11D23889C00ED431E /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BF1D23889C00ED431E /* libspeex.a */; };
+		ABB900E21D23889C00ED431E /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C01D23889C00ED431E /* libspeexdsp.a */; };
+		ABB900E31D23889C00ED431E /* libsrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C11D23889C00ED431E /* libsrtp.a */; };
+		ABB900E41D23889C00ED431E /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C21D23889C00ED431E /* libswresample.a */; };
+		ABB900E51D23889C00ED431E /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C31D23889C00ED431E /* libswscale.a */; };
+		ABB900E61D23889C00ED431E /* libtunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C41D23889C00ED431E /* libtunnel.a */; };
+		ABB900E71D23889C00ED431E /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C51D23889C00ED431E /* libvpx.a */; };
+		ABB900E81D23889C00ED431E /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C61D23889C00ED431E /* libx264.a */; };
+		ABB900E91D23889C00ED431E /* libxml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C71D23889C00ED431E /* libxml2.a */; };
+		ABB900EA1D23889C00ED431E /* libmsamr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C81D23889C00ED431E /* libmsamr.a */; };
+		ABB900EB1D23889C00ED431E /* libmsbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C91D23889C00ED431E /* libmsbcg729.a */; };
+		ABB900EC1D23889C00ED431E /* libmsilbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CA1D23889C00ED431E /* libmsilbc.a */; };
+		ABB900ED1D23889C00ED431E /* libmsopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CB1D23889C00ED431E /* libmsopenh264.a */; };
+		ABB900EE1D23889C00ED431E /* libmssilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CC1D23889C00ED431E /* libmssilk.a */; };
+		ABB900EF1D23889C00ED431E /* libmsx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CD1D23889C00ED431E /* libmsx264.a */; };
+		ABB900F81D23910800ED431E /* UCSIPCCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB900F71D23910800ED431E /* UCSIPCCManager.m */; };
+		ABB900F91D23911F00ED431E /* UCSIPCCManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ABB900F61D23910800ED431E /* UCSIPCCManager.h */; };
+		ABB90BC01D2B8C210049C2D9 /* UCSIPCCSDKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB90BBF1D2B8C210049C2D9 /* UCSIPCCSDKLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ABBBE7531D24C36200F9D3F4 /* UCSIPCCDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ABBBE7521D24C30800F9D3F4 /* UCSIPCCDelegate.h */; };
+		ABBBE7561D24C7BC00F9D3F4 /* UCSIPCCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBBE7551D24C7BC00F9D3F4 /* UCSIPCCClass.m */; };
+		ABBBE7581D24CFA300F9D3F4 /* UCSIPCCClass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ABBBE7541D24C7BC00F9D3F4 /* UCSIPCCClass.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABB900571D23872000ED431E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				ABBBE7581D24CFA300F9D3F4 /* UCSIPCCClass.h in CopyFiles */,
+				ABBBE7531D24C36200F9D3F4 /* UCSIPCCDelegate.h in CopyFiles */,
+				ABB900F91D23911F00ED431E /* UCSIPCCManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ABB900591D23872000ED431E /* libucsipccsdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libucsipccsdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB900661D23878D00ED431E /* ColorSpaceUtilites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceUtilites.m; sourceTree = "<group>"; };
+		ABB900671D23878D00ED431E /* ColorSpaceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceUtilities.h; sourceTree = "<group>"; };
+		ABB900681D23878D00ED431E /* FastAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAddressBook.h; sourceTree = "<group>"; };
+		ABB900691D23878D00ED431E /* FastAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastAddressBook.m; sourceTree = "<group>"; };
+		ABB9006A1D23878D00ED431E /* LinphoneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinphoneManager.h; sourceTree = "<group>"; };
+		ABB9006B1D23878D00ED431E /* LinphoneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinphoneManager.m; sourceTree = "<group>"; };
+		ABB9006C1D23878D00ED431E /* UILinphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILinphone.h; sourceTree = "<group>"; };
+		ABB9006D1D23878D00ED431E /* UILinphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILinphone.m; sourceTree = "<group>"; };
+		ABB9006E1D23878D00ED431E /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		ABB9006F1D23878D00ED431E /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		ABB900AC1D23889C00ED431E /* libantlr3c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libantlr3c.a; path = "../liblinphone-sdk/apple-darwin/lib/libantlr3c.a"; sourceTree = "<group>"; };
+		ABB900AD1D23889C00ED431E /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../liblinphone-sdk/apple-darwin/lib/libavcodec.a"; sourceTree = "<group>"; };
+		ABB900AE1D23889C00ED431E /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "../liblinphone-sdk/apple-darwin/lib/libavutil.a"; sourceTree = "<group>"; };
+		ABB900AF1D23889C00ED431E /* libbellesip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbellesip.a; path = "../liblinphone-sdk/apple-darwin/lib/libbellesip.a"; sourceTree = "<group>"; };
+		ABB900B01D23889C00ED431E /* libbzrtp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbzrtp.a; path = "../liblinphone-sdk/apple-darwin/lib/libbzrtp.a"; sourceTree = "<group>"; };
+		ABB900B11D23889C00ED431E /* libcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcunit.a; path = "../liblinphone-sdk/apple-darwin/lib/libcunit.a"; sourceTree = "<group>"; };
+		ABB900B21D23889C00ED431E /* libgsm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgsm.a; path = "../liblinphone-sdk/apple-darwin/lib/libgsm.a"; sourceTree = "<group>"; };
+		ABB900B31D23889C00ED431E /* libilbc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libilbc.a; path = "../liblinphone-sdk/apple-darwin/lib/libilbc.a"; sourceTree = "<group>"; };
+		ABB900B41D23889C00ED431E /* liblinphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblinphone.a; path = "../liblinphone-sdk/apple-darwin/lib/liblinphone.a"; sourceTree = "<group>"; };
+		ABB900B51D23889C00ED431E /* liblinphonetester.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblinphonetester.a; path = "../liblinphone-sdk/apple-darwin/lib/liblinphonetester.a"; sourceTree = "<group>"; };
+		ABB900B61D23889C00ED431E /* libmediastreamer_base.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmediastreamer_base.a; path = "../liblinphone-sdk/apple-darwin/lib/libmediastreamer_base.a"; sourceTree = "<group>"; };
+		ABB900B71D23889C00ED431E /* libmediastreamer_voip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmediastreamer_voip.a; path = "../liblinphone-sdk/apple-darwin/lib/libmediastreamer_voip.a"; sourceTree = "<group>"; };
+		ABB900B81D23889C00ED431E /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopencore-amrnb.a"; path = "../liblinphone-sdk/apple-darwin/lib/libopencore-amrnb.a"; sourceTree = "<group>"; };
+		ABB900B91D23889C00ED431E /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopencore-amrwb.a"; path = "../liblinphone-sdk/apple-darwin/lib/libopencore-amrwb.a"; sourceTree = "<group>"; };
+		ABB900BA1D23889C00ED431E /* libopenh264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopenh264.a; path = "../liblinphone-sdk/apple-darwin/lib/libopenh264.a"; sourceTree = "<group>"; };
+		ABB900BB1D23889C00ED431E /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopus.a; path = "../liblinphone-sdk/apple-darwin/lib/libopus.a"; sourceTree = "<group>"; };
+		ABB900BC1D23889C00ED431E /* libortp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libortp.a; path = "../liblinphone-sdk/apple-darwin/lib/libortp.a"; sourceTree = "<group>"; };
+		ABB900BD1D23889C00ED431E /* libpolarssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpolarssl.a; path = "../liblinphone-sdk/apple-darwin/lib/libpolarssl.a"; sourceTree = "<group>"; };
+		ABB900BE1D23889C00ED431E /* libSKP_SILK_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSKP_SILK_SDK.a; path = "../liblinphone-sdk/apple-darwin/lib/libSKP_SILK_SDK.a"; sourceTree = "<group>"; };
+		ABB900BF1D23889C00ED431E /* libspeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeex.a; path = "../liblinphone-sdk/apple-darwin/lib/libspeex.a"; sourceTree = "<group>"; };
+		ABB900C01D23889C00ED431E /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = "../liblinphone-sdk/apple-darwin/lib/libspeexdsp.a"; sourceTree = "<group>"; };
+		ABB900C11D23889C00ED431E /* libsrtp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsrtp.a; path = "../liblinphone-sdk/apple-darwin/lib/libsrtp.a"; sourceTree = "<group>"; };
+		ABB900C21D23889C00ED431E /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = "../liblinphone-sdk/apple-darwin/lib/libswresample.a"; sourceTree = "<group>"; };
+		ABB900C31D23889C00ED431E /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "../liblinphone-sdk/apple-darwin/lib/libswscale.a"; sourceTree = "<group>"; };
+		ABB900C41D23889C00ED431E /* libtunnel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtunnel.a; path = "../liblinphone-sdk/apple-darwin/lib/libtunnel.a"; sourceTree = "<group>"; };
+		ABB900C51D23889C00ED431E /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.a; path = "../liblinphone-sdk/apple-darwin/lib/libvpx.a"; sourceTree = "<group>"; };
+		ABB900C61D23889C00ED431E /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = "../liblinphone-sdk/apple-darwin/lib/libx264.a"; sourceTree = "<group>"; };
+		ABB900C71D23889C00ED431E /* libxml2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxml2.a; path = "../liblinphone-sdk/apple-darwin/lib/libxml2.a"; sourceTree = "<group>"; };
+		ABB900C81D23889C00ED431E /* libmsamr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmsamr.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmsamr.a"; sourceTree = "<group>"; };
+		ABB900C91D23889C00ED431E /* libmsbcg729.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmsbcg729.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmsbcg729.a"; sourceTree = "<group>"; };
+		ABB900CA1D23889C00ED431E /* libmsilbc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmsilbc.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmsilbc.a"; sourceTree = "<group>"; };
+		ABB900CB1D23889C00ED431E /* libmsopenh264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmsopenh264.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmsopenh264.a"; sourceTree = "<group>"; };
+		ABB900CC1D23889C00ED431E /* libmssilk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmssilk.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmssilk.a"; sourceTree = "<group>"; };
+		ABB900CD1D23889C00ED431E /* libmsx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmsx264.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmsx264.a"; sourceTree = "<group>"; };
+		ABB900F21D23897C00ED431E /* ipccsdk.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipccsdk.pch; sourceTree = "<group>"; };
+		ABB900F61D23910800ED431E /* UCSIPCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCManager.h; sourceTree = "<group>"; };
+		ABB900F71D23910800ED431E /* UCSIPCCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCSIPCCManager.m; sourceTree = "<group>"; };
+		ABB90BBE1D2B8C210049C2D9 /* UCSIPCCSDKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCSDKLog.h; sourceTree = "<group>"; };
+		ABB90BBF1D2B8C210049C2D9 /* UCSIPCCSDKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCSIPCCSDKLog.m; sourceTree = "<group>"; };
+		ABBBE7521D24C30800F9D3F4 /* UCSIPCCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCSIPCCDelegate.h; sourceTree = "<group>"; };
+		ABBBE7541D24C7BC00F9D3F4 /* UCSIPCCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCClass.h; sourceTree = "<group>"; };
+		ABBBE7551D24C7BC00F9D3F4 /* UCSIPCCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCSIPCCClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB900561D23872000ED431E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB900CE1D23889C00ED431E /* libantlr3c.a in Frameworks */,
+				ABB900CF1D23889C00ED431E /* libavcodec.a in Frameworks */,
+				ABB900D01D23889C00ED431E /* libavutil.a in Frameworks */,
+				ABB900D11D23889C00ED431E /* libbellesip.a in Frameworks */,
+				ABB900D21D23889C00ED431E /* libbzrtp.a in Frameworks */,
+				ABB900D31D23889C00ED431E /* libcunit.a in Frameworks */,
+				ABB900D41D23889C00ED431E /* libgsm.a in Frameworks */,
+				ABB900D51D23889C00ED431E /* libilbc.a in Frameworks */,
+				ABB900D61D23889C00ED431E /* liblinphone.a in Frameworks */,
+				ABB900D71D23889C00ED431E /* liblinphonetester.a in Frameworks */,
+				ABB900D81D23889C00ED431E /* libmediastreamer_base.a in Frameworks */,
+				ABB900D91D23889C00ED431E /* libmediastreamer_voip.a in Frameworks */,
+				ABB900DA1D23889C00ED431E /* libopencore-amrnb.a in Frameworks */,
+				ABB900DB1D23889C00ED431E /* libopencore-amrwb.a in Frameworks */,
+				ABB900DC1D23889C00ED431E /* libopenh264.a in Frameworks */,
+				ABB900DD1D23889C00ED431E /* libopus.a in Frameworks */,
+				ABB900DE1D23889C00ED431E /* libortp.a in Frameworks */,
+				ABB900DF1D23889C00ED431E /* libpolarssl.a in Frameworks */,
+				ABB900E01D23889C00ED431E /* libSKP_SILK_SDK.a in Frameworks */,
+				ABB900E11D23889C00ED431E /* libspeex.a in Frameworks */,
+				ABB900E21D23889C00ED431E /* libspeexdsp.a in Frameworks */,
+				ABB900E31D23889C00ED431E /* libsrtp.a in Frameworks */,
+				ABB900E41D23889C00ED431E /* libswresample.a in Frameworks */,
+				ABB900E51D23889C00ED431E /* libswscale.a in Frameworks */,
+				ABB900E61D23889C00ED431E /* libtunnel.a in Frameworks */,
+				ABB900E71D23889C00ED431E /* libvpx.a in Frameworks */,
+				ABB900E81D23889C00ED431E /* libx264.a in Frameworks */,
+				ABB900E91D23889C00ED431E /* libxml2.a in Frameworks */,
+				ABB900EA1D23889C00ED431E /* libmsamr.a in Frameworks */,
+				ABB900EB1D23889C00ED431E /* libmsbcg729.a in Frameworks */,
+				ABB900EC1D23889C00ED431E /* libmsilbc.a in Frameworks */,
+				ABB900ED1D23889C00ED431E /* libmsopenh264.a in Frameworks */,
+				ABB900EE1D23889C00ED431E /* libmssilk.a in Frameworks */,
+				ABB900EF1D23889C00ED431E /* libmsx264.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB900501D23872000ED431E = {
+			isa = PBXGroup;
+			children = (
+				ABB9005B1D23872000ED431E /* ucsipccsdk */,
+				ABB9005A1D23872000ED431E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB9005A1D23872000ED431E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB900591D23872000ED431E /* libucsipccsdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB9005B1D23872000ED431E /* ucsipccsdk */ = {
+			isa = PBXGroup;
+			children = (
+				ABB900F01D2388B100ED431E /* Frameworks */,
+				ABB900651D23878D00ED431E /* IPCC_SDK */,
+				ABBBE7521D24C30800F9D3F4 /* UCSIPCCDelegate.h */,
+				ABB900F61D23910800ED431E /* UCSIPCCManager.h */,
+				ABB900F71D23910800ED431E /* UCSIPCCManager.m */,
+				ABBBE7541D24C7BC00F9D3F4 /* UCSIPCCClass.h */,
+				ABBBE7551D24C7BC00F9D3F4 /* UCSIPCCClass.m */,
+				ABB900F21D23897C00ED431E /* ipccsdk.pch */,
+			);
+			path = ucsipccsdk;
+			sourceTree = "<group>";
+		};
+		ABB900651D23878D00ED431E /* IPCC_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ABB900661D23878D00ED431E /* ColorSpaceUtilites.m */,
+				ABB900671D23878D00ED431E /* ColorSpaceUtilities.h */,
+				ABB900681D23878D00ED431E /* FastAddressBook.h */,
+				ABB900691D23878D00ED431E /* FastAddressBook.m */,
+				ABB9006A1D23878D00ED431E /* LinphoneManager.h */,
+				ABB9006B1D23878D00ED431E /* LinphoneManager.m */,
+				ABB9006C1D23878D00ED431E /* UILinphone.h */,
+				ABB9006D1D23878D00ED431E /* UILinphone.m */,
+				ABB9006E1D23878D00ED431E /* Utils.h */,
+				ABB9006F1D23878D00ED431E /* Utils.m */,
+				ABB90BBE1D2B8C210049C2D9 /* UCSIPCCSDKLog.h */,
+				ABB90BBF1D2B8C210049C2D9 /* UCSIPCCSDKLog.m */,
+			);
+			path = IPCC_SDK;
+			sourceTree = "<group>";
+		};
+		ABB900F01D2388B100ED431E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABB900AC1D23889C00ED431E /* libantlr3c.a */,
+				ABB900AD1D23889C00ED431E /* libavcodec.a */,
+				ABB900AE1D23889C00ED431E /* libavutil.a */,
+				ABB900AF1D23889C00ED431E /* libbellesip.a */,
+				ABB900B01D23889C00ED431E /* libbzrtp.a */,
+				ABB900B11D23889C00ED431E /* libcunit.a */,
+				ABB900B21D23889C00ED431E /* libgsm.a */,
+				ABB900B31D23889C00ED431E /* libilbc.a */,
+				ABB900B41D23889C00ED431E /* liblinphone.a */,
+				ABB900B51D23889C00ED431E /* liblinphonetester.a */,
+				ABB900B61D23889C00ED431E /* libmediastreamer_base.a */,
+				ABB900B71D23889C00ED431E /* libmediastreamer_voip.a */,
+				ABB900B81D23889C00ED431E /* libopencore-amrnb.a */,
+				ABB900B91D23889C00ED431E /* libopencore-amrwb.a */,
+				ABB900BA1D23889C00ED431E /* libopenh264.a */,
+				ABB900BB1D23889C00ED431E /* libopus.a */,
+				ABB900BC1D23889C00ED431E /* libortp.a */,
+				ABB900BD1D23889C00ED431E /* libpolarssl.a */,
+				ABB900BE1D23889C00ED431E /* libSKP_SILK_SDK.a */,
+				ABB900BF1D23889C00ED431E /* libspeex.a */,
+				ABB900C01D23889C00ED431E /* libspeexdsp.a */,
+				ABB900C11D23889C00ED431E /* libsrtp.a */,
+				ABB900C21D23889C00ED431E /* libswresample.a */,
+				ABB900C31D23889C00ED431E /* libswscale.a */,
+				ABB900C41D23889C00ED431E /* libtunnel.a */,
+				ABB900C51D23889C00ED431E /* libvpx.a */,
+				ABB900C61D23889C00ED431E /* libx264.a */,
+				ABB900C71D23889C00ED431E /* libxml2.a */,
+				ABB900C81D23889C00ED431E /* libmsamr.a */,
+				ABB900C91D23889C00ED431E /* libmsbcg729.a */,
+				ABB900CA1D23889C00ED431E /* libmsilbc.a */,
+				ABB900CB1D23889C00ED431E /* libmsopenh264.a */,
+				ABB900CC1D23889C00ED431E /* libmssilk.a */,
+				ABB900CD1D23889C00ED431E /* libmsx264.a */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB900581D23872000ED431E /* ucsipccsdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB900621D23872000ED431E /* Build configuration list for PBXNativeTarget "ucsipccsdk" */;
+			buildPhases = (
+				ABB900551D23872000ED431E /* Sources */,
+				ABB900561D23872000ED431E /* Frameworks */,
+				ABB900571D23872000ED431E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ucsipccsdk;
+			productName = ucsipccsdk;
+			productReference = ABB900591D23872000ED431E /* libucsipccsdk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB900511D23872000ED431E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = i.Jozo;
+				TargetAttributes = {
+					ABB900581D23872000ED431E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = ABB900541D23872000ED431E /* Build configuration list for PBXProject "ucsipccsdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABB900501D23872000ED431E;
+			productRefGroup = ABB9005A1D23872000ED431E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABB900581D23872000ED431E /* ucsipccsdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB900551D23872000ED431E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB900721D23878D00ED431E /* LinphoneManager.m in Sources */,
+				ABB900711D23878D00ED431E /* FastAddressBook.m in Sources */,
+				ABB900741D23878D00ED431E /* Utils.m in Sources */,
+				ABB900701D23878D00ED431E /* ColorSpaceUtilites.m in Sources */,
+				ABB900731D23878D00ED431E /* UILinphone.m in Sources */,
+				ABB900F81D23910800ED431E /* UCSIPCCManager.m in Sources */,
+				ABB90BC01D2B8C210049C2D9 /* UCSIPCCSDKLog.m in Sources */,
+				ABBBE7561D24C7BC00F9D3F4 /* UCSIPCCClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ABB900601D23872000ED431E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABB900611D23872000ED431E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABB900631D23872000ED431E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ucsipccsdk/ipccsdk.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/ucsipccsdk/liblinphone-sdk/apple-darwin/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ucsipccsdk/liblinphone-sdk/apple-darwin/lib",
+					"$(PROJECT_DIR)/ucsipccsdk/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ABB900641D23872000ED431E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ucsipccsdk/ipccsdk.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/ucsipccsdk/liblinphone-sdk/apple-darwin/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ucsipccsdk/liblinphone-sdk/apple-darwin/lib",
+					"$(PROJECT_DIR)/ucsipccsdk/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB900541D23872000ED431E /* Build configuration list for PBXProject "ucsipccsdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB900601D23872000ED431E /* Debug */,
+				ABB900611D23872000ED431E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB900621D23872000ED431E /* Build configuration list for PBXNativeTarget "ucsipccsdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB900631D23872000ED431E /* Debug */,
+				ABB900641D23872000ED431E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABB900511D23872000ED431E /* Project object */;
+}

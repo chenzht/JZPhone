@@ -1,0 +1,1081 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="call__params_8h" kind="file">
+    <compoundname>call_params.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__call__control_1ga40918ba90bc3487d862eaaa3fdbe01db" prot="public" static="no">
+        <name>linphone_call_params_local_conference_mode</name>
+        <initializer><ref refid="group__call__control_1ga111ae3ce331d52a935af3c35d958e90d" kindref="member">linphone_call_params_get_local_conference_mode</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__control_1ga111ae3ce331d52a935af3c35d958e90d" kindref="member">linphone_call_params_get_local_conference_mode()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="288" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" prot="public" static="no">
+        <type>struct _LinphoneCallParams</type>
+        <definition>typedef struct _LinphoneCallParams LinphoneCallParams</definition>
+        <argsstring></argsstring>
+        <name>LinphoneCallParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LinphoneCallParams is an object containing various call related parameters. It can be used to retrieve parameters from a currently running call or modify the call&apos;s characteristics dynamically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="202" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__call__control_1ga824620d7b67c53a8a94205cfa7ee917e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_add_custom_header</definition>
+        <argsstring>(LinphoneCallParams *cp, const char *header_name, const char *header_value)</argsstring>
+        <name>linphone_call_params_add_custom_header</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a custom SIP header in the INVITE for a call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> to add a custom SIP header to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the header to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the header to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="57" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaaff626b40ba1834c7912aef9fc441544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+        <definition>LinphoneCallParams* linphone_call_params_copy</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_copy</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy an existing LinphoneCallParams object to a new LinphoneCallParams object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCallParams object to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A copy of the LinphoneCallParams object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="64" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="43" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga4ccd4da7a48deae180fff113acf9602a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_params_early_media_sending_enabled</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_early_media_sending_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicate whether sending of early media was enabled. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether sending of early media was enabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="71" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga6501c3b5987ff4e00bf59573cc8b404d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_enable_early_media_sending</definition>
+        <argsstring>(LinphoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>linphone_call_params_enable_early_media_sending</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable sending of real early media (during outgoing calls). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to enable early media sending or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="78" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga7f442dd06cba9bb1065ee759e204b206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_enable_low_bandwidth</definition>
+        <argsstring>(LinphoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>linphone_call_params_enable_low_bandwidth</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicate low bandwith mode. Configuring a call to low bandwidth mode will result in the core to activate several settings for the call in order to ensure that bitrate usage is lowered to the minimum possible. Typically, ptime (packetization time) will be increased, audio codec&apos;s output bitrate will be targetted to 20kbit/s provided that it is achievable by the codec selected after SDP handshake. Video is automatically disabled. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to activate the low bandwidth mode or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="88" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga195ed008fbb19ded55070bb149e72ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_enable_video</definition>
+        <argsstring>(LinphoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>linphone_call_params_enable_video</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable video stream. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to enable video or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="95" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga35ff99ed72925d1160706adf8ce89325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_call_params_get_custom_header</definition>
+        <argsstring>(const LinphoneCallParams *cp, const char *header_name)</argsstring>
+        <name>linphone_call_params_get_custom_header</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a custom SIP header. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> to get the custom SIP header from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the header to get. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The content of the header or NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="103" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga111ae3ce331d52a935af3c35d958e90d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_params_get_local_conference_mode</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_local_conference_mode</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether the call is part of the locally managed conference. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether the call is part of the locally managed conference. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="110" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae1606abff8e1162021464722c3af8035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__media__parameters_1ga61f5a2961ec43a0bd91eb1a664a6f111" kindref="member">LinphoneMediaEncryption</ref></type>
+        <definition>LinphoneMediaEncryption linphone_call_params_get_media_encryption</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_media_encryption</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the kind of media encryption selected for the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The kind of media encryption selected for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="117" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga2e2e90c197bb6ec2a4e78e2b5ffea849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphonePrivacyMask</type>
+        <definition>LinphonePrivacyMask linphone_call_params_get_privacy</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_privacy</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get requested level of privacy for the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The privacy mode used for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="124" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga21b90f0f67cf7242cf0118da87b48dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_params_get_received_framerate</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_received_framerate</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the framerate of the video that is received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual received framerate in frames per seconds, 0 if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="131" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga8545e0b9754e562a12939b0efacd8c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MSVideoSize</type>
+        <definition>MSVideoSize linphone_call_params_get_received_video_size</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_received_video_size</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the size of the video that is received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The received video size or MS_VIDEO_SIZE_UNKNOWN if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="138" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga6cf7ae608b631943716a86db72b6050a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_call_params_get_record_file</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_record_file</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the path for the audio recording of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path to the audio recording of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="145" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gac9478e7017f48bc4f773d1969a21cff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_call_params_get_rtp_profile</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_rtp_profile</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP profile being used. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP profile. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="152" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaeb769a6ca39754b1e7949920a6d5cf04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_params_get_sent_framerate</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_sent_framerate</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the framerate of the video that is sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual sent framerate in frames per seconds, 0 if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="159" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaed201ba82196265fba29f55947f28ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MSVideoSize</type>
+        <definition>MSVideoSize linphone_call_params_get_sent_video_size</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_sent_video_size</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the size of the video that is sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCalParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sent video size or MS_VIDEO_SIZE_UNKNOWN if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="166" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga617297088fcae5ca83369ab7abc93e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_call_params_get_session_name</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_session_name</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the session name of the media session (ie in SDP). Subject from the SIP message can be retrieved using <ref refid="group__call__control_1ga35ff99ed72925d1160706adf8ce89325" kindref="member">linphone_call_params_get_custom_header()</ref> and is different. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The session name of the media session. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="174" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gac7c352ef2c0c62a890fd870ffa7d0095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__media__parameters_1gae02100a16ec58d90edc04725bd58f747" kindref="member">LinphonePayloadType</ref> *</type>
+        <definition>const LinphonePayloadType* linphone_call_params_get_used_audio_codec</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_used_audio_codec</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the audio codec used in the call, described as a LinphonePayloadType object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The LinphonePayloadType object corresponding to the audio codec being used in the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="181" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga7e40f1c18563b740cdf15d6a2c7f4fcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__media__parameters_1gae02100a16ec58d90edc04725bd58f747" kindref="member">LinphonePayloadType</ref> *</type>
+        <definition>const LinphonePayloadType* linphone_call_params_get_used_video_codec</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_used_video_codec</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the video codec used in the call, described as a LinphonePayloadType structure. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The LinphonePayloadType object corresponding to the video codec being used in the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="188" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gac3f7643e84b1afcfdcdcb6a19d821409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_params_low_bandwidth_enabled</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_low_bandwidth_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether the call has been configured in low bandwidth mode or not. This mode can be automatically discovered thanks to a stun server when activate_edge_workarounds=1 in section [net] of configuration file. An application that would have reliable way to know network capacity may not use activate_edge_workarounds=1 but instead manually configure low bandwidth mode with <ref refid="group__call__control_1ga7f442dd06cba9bb1065ee759e204b206" kindref="member">linphone_call_params_enable_low_bandwidth()</ref>. When enabled, this param may transform a call request with video in audio only mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether the low bandwidth mode has been configured/detected. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="199" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga2aad89c0e9e53028532b9cb1afe1e5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_audio_bandwidth_limit</definition>
+        <argsstring>(LinphoneCallParams *cp, int bw)</argsstring>
+        <name>linphone_call_params_set_audio_bandwidth_limit</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refine bandwidth settings for this call by setting a bandwidth limit for audio streams. As a consequence, codecs whose bitrates are not compatible with this limit won&apos;t be used. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The audio bandwidth limit to set in kbit/s. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="207" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gab51579a5169a631878dd6210a2d8e2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_media_encryption</definition>
+        <argsstring>(LinphoneCallParams *cp, LinphoneMediaEncryption enc)</argsstring>
+        <name>linphone_call_params_set_media_encryption</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type><ref refid="group__media__parameters_1ga61f5a2961ec43a0bd91eb1a664a6f111" kindref="member">LinphoneMediaEncryption</ref></type>
+          <declname>enc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set requested media encryption for a call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media encryption to use for the call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="214" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaa225b0cef831e2a138f886f482610adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_privacy</definition>
+        <argsstring>(LinphoneCallParams *params, LinphonePrivacyMask privacy)</argsstring>
+        <name>linphone_call_params_set_privacy</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>LinphonePrivacyMask</type>
+          <declname>privacy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set requested level of privacy for the call.  <language-tags>javascript</language-tags>  <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">privacy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The privacy mode to used for the call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="222" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga10fff1a05dc9c63249ba59dc7240d803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_record_file</definition>
+        <argsstring>(LinphoneCallParams *cp, const char *path)</argsstring>
+        <name>linphone_call_params_set_record_file</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable recording of the call. This function must be used before the call parameters are assigned to the call. The call recording can be started and paused after the call is established with <ref refid="group__call__misc_1gaa92c7b4c3443ff4ae29f7b57f57cfd35" kindref="member">linphone_call_start_recording()</ref> and linphone_call_pause_recording(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the path and filename of the file where audio/video streams are to be written. The filename must have either .mkv or .wav extention. The video stream will be written only if a MKV file is given. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="233" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gac17c4cd38ef3e357b5afdc2fca458c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_session_name</definition>
+        <argsstring>(LinphoneCallParams *cp, const char *name)</argsstring>
+        <name>linphone_call_params_set_session_name</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the session name of the media session (ie in SDP). Subject from the SIP message (which is different) can be set using linphone_call_params_set_custom_header(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session name to be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="241" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga76c45eb46038b54a05325a61ca5908f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_params_video_enabled</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_video_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether video is enabled or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether video is enabled or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="248" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga40278c297e0a4ac94e7bc5ba9e33537e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* linphone_call_params_get_user_data</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user data associated with the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user data associated with the call params. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="260" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga2f2132164aacece16652bb8ce3f352f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_user_data</definition>
+        <argsstring>(LinphoneCallParams *cp, void *ud)</argsstring>
+        <name>linphone_call_params_set_user_data</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user data to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user data to associate with the call params. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="267" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga0fa42c71eed5c929fc9154ed5ee016aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+        <definition>LinphoneCallParams* linphone_call_params_ref</definition>
+        <argsstring>(LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_ref</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same LinphoneCallParams object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="274" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga341015ca73484947fca50896432106d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_unref</definition>
+        <argsstring>(LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_unref</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release a reference to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="280" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae5a1586d6c30f4daf96945a9ba5fc87f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_destroy</definition>
+        <argsstring>(LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_destroy</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a LinphoneCallParams object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__control_1ga341015ca73484947fca50896432106d2" kindref="member">linphone_call_params_unref()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h" line="295" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.c" bodystart="196" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">linphone</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010-2014<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__LINPHONE_CALL_PARAMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__LINPHONE_CALL_PARAMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Structures<sp/>and<sp/>enums<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_LinphoneCallParams;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_LinphoneCallParams<sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>Public<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga824620d7b67c53a8a94205cfa7ee917e" kindref="member">linphone_call_params_add_custom_header</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_value);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">LINPHONE_PUBLIC<sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*<sp/><ref refid="group__call__control_1gaaff626b40ba1834c7912aef9fc441544" kindref="member">linphone_call_params_copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">LINPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga4ccd4da7a48deae180fff113acf9602a" kindref="member">linphone_call_params_early_media_sending_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga6501c3b5987ff4e00bf59573cc8b404d" kindref="member">linphone_call_params_enable_early_media_sending</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga7f442dd06cba9bb1065ee759e204b206" kindref="member">linphone_call_params_enable_low_bandwidth</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga195ed008fbb19ded55070bb149e72ec5" kindref="member">linphone_call_params_enable_video</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga35ff99ed72925d1160706adf8ce89325" kindref="member">linphone_call_params_get_custom_header</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_name);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">LINPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga111ae3ce331d52a935af3c35d958e90d" kindref="member">linphone_call_params_get_local_conference_mode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">LINPHONE_PUBLIC<sp/><ref refid="group__media__parameters_1ga61f5a2961ec43a0bd91eb1a664a6f111" kindref="member">LinphoneMediaEncryption</ref><sp/><ref refid="group__call__control_1gae1606abff8e1162021464722c3af8035" kindref="member">linphone_call_params_get_media_encryption</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">LINPHONE_PUBLIC<sp/>LinphonePrivacyMask<sp/><ref refid="group__call__control_1ga2e2e90c197bb6ec2a4e78e2b5ffea849" kindref="member">linphone_call_params_get_privacy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga21b90f0f67cf7242cf0118da87b48dad" kindref="member">linphone_call_params_get_received_framerate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">LINPHONE_PUBLIC<sp/>MSVideoSize<sp/><ref refid="group__call__control_1ga8545e0b9754e562a12939b0efacd8c2f" kindref="member">linphone_call_params_get_received_video_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga6cf7ae608b631943716a86db72b6050a" kindref="member">linphone_call_params_get_record_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group__call__control_1gac9478e7017f48bc4f773d1969a21cff9" kindref="member">linphone_call_params_get_rtp_profile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaeb769a6ca39754b1e7949920a6d5cf04" kindref="member">linphone_call_params_get_sent_framerate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">LINPHONE_PUBLIC<sp/>MSVideoSize<sp/><ref refid="group__call__control_1gaed201ba82196265fba29f55947f28ebf" kindref="member">linphone_call_params_get_sent_video_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga617297088fcae5ca83369ab7abc93e7f" kindref="member">linphone_call_params_get_session_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__media__parameters_1gae02100a16ec58d90edc04725bd58f747" kindref="member">LinphonePayloadType</ref>*<sp/><ref refid="group__call__control_1gac7c352ef2c0c62a890fd870ffa7d0095" kindref="member">linphone_call_params_get_used_audio_codec</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__media__parameters_1gae02100a16ec58d90edc04725bd58f747" kindref="member">LinphonePayloadType</ref>*<sp/><ref refid="group__call__control_1ga7e40f1c18563b740cdf15d6a2c7f4fcf" kindref="member">linphone_call_params_get_used_video_codec</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">LINPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1gac3f7643e84b1afcfdcdcb6a19d821409" kindref="member">linphone_call_params_low_bandwidth_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga2aad89c0e9e53028532b9cb1afe1e5de" kindref="member">linphone_call_params_set_audio_bandwidth_limit</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bw);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gab51579a5169a631878dd6210a2d8e2b1" kindref="member">linphone_call_params_set_media_encryption</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/><ref refid="group__media__parameters_1ga61f5a2961ec43a0bd91eb1a664a6f111" kindref="member">LinphoneMediaEncryption</ref><sp/>enc);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa225b0cef831e2a138f886f482610adf" kindref="member">linphone_call_params_set_privacy</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*params,<sp/>LinphonePrivacyMask<sp/>privacy);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga10fff1a05dc9c63249ba59dc7240d803" kindref="member">linphone_call_params_set_record_file</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gac17c4cd38ef3e357b5afdc2fca458c73" kindref="member">linphone_call_params_set_session_name</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">LINPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga76c45eb46038b54a05325a61ca5908f4" kindref="member">linphone_call_params_video_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/>*<sp/>Reference<sp/>and<sp/>user<sp/>data<sp/>handling<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga40278c297e0a4ac94e7bc5ba9e33537e" kindref="member">linphone_call_params_get_user_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga2f2132164aacece16652bb8ce3f352f0" kindref="member">linphone_call_params_set_user_data</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ud);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal">LINPHONE_PUBLIC<sp/><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*<sp/><ref refid="group__call__control_1ga0fa42c71eed5c929fc9154ed5ee016aa" kindref="member">linphone_call_params_ref</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga341015ca73484947fca50896432106d2" kindref="member">linphone_call_params_unref</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/>*<sp/>DEPRECATED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="preprocessor">#define<sp/>linphone_call_params_local_conference_mode<sp/>linphone_call_params_get_local_conference_mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gae5a1586d6c30f4daf96945a9ba5fc87f" kindref="member">linphone_call_params_destroy</ref>(<ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__LINPHONE_CALL_PARAMS_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/call_params.h"/>
+  </compounddef>
+</doxygen>

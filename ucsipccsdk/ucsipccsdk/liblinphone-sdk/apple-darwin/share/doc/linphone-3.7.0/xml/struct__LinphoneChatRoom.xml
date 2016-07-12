@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneChatRoom" kind="struct" prot="public">
+    <compoundname>_LinphoneChatRoom</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1aeee3bf01bd63ee6c79b5bf75b4d6e7dc" prot="public" static="no" mutable="no">
+        <type>belle_sip_object_t</type>
+        <definition>belle_sip_object_t _LinphoneChatRoom::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="528" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1ab84b3c1a8cfa8ffbf18bcc29190448e7" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneChatRoom::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="529" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="529" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1acd80f6242340206c2eb5fde06f043e81" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneChatRoom::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="530" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a8a714cf8cc0abbd298b1d7ee1082628a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneChatRoom::peer</definition>
+        <argsstring></argsstring>
+        <name>peer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="531" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a7e2234d7769a8dde644df847ddc65c47" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1ga5af5a516ac253e3cda4f51b599a5385b" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneChatRoom::peer_url</definition>
+        <argsstring></argsstring>
+        <name>peer_url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="532" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a17410cceaaad18fd933e963a995cd634" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneChatRoom::messages_hist</definition>
+        <argsstring></argsstring>
+        <name>messages_hist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="533" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a3ef193dcfaca60b5478d36b6b7dbedf3" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneChatRoom::transient_messages</definition>
+        <argsstring></argsstring>
+        <name>transient_messages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="534" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1ab2df64e04d5a035d7d423cf0642ec348" prot="public" static="no" mutable="no">
+        <type>LinphoneIsComposingState</type>
+        <definition>LinphoneIsComposingState _LinphoneChatRoom::remote_is_composing</definition>
+        <argsstring></argsstring>
+        <name>remote_is_composing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="535" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a23ac7f1fb5531a3db2831627017b357f" prot="public" static="no" mutable="no">
+        <type>LinphoneIsComposingState</type>
+        <definition>LinphoneIsComposingState _LinphoneChatRoom::is_composing</definition>
+        <argsstring></argsstring>
+        <name>is_composing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="536" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a06ce912384b7cb42f1c746652cedbf8c" prot="public" static="no" mutable="no">
+        <type>belle_sip_source_t *</type>
+        <definition>belle_sip_source_t* _LinphoneChatRoom::remote_composing_refresh_timer</definition>
+        <argsstring></argsstring>
+        <name>remote_composing_refresh_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="537" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a382b9c4dbcff0c5d0e89057e37777b16" prot="public" static="no" mutable="no">
+        <type>belle_sip_source_t *</type>
+        <definition>belle_sip_source_t* _LinphoneChatRoom::composing_idle_timer</definition>
+        <argsstring></argsstring>
+        <name>composing_idle_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="538" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1acdb5cf7a5cd7570b14c90c44f9a4c9cd" prot="public" static="no" mutable="no">
+        <type>belle_sip_source_t *</type>
+        <definition>belle_sip_source_t* _LinphoneChatRoom::composing_refresh_timer</definition>
+        <argsstring></argsstring>
+        <name>composing_refresh_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="539" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="527" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="527" bodyend="540"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneChatRoom_1aeee3bf01bd63ee6c79b5bf75b4d6e7dc" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>base</name></member>
+      <member refid="struct__LinphoneChatRoom_1a382b9c4dbcff0c5d0e89057e37777b16" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>composing_idle_timer</name></member>
+      <member refid="struct__LinphoneChatRoom_1acdb5cf7a5cd7570b14c90c44f9a4c9cd" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>composing_refresh_timer</name></member>
+      <member refid="struct__LinphoneChatRoom_1a23ac7f1fb5531a3db2831627017b357f" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>is_composing</name></member>
+      <member refid="struct__LinphoneChatRoom_1acd80f6242340206c2eb5fde06f043e81" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>lc</name></member>
+      <member refid="struct__LinphoneChatRoom_1a17410cceaaad18fd933e963a995cd634" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>messages_hist</name></member>
+      <member refid="struct__LinphoneChatRoom_1a8a714cf8cc0abbd298b1d7ee1082628a" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>peer</name></member>
+      <member refid="struct__LinphoneChatRoom_1a7e2234d7769a8dde644df847ddc65c47" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>peer_url</name></member>
+      <member refid="struct__LinphoneChatRoom_1a06ce912384b7cb42f1c746652cedbf8c" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>remote_composing_refresh_timer</name></member>
+      <member refid="struct__LinphoneChatRoom_1ab2df64e04d5a035d7d423cf0642ec348" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>remote_is_composing</name></member>
+      <member refid="struct__LinphoneChatRoom_1a3ef193dcfaca60b5478d36b6b7dbedf3" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>transient_messages</name></member>
+      <member refid="struct__LinphoneChatRoom_1ab84b3c1a8cfa8ffbf18bcc29190448e7" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

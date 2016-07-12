@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneAccountCreator" kind="struct" prot="public">
+    <compoundname>_LinphoneAccountCreator</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1ad8c6a3edf7b1cd4c0e96613cfb7f8660" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>LinphoneCore* _LinphoneAccountCreator::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1140" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1a5c6e58930ac9bd469302e125af553889" prot="public" static="no" mutable="no">
+        <type>struct _SipSetupContext *</type>
+        <definition>struct _SipSetupContext* _LinphoneAccountCreator::ssctx</definition>
+        <argsstring></argsstring>
+        <name>ssctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1141" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1ad3d638da5d2d7ca177040643ac0176cd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAccountCreator::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1142" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1a9f7284c337134f595452dfca5d452343" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAccountCreator::password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1143" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1adf4267b2ec617ed024ebf0f146191733" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAccountCreator::domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1144" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1ab83e7c71fd06d14c336391ad5738d2c9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAccountCreator::route</definition>
+        <argsstring></argsstring>
+        <name>route</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1145" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1a888d005d315bcfb9c1aa394b8e0dbb0a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAccountCreator::email</definition>
+        <argsstring></argsstring>
+        <name>email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1146" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1a3efad222bbd8d16c1ed0bf58e57e74c7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneAccountCreator::suscribe</definition>
+        <argsstring></argsstring>
+        <name>suscribe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1147" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAccountCreator_1acae10072b5d8d84d01e118abd5c1e733" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneAccountCreator::succeeded</definition>
+        <argsstring></argsstring>
+        <name>succeeded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1148" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1139" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="1139" bodyend="1149"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneAccountCreator_1adf4267b2ec617ed024ebf0f146191733" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>domain</name></member>
+      <member refid="struct__LinphoneAccountCreator_1a888d005d315bcfb9c1aa394b8e0dbb0a" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>email</name></member>
+      <member refid="struct__LinphoneAccountCreator_1ad8c6a3edf7b1cd4c0e96613cfb7f8660" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>lc</name></member>
+      <member refid="struct__LinphoneAccountCreator_1a9f7284c337134f595452dfca5d452343" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>password</name></member>
+      <member refid="struct__LinphoneAccountCreator_1ab83e7c71fd06d14c336391ad5738d2c9" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>route</name></member>
+      <member refid="struct__LinphoneAccountCreator_1a5c6e58930ac9bd469302e125af553889" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>ssctx</name></member>
+      <member refid="struct__LinphoneAccountCreator_1acae10072b5d8d84d01e118abd5c1e733" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>succeeded</name></member>
+      <member refid="struct__LinphoneAccountCreator_1a3efad222bbd8d16c1ed0bf58e57e74c7" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>suscribe</name></member>
+      <member refid="struct__LinphoneAccountCreator_1ad3d638da5d2d7ca177040643ac0176cd" prot="public" virt="non-virtual"><scope>_LinphoneAccountCreator</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

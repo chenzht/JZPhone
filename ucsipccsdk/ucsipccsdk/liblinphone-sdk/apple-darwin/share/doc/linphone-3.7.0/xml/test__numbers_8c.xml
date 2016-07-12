@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="test__numbers_8c" kind="file">
+    <compoundname>test_numbers.c</compoundname>
+    <includes refid="linphonecore_8h" local="yes">linphonecore.h</includes>
+    <includes refid="linphonecore__utils_8h" local="yes">linphonecore_utils.h</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__numbers_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/test_numbers.c" line="25" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/test_numbers.c" bodystart="25" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">linphone</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2012<sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Author:<sp/>Simon<sp/>MORLAT<sp/>(simon.morlat@linphone.org)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;linphonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;linphonecore_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc<sp/>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref><sp/>*cfg;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>normalized_number[32];</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc&lt;2){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Usage:\n%s<sp/>&lt;phone<sp/>number&gt;<sp/>[&lt;country<sp/>code&gt;]<sp/>[--escape-plus]\nReturns<sp/>normalized<sp/>number.&quot;</highlight><highlight class="normal">,<sp/>argv[0]);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gad70dc5268366c829238b458547fe5277" kindref="member">linphone_core_enable_logs</ref>(stderr);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cfg=<ref refid="group__proxies_1gaaedcf1a592cedba55ad05167abd2d7ce" kindref="member">linphone_proxy_config_new</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc&gt;2)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__proxies_1ga34cc952a4053bd82f65f8de965e239dc" kindref="member">linphone_proxy_config_set_dial_prefix</ref>(cfg,argv[2]);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc&gt;3<sp/>&amp;&amp;<sp/>strcmp(argv[3],</highlight><highlight class="stringliteral">&quot;--escape-plus&quot;</highlight><highlight class="normal">)==0)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__proxies_1gadf8ce7a15604a3b8469e7149f992d916" kindref="member">linphone_proxy_config_set_dial_escape_plus</ref>(cfg,TRUE);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__proxies_1ga743329b10e73baa4611f4e304ab6f7c8" kindref="member">linphone_proxy_config_normalize_number</ref>(cfg,argv[1],normalized_number,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(normalized_number));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Normalized<sp/>number<sp/>is<sp/>%s\n&quot;</highlight><highlight class="normal">,normalized_number);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*check<sp/>extracted<sp/>ccc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__misc_1ga38c2e82076bbde91124ae8867320a43c" kindref="member">linphone_dial_plan_lookup_ccc_from_e164</ref>(normalized_number)<sp/>!=<sp/>atoi(<ref refid="group__proxies_1ga3df8c8bbe169364504a7e4b7c39c75c3" kindref="member">linphone_proxy_config_get_dial_prefix</ref>(cfg)))<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>ccc<sp/>[%i]<sp/>not<sp/>correctly<sp/>parsed\n&quot;</highlight><highlight class="normal">,<ref refid="group__misc_1ga38c2e82076bbde91124ae8867320a43c" kindref="member">linphone_dial_plan_lookup_ccc_from_e164</ref>(normalized_number));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Extracted<sp/>ccc<sp/>is<sp/>[%i]<sp/>\n&quot;</highlight><highlight class="normal">,<ref refid="group__misc_1ga38c2e82076bbde91124ae8867320a43c" kindref="member">linphone_dial_plan_lookup_ccc_from_e164</ref>(normalized_number));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/test_numbers.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneCore" kind="struct" prot="public">
+    <compoundname>_LinphoneCore</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneCore_1a524fca0528d400dc4a916705f2b2ef14" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::vtables</definition>
+        <argsstring></argsstring>
+        <name>vtables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="709" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ab0d442d8ee11036f5511259d25e60ac1" prot="public" static="no" mutable="no">
+        <type>Sal *</type>
+        <definition>Sal* _LinphoneCore::sal</definition>
+        <argsstring></argsstring>
+        <name>sal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="710" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a8edebf487a63002abe2566ed44945a37" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1gae852b5b31d6d5e673de9d2c9b63aca7e" kindref="member">LinphoneGlobalState</ref></type>
+        <definition>LinphoneGlobalState _LinphoneCore::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="711" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a3b6c116526dff5158fe63560dabdba73" prot="public" static="no" mutable="no">
+        <type>struct _LpConfig *</type>
+        <definition>struct _LpConfig* _LinphoneCore::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="712" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa931d5b20852a8e9a12920b6d356ec76" prot="public" static="no" mutable="no">
+        <type>RtpProfile *</type>
+        <definition>RtpProfile* _LinphoneCore::default_profile</definition>
+        <argsstring></argsstring>
+        <name>default_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="713" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa3ff570617522419e0ce19e9dd271244" prot="public" static="no" mutable="no">
+        <type>net_config_t</type>
+        <definition>net_config_t _LinphoneCore::net_conf</definition>
+        <argsstring></argsstring>
+        <name>net_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="714" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="714" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aec68152e9ef9738ac052ad4672202e7b" prot="public" static="no" mutable="no">
+        <type>sip_config_t</type>
+        <definition>sip_config_t _LinphoneCore::sip_conf</definition>
+        <argsstring></argsstring>
+        <name>sip_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="715" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="715" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ae263e94b2153053c61f91039c2766c21" prot="public" static="no" mutable="no">
+        <type>rtp_config_t</type>
+        <definition>rtp_config_t _LinphoneCore::rtp_conf</definition>
+        <argsstring></argsstring>
+        <name>rtp_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="716" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="716" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a2145aa47b16d847c73dcba9fed714542" prot="public" static="no" mutable="no">
+        <type>sound_config_t</type>
+        <definition>sound_config_t _LinphoneCore::sound_conf</definition>
+        <argsstring></argsstring>
+        <name>sound_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="717" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="717" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a023a8cce78dfd0da2c643b9d05b5729a" prot="public" static="no" mutable="no">
+        <type>video_config_t</type>
+        <definition>video_config_t _LinphoneCore::video_conf</definition>
+        <argsstring></argsstring>
+        <name>video_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="718" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="718" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ace8bde7de3a74ea3dec654f709e2c477" prot="public" static="no" mutable="no">
+        <type>codecs_config_t</type>
+        <definition>codecs_config_t _LinphoneCore::codecs_conf</definition>
+        <argsstring></argsstring>
+        <name>codecs_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="719" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="719" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ab14ffc111e3021cf28041a036b2aae63" prot="public" static="no" mutable="no">
+        <type>ui_config_t</type>
+        <definition>ui_config_t _LinphoneCore::ui_conf</definition>
+        <argsstring></argsstring>
+        <name>ui_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="720" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="720" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a3b74ccff7767d47bfea342e9713ed0d7" prot="public" static="no" mutable="no">
+        <type>autoreplier_config_t</type>
+        <definition>autoreplier_config_t _LinphoneCore::autoreplier_conf</definition>
+        <argsstring></argsstring>
+        <name>autoreplier_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="721" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="721" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a12c710f1953bf490d3dde70f45e91c80" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::payload_types</definition>
+        <argsstring></argsstring>
+        <name>payload_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="722" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="722" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a640b230296e6d33b1b8ee23c1b2bfac8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::dyn_pt</definition>
+        <argsstring></argsstring>
+        <name>dyn_pt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="723" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="723" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1acf51126d0e173d01272004a98bf98eb4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig* _LinphoneCore::default_proxy</definition>
+        <argsstring></argsstring>
+        <name>default_proxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="724" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a3b0911b3b1932451548af6af0315d02d" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::friends</definition>
+        <argsstring></argsstring>
+        <name>friends</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="725" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="725" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ad11ee4c37cb6182a5c0b02c812991d12" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::auth_info</definition>
+        <argsstring></argsstring>
+        <name>auth_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="726" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="726" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1afbdff57917a2324e558b39419daf1d65" prot="public" static="no" mutable="no">
+        <type>struct _RingStream *</type>
+        <definition>struct _RingStream* _LinphoneCore::ringstream</definition>
+        <argsstring></argsstring>
+        <name>ringstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="727" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="727" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a5dd89b76faa67dcf044e0212696d678c" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCore::dmfs_playing_start_time</definition>
+        <argsstring></argsstring>
+        <name>dmfs_playing_start_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="728" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a1d466f4537387677fdfec5777d0c45a3" prot="public" static="no" mutable="no">
+        <type>LCCallbackObj</type>
+        <definition>LCCallbackObj _LinphoneCore::preview_finished_cb</definition>
+        <argsstring></argsstring>
+        <name>preview_finished_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="729" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1af5b3bc1c71bb0100d0c2f6740b7b8f01" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+        <definition>LinphoneCall* _LinphoneCore::current_call</definition>
+        <argsstring></argsstring>
+        <name>current_call</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="730" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a98761d4d8b0cc006f2f52aec0d793f8d" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::calls</definition>
+        <argsstring></argsstring>
+        <name>calls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="731" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a1164d0d188b4c20d26a2e9862308a8be" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::queued_calls</definition>
+        <argsstring></argsstring>
+        <name>queued_calls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="732" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a6373256439f864cc34f31eaf1079e390" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::call_logs</definition>
+        <argsstring></argsstring>
+        <name>call_logs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="733" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1adf03c4d54f83019521eb4285e660a1f7" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::chatrooms</definition>
+        <argsstring></argsstring>
+        <name>chatrooms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="734" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a38cd11592ca13f7427b32976d84dc0be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::max_call_logs</definition>
+        <argsstring></argsstring>
+        <name>max_call_logs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="735" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1afacd55fe68f0eba9c806822af1a9b148" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::missed_calls</definition>
+        <argsstring></argsstring>
+        <name>missed_calls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="736" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="736" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a62e2fc3ff50df336558b8fff2b7bf347" prot="public" static="no" mutable="no">
+        <type>VideoPreview *</type>
+        <definition>VideoPreview* _LinphoneCore::previewstream</definition>
+        <argsstring></argsstring>
+        <name>previewstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="737" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a6b69abd67f3187a7325423552e26bf9d" prot="public" static="no" mutable="no">
+        <type>struct _MSEventQueue *</type>
+        <definition>struct _MSEventQueue* _LinphoneCore::msevq</definition>
+        <argsstring></argsstring>
+        <name>msevq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="738" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a2ecdb1bd3390130148293c9c826e3a05" prot="public" static="no" mutable="no">
+        <type>LinphoneRtpTransportFactories *</type>
+        <definition>LinphoneRtpTransportFactories* _LinphoneCore::rtptf</definition>
+        <argsstring></argsstring>
+        <name>rtptf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="739" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a65aeb1a608ce958b966cd7918169aa67" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::bl_reqs</definition>
+        <argsstring></argsstring>
+        <name>bl_reqs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="740" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aaec56e8ea44a5259a104ddf7965c730a" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::subscribers</definition>
+        <argsstring></argsstring>
+        <name>subscribers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="741" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a363eedfd5860fc0938e1fe3f1a762cfb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::minutes_away</definition>
+        <argsstring></argsstring>
+        <name>minutes_away</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="742" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa2c808b99722a797eb477f0ba9df9ae4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__buddy__list_1gad98268f00fb29b50b22b3c3da566e366" kindref="member">LinphonePresenceModel</ref> *</type>
+        <definition>LinphonePresenceModel* _LinphoneCore::presence_model</definition>
+        <argsstring></argsstring>
+        <name>presence_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="743" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="743" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a76e8bf7c69c20d9e3bc7e54c48b1521c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneCore::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="744" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="744" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a85764105151f47e95921611629f1fa6b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCore::play_file</definition>
+        <argsstring></argsstring>
+        <name>play_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="745" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="745" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a715f25b09cd27c5da5df4f99cf54a01c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCore::rec_file</definition>
+        <argsstring></argsstring>
+        <name>rec_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="746" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="746" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a1993a4c0ce62e357113a29e95002e5ad" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCore::prevtime</definition>
+        <argsstring></argsstring>
+        <name>prevtime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="747" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="747" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a31fcb0b35fdf29facd39997712d7c33d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::audio_bw</definition>
+        <argsstring></argsstring>
+        <name>audio_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="748" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="748" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1adbc7dabd5c16bc44b35895ab47f2bccb" prot="public" static="no" mutable="no">
+        <type>LinphoneCoreWaitingCallback</type>
+        <definition>LinphoneCoreWaitingCallback _LinphoneCore::wait_cb</definition>
+        <argsstring></argsstring>
+        <name>wait_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="749" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="749" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a6e050e93aa3f839f0d430cf50ef5e302" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneCore::wait_ctx</definition>
+        <argsstring></argsstring>
+        <name>wait_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="750" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="750" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a2d86e19355a94b999d6a5bd66cc07414" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long _LinphoneCore::video_window_id</definition>
+        <argsstring></argsstring>
+        <name>video_window_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="751" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a3c7f879a4c019c4c1fbe6ee851d23b57" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long _LinphoneCore::preview_window_id</definition>
+        <argsstring></argsstring>
+        <name>preview_window_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="752" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa761d5998f07e530e21c40aa60fb4002" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCore::netup_time</definition>
+        <argsstring></argsstring>
+        <name>netup_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="753" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a973e3bdcc3dba668499f3f6a114dc412" prot="public" static="no" mutable="no">
+        <type>struct _EcCalibrator *</type>
+        <definition>struct _EcCalibrator* _LinphoneCore::ecc</definition>
+        <argsstring></argsstring>
+        <name>ecc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="754" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a9b577b1b6c2205fb38a8cd8be728631b" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::hooks</definition>
+        <argsstring></argsstring>
+        <name>hooks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="755" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a22d7005cf376356135d80095f337d0d6" prot="public" static="no" mutable="no">
+        <type>LinphoneConference</type>
+        <definition>LinphoneConference _LinphoneCore::conf_ctx</definition>
+        <argsstring></argsstring>
+        <name>conf_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="756" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ae19ad946001df14370f52a2b2ae3c4ed" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCore::zrtp_secrets_cache</definition>
+        <argsstring></argsstring>
+        <name>zrtp_secrets_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="757" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="757" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a855467cd7ad8942990ea64cad9979c75" prot="public" static="no" mutable="no">
+        <type><ref refid="group__media__parameters_1ga83cad3d734c773e03ab7e555303d57d8" kindref="member">LinphoneVideoPolicy</ref></type>
+        <definition>LinphoneVideoPolicy _LinphoneCore::video_policy</definition>
+        <argsstring></argsstring>
+        <name>video_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="758" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="758" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ac4e1fbab202b51d24acf3e122210c36c" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::use_files</definition>
+        <argsstring></argsstring>
+        <name>use_files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="759" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="759" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a8c505768efeaa37d714711b209f32b0f" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::apply_nat_settings</definition>
+        <argsstring></argsstring>
+        <name>apply_nat_settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="760" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="760" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a89e7e5d848e9615d670475a78fbbe6c0" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::initial_subscribes_sent</definition>
+        <argsstring></argsstring>
+        <name>initial_subscribes_sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="761" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="761" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1af86cc7b01a54dddd82ebf90351a7e18c" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::bl_refresh</definition>
+        <argsstring></argsstring>
+        <name>bl_refresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="762" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="762" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1abf857ad900435f86135bd7ee8cb66d1d" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::preview_finished</definition>
+        <argsstring></argsstring>
+        <name>preview_finished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="764" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="764" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ad0042411925aa057e362ee92d0fa78d3" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::auto_net_state_mon</definition>
+        <argsstring></argsstring>
+        <name>auto_net_state_mon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="765" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a3195056ab7df8d76c1e0c436981fe82f" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::network_reachable</definition>
+        <argsstring></argsstring>
+        <name>network_reachable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="766" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a4f24e2f88c0e6d1e828766b2eb9ee6e8" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::network_reachable_to_be_notified</definition>
+        <argsstring></argsstring>
+        <name>network_reachable_to_be_notified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="767" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aeace0ae8adbd2036852ed6349dbaddd6" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::use_preview_window</definition>
+        <argsstring></argsstring>
+        <name>use_preview_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="768" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a52ad531e03ddb4e1758061504424d325" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCore::network_last_check</definition>
+        <argsstring></argsstring>
+        <name>network_last_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="770" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa964c7a3bbeb89b20ad5674c8b2238c2" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::network_last_status</definition>
+        <argsstring></argsstring>
+        <name>network_last_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="772" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="772" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a9aaa7531099595a134d715c537c1db9b" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::ringstream_autorelease</definition>
+        <argsstring></argsstring>
+        <name>ringstream_autorelease</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="773" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a714822978e676996a852bcfedbdd7756" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCore::pad[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="774" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a9855485a9cf689e7dda7e978ea5aa681" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _LinphoneCore::localip[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>localip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="775" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aa86703273d27a628476b89982670a03b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::device_rotation</definition>
+        <argsstring></argsstring>
+        <name>device_rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="776" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ab889ea80a90c4b3520e3efb008675ee0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCore::max_calls</definition>
+        <argsstring></argsstring>
+        <name>max_calls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="777" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aad187fb959c4d73e67718ae49a87d6a4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__tunnel_1gafac6fdea7804b750849d0df376b45052" kindref="member">LinphoneTunnel</ref> *</type>
+        <definition>LinphoneTunnel* _LinphoneCore::tunnel</definition>
+        <argsstring></argsstring>
+        <name>tunnel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="778" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a29b897410003cbe1386ec9c4c9549d0d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCore::device_id</definition>
+        <argsstring></argsstring>
+        <name>device_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="779" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ae2ba565c6465a23be524096e05a717ae" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::last_recv_msg_ids</definition>
+        <argsstring></argsstring>
+        <name>last_recv_msg_ids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="780" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a8b2e39e2dff4d5f963c2dffce8ddb362" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCore::chat_db_file</definition>
+        <argsstring></argsstring>
+        <name>chat_db_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="781" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1abf87c1fb984dade6b36f7d01139b26bf" prot="public" static="no" mutable="no">
+        <type>belle_http_provider_t *</type>
+        <definition>belle_http_provider_t* _LinphoneCore::http_provider</definition>
+        <argsstring></argsstring>
+        <name>http_provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="789" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="789" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a4ae2e8fef560afa3cb7aa7167c81e37f" prot="public" static="no" mutable="no">
+        <type>belle_tls_verify_policy_t *</type>
+        <definition>belle_tls_verify_policy_t* _LinphoneCore::http_verify_policy</definition>
+        <argsstring></argsstring>
+        <name>http_verify_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="790" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="790" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1aaf815b7566f762a757f7c4cb5f0665f4" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneCore::tones</definition>
+        <argsstring></argsstring>
+        <name>tones</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="791" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="791" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a5b75406f13df1bacf1d7ebe51e2d0da2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1gabe82a1a1ffc3d6b4e0b51a03028513b7" kindref="member">LinphoneReason</ref></type>
+        <definition>LinphoneReason _LinphoneCore::chat_deny_code</definition>
+        <argsstring></argsstring>
+        <name>chat_deny_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="792" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="792" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a8647c349baf9cece0f804a62f7326d68" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** _LinphoneCore::supported_formats</definition>
+        <argsstring></argsstring>
+        <name>supported_formats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="793" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1a9d3c774b46cc9e29f6cf716a4152c93a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+        <definition>LinphoneContent* _LinphoneCore::log_collection_upload_information</definition>
+        <argsstring></argsstring>
+        <name>log_collection_upload_information</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="794" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="794" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCore_1ad6261e9cdf45539f6e6637e1cd292918" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1ga1ca71386f318e4044967ddf32ac7aacb" kindref="member">LinphoneCoreVTable</ref> *</type>
+        <definition>LinphoneCoreVTable* _LinphoneCore::current_vtable</definition>
+        <argsstring></argsstring>
+        <name>current_vtable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="795" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="795" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="60">
+        <label>_LinphoneCoreVTable</label>
+        <link refid="struct__LinphoneCoreVTable"/>
+      </node>
+      <node id="59">
+        <label>_LinphoneCore</label>
+        <childnode refid="60" relation="usage">
+          <edgelabel>current_vtable</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>presence_model</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>video_policy</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>_LinphonePresenceModel</label>
+        <link refid="struct__LinphonePresenceModel"/>
+      </node>
+      <node id="62">
+        <label>_LinphoneVideoPolicy</label>
+        <link refid="struct__LinphoneVideoPolicy"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="708" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="707" bodyend="796"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneCore_1a8c505768efeaa37d714711b209f32b0f" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>apply_nat_settings</name></member>
+      <member refid="struct__LinphoneCore_1a31fcb0b35fdf29facd39997712d7c33d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>audio_bw</name></member>
+      <member refid="struct__LinphoneCore_1ad11ee4c37cb6182a5c0b02c812991d12" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>auth_info</name></member>
+      <member refid="struct__LinphoneCore_1ad0042411925aa057e362ee92d0fa78d3" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>auto_net_state_mon</name></member>
+      <member refid="struct__LinphoneCore_1a3b74ccff7767d47bfea342e9713ed0d7" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>autoreplier_conf</name></member>
+      <member refid="struct__LinphoneCore_1af86cc7b01a54dddd82ebf90351a7e18c" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>bl_refresh</name></member>
+      <member refid="struct__LinphoneCore_1a65aeb1a608ce958b966cd7918169aa67" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>bl_reqs</name></member>
+      <member refid="struct__LinphoneCore_1a6373256439f864cc34f31eaf1079e390" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>call_logs</name></member>
+      <member refid="struct__LinphoneCore_1a98761d4d8b0cc006f2f52aec0d793f8d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>calls</name></member>
+      <member refid="struct__LinphoneCore_1a8b2e39e2dff4d5f963c2dffce8ddb362" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>chat_db_file</name></member>
+      <member refid="struct__LinphoneCore_1a5b75406f13df1bacf1d7ebe51e2d0da2" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>chat_deny_code</name></member>
+      <member refid="struct__LinphoneCore_1adf03c4d54f83019521eb4285e660a1f7" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>chatrooms</name></member>
+      <member refid="struct__LinphoneCore_1ace8bde7de3a74ea3dec654f709e2c477" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>codecs_conf</name></member>
+      <member refid="struct__LinphoneCore_1a22d7005cf376356135d80095f337d0d6" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>conf_ctx</name></member>
+      <member refid="struct__LinphoneCore_1a3b6c116526dff5158fe63560dabdba73" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>config</name></member>
+      <member refid="struct__LinphoneCore_1af5b3bc1c71bb0100d0c2f6740b7b8f01" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>current_call</name></member>
+      <member refid="struct__LinphoneCore_1ad6261e9cdf45539f6e6637e1cd292918" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>current_vtable</name></member>
+      <member refid="struct__LinphoneCore_1a76e8bf7c69c20d9e3bc7e54c48b1521c" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>data</name></member>
+      <member refid="struct__LinphoneCore_1aa931d5b20852a8e9a12920b6d356ec76" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>default_profile</name></member>
+      <member refid="struct__LinphoneCore_1acf51126d0e173d01272004a98bf98eb4" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>default_proxy</name></member>
+      <member refid="struct__LinphoneCore_1a29b897410003cbe1386ec9c4c9549d0d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>device_id</name></member>
+      <member refid="struct__LinphoneCore_1aa86703273d27a628476b89982670a03b" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>device_rotation</name></member>
+      <member refid="struct__LinphoneCore_1a5dd89b76faa67dcf044e0212696d678c" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>dmfs_playing_start_time</name></member>
+      <member refid="struct__LinphoneCore_1a640b230296e6d33b1b8ee23c1b2bfac8" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>dyn_pt</name></member>
+      <member refid="struct__LinphoneCore_1a973e3bdcc3dba668499f3f6a114dc412" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>ecc</name></member>
+      <member refid="struct__LinphoneCore_1a3b0911b3b1932451548af6af0315d02d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>friends</name></member>
+      <member refid="struct__LinphoneCore_1a9b577b1b6c2205fb38a8cd8be728631b" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>hooks</name></member>
+      <member refid="struct__LinphoneCore_1abf87c1fb984dade6b36f7d01139b26bf" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>http_provider</name></member>
+      <member refid="struct__LinphoneCore_1a4ae2e8fef560afa3cb7aa7167c81e37f" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>http_verify_policy</name></member>
+      <member refid="struct__LinphoneCore_1a89e7e5d848e9615d670475a78fbbe6c0" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>initial_subscribes_sent</name></member>
+      <member refid="struct__LinphoneCore_1ae2ba565c6465a23be524096e05a717ae" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>last_recv_msg_ids</name></member>
+      <member refid="struct__LinphoneCore_1a9855485a9cf689e7dda7e978ea5aa681" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>localip</name></member>
+      <member refid="struct__LinphoneCore_1a9d3c774b46cc9e29f6cf716a4152c93a" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>log_collection_upload_information</name></member>
+      <member refid="struct__LinphoneCore_1a38cd11592ca13f7427b32976d84dc0be" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>max_call_logs</name></member>
+      <member refid="struct__LinphoneCore_1ab889ea80a90c4b3520e3efb008675ee0" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>max_calls</name></member>
+      <member refid="struct__LinphoneCore_1a363eedfd5860fc0938e1fe3f1a762cfb" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>minutes_away</name></member>
+      <member refid="struct__LinphoneCore_1afacd55fe68f0eba9c806822af1a9b148" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>missed_calls</name></member>
+      <member refid="struct__LinphoneCore_1a6b69abd67f3187a7325423552e26bf9d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>msevq</name></member>
+      <member refid="struct__LinphoneCore_1aa3ff570617522419e0ce19e9dd271244" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>net_conf</name></member>
+      <member refid="struct__LinphoneCore_1aa761d5998f07e530e21c40aa60fb4002" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>netup_time</name></member>
+      <member refid="struct__LinphoneCore_1a52ad531e03ddb4e1758061504424d325" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>network_last_check</name></member>
+      <member refid="struct__LinphoneCore_1aa964c7a3bbeb89b20ad5674c8b2238c2" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>network_last_status</name></member>
+      <member refid="struct__LinphoneCore_1a3195056ab7df8d76c1e0c436981fe82f" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>network_reachable</name></member>
+      <member refid="struct__LinphoneCore_1a4f24e2f88c0e6d1e828766b2eb9ee6e8" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>network_reachable_to_be_notified</name></member>
+      <member refid="struct__LinphoneCore_1a714822978e676996a852bcfedbdd7756" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>pad</name></member>
+      <member refid="struct__LinphoneCore_1a12c710f1953bf490d3dde70f45e91c80" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>payload_types</name></member>
+      <member refid="struct__LinphoneCore_1a85764105151f47e95921611629f1fa6b" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>play_file</name></member>
+      <member refid="struct__LinphoneCore_1aa2c808b99722a797eb477f0ba9df9ae4" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>presence_model</name></member>
+      <member refid="struct__LinphoneCore_1abf857ad900435f86135bd7ee8cb66d1d" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>preview_finished</name></member>
+      <member refid="struct__LinphoneCore_1a1d466f4537387677fdfec5777d0c45a3" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>preview_finished_cb</name></member>
+      <member refid="struct__LinphoneCore_1a3c7f879a4c019c4c1fbe6ee851d23b57" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>preview_window_id</name></member>
+      <member refid="struct__LinphoneCore_1a62e2fc3ff50df336558b8fff2b7bf347" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>previewstream</name></member>
+      <member refid="struct__LinphoneCore_1a1993a4c0ce62e357113a29e95002e5ad" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>prevtime</name></member>
+      <member refid="struct__LinphoneCore_1a1164d0d188b4c20d26a2e9862308a8be" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>queued_calls</name></member>
+      <member refid="struct__LinphoneCore_1a715f25b09cd27c5da5df4f99cf54a01c" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>rec_file</name></member>
+      <member refid="struct__LinphoneCore_1afbdff57917a2324e558b39419daf1d65" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>ringstream</name></member>
+      <member refid="struct__LinphoneCore_1a9aaa7531099595a134d715c537c1db9b" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>ringstream_autorelease</name></member>
+      <member refid="struct__LinphoneCore_1ae263e94b2153053c61f91039c2766c21" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>rtp_conf</name></member>
+      <member refid="struct__LinphoneCore_1a2ecdb1bd3390130148293c9c826e3a05" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>rtptf</name></member>
+      <member refid="struct__LinphoneCore_1ab0d442d8ee11036f5511259d25e60ac1" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>sal</name></member>
+      <member refid="struct__LinphoneCore_1aec68152e9ef9738ac052ad4672202e7b" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>sip_conf</name></member>
+      <member refid="struct__LinphoneCore_1a2145aa47b16d847c73dcba9fed714542" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>sound_conf</name></member>
+      <member refid="struct__LinphoneCore_1a8edebf487a63002abe2566ed44945a37" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>state</name></member>
+      <member refid="struct__LinphoneCore_1aaec56e8ea44a5259a104ddf7965c730a" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>subscribers</name></member>
+      <member refid="struct__LinphoneCore_1a8647c349baf9cece0f804a62f7326d68" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>supported_formats</name></member>
+      <member refid="struct__LinphoneCore_1aaf815b7566f762a757f7c4cb5f0665f4" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>tones</name></member>
+      <member refid="struct__LinphoneCore_1aad187fb959c4d73e67718ae49a87d6a4" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>tunnel</name></member>
+      <member refid="struct__LinphoneCore_1ab14ffc111e3021cf28041a036b2aae63" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>ui_conf</name></member>
+      <member refid="struct__LinphoneCore_1ac4e1fbab202b51d24acf3e122210c36c" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>use_files</name></member>
+      <member refid="struct__LinphoneCore_1aeace0ae8adbd2036852ed6349dbaddd6" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>use_preview_window</name></member>
+      <member refid="struct__LinphoneCore_1a023a8cce78dfd0da2c643b9d05b5729a" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>video_conf</name></member>
+      <member refid="struct__LinphoneCore_1a855467cd7ad8942990ea64cad9979c75" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>video_policy</name></member>
+      <member refid="struct__LinphoneCore_1a2d86e19355a94b999d6a5bd66cc07414" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>video_window_id</name></member>
+      <member refid="struct__LinphoneCore_1a524fca0528d400dc4a916705f2b2ef14" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>vtables</name></member>
+      <member refid="struct__LinphoneCore_1adbc7dabd5c16bc44b35895ab47f2bccb" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>wait_cb</name></member>
+      <member refid="struct__LinphoneCore_1a6e050e93aa3f839f0d430cf50ef5e302" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>wait_ctx</name></member>
+      <member refid="struct__LinphoneCore_1ae19ad946001df14370f52a2b2ae3c4ed" prot="public" virt="non-virtual"><scope>_LinphoneCore</scope><name>zrtp_secrets_cache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

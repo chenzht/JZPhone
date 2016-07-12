@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__BLReq" kind="struct" prot="public">
+    <compoundname>_BLReq</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__BLReq_1aaaa597fa492a018a0ffad203c88597d2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _BLReq::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="26" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__BLReq_1a174764943ce774bdf66003ccc00aece9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _BLReq::result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="27" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__BLReq_1acf96739b98b3b15010120f4788415b89" prot="public" static="no" mutable="no">
+        <type>SoupMessage *</type>
+        <definition>SoupMessage* _BLReq::msg</definition>
+        <argsstring></argsstring>
+        <name>msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="28" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__BLReq_1a5282db53c14f6d14b413ece40fb67fbf" prot="public" static="no" mutable="no">
+        <type>SoupSession *</type>
+        <definition>SoupSession* _BLReq::session</definition>
+        <argsstring></argsstring>
+        <name>session</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="29" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__BLReq_1a2095b6c46607026f651b3e9088828e62" prot="public" static="no" mutable="no">
+        <type>ortp_thread_t</type>
+        <definition>ortp_thread_t _BLReq::th</definition>
+        <argsstring></argsstring>
+        <name>th</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="30" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" line="25" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/sipwizard.c" bodystart="25" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct__BLReq_1acf96739b98b3b15010120f4788415b89" prot="public" virt="non-virtual"><scope>_BLReq</scope><name>msg</name></member>
+      <member refid="struct__BLReq_1a174764943ce774bdf66003ccc00aece9" prot="public" virt="non-virtual"><scope>_BLReq</scope><name>result</name></member>
+      <member refid="struct__BLReq_1a5282db53c14f6d14b413ece40fb67fbf" prot="public" virt="non-virtual"><scope>_BLReq</scope><name>session</name></member>
+      <member refid="struct__BLReq_1aaaa597fa492a018a0ffad203c88597d2" prot="public" virt="non-virtual"><scope>_BLReq</scope><name>status</name></member>
+      <member refid="struct__BLReq_1a2095b6c46607026f651b3e9088828e62" prot="public" virt="non-virtual"><scope>_BLReq</scope><name>th</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

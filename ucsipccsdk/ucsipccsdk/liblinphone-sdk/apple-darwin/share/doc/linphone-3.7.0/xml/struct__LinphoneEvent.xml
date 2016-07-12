@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneEvent" kind="struct" prot="public">
+    <compoundname>_LinphoneEvent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a23a659448928b49610b04736a5da05b7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1ga317c5125e3a75ae35564895024cf24f9" kindref="member">LinphoneSubscriptionDir</ref></type>
+        <definition>LinphoneSubscriptionDir _LinphoneEvent::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="800" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="800" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ac2db8b33e206b0bc6ffcafcc896d72ff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>LinphoneCore* _LinphoneEvent::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="801" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="801" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ac452d094d9725172dad9cea2fa235dd7" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneEvent::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="802" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="802" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ae788137e94173989b9d4ef428b1a4957" prot="public" static="no" mutable="no">
+        <type>SalCustomHeader *</type>
+        <definition>SalCustomHeader* _LinphoneEvent::send_custom_headers</definition>
+        <argsstring></argsstring>
+        <name>send_custom_headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="803" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="803" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a5b4b1227a72d5223c43bc672aaa5e9e1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1gae08ee010813d69b0bc487c704b174933" kindref="member">LinphoneSubscriptionState</ref></type>
+        <definition>LinphoneSubscriptionState _LinphoneEvent::subscription_state</definition>
+        <argsstring></argsstring>
+        <name>subscription_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="804" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="804" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a76fea6f4defe2ef5b04d25640c763b91" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1gafb440ee528090b514289e74320923ea2" kindref="member">LinphonePublishState</ref></type>
+        <definition>LinphonePublishState _LinphoneEvent::publish_state</definition>
+        <argsstring></argsstring>
+        <name>publish_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="805" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="805" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1aa9b7b4aa5bc742ad89e13146533312de" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneEvent::userdata</definition>
+        <argsstring></argsstring>
+        <name>userdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="806" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="806" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1aa9bee612450b025273ae1327102dd63a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneEvent::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="807" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a29c9ebd70c15760e51b1bb1d5a2fcea1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneEvent::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="808" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ab83693946e73af3d35f19a6049bc4fef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneEvent::expires</definition>
+        <argsstring></argsstring>
+        <name>expires</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="809" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="809" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1acedb68d06429788f96e42c050de9c71a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneEvent::terminating</definition>
+        <argsstring></argsstring>
+        <name>terminating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="810" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="810" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a23a0ffbcb3e45008993e627a2a141cc7" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneEvent::is_out_of_dialog_op</definition>
+        <argsstring></argsstring>
+        <name>is_out_of_dialog_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="811" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="811" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="799" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="799" bodyend="812"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneEvent_1a23a659448928b49610b04736a5da05b7" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>dir</name></member>
+      <member refid="struct__LinphoneEvent_1ab83693946e73af3d35f19a6049bc4fef" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>expires</name></member>
+      <member refid="struct__LinphoneEvent_1a23a0ffbcb3e45008993e627a2a141cc7" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>is_out_of_dialog_op</name></member>
+      <member refid="struct__LinphoneEvent_1ac2db8b33e206b0bc6ffcafcc896d72ff" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>lc</name></member>
+      <member refid="struct__LinphoneEvent_1a29c9ebd70c15760e51b1bb1d5a2fcea1" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>name</name></member>
+      <member refid="struct__LinphoneEvent_1ac452d094d9725172dad9cea2fa235dd7" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>op</name></member>
+      <member refid="struct__LinphoneEvent_1a76fea6f4defe2ef5b04d25640c763b91" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>publish_state</name></member>
+      <member refid="struct__LinphoneEvent_1aa9bee612450b025273ae1327102dd63a" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>refcnt</name></member>
+      <member refid="struct__LinphoneEvent_1ae788137e94173989b9d4ef428b1a4957" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>send_custom_headers</name></member>
+      <member refid="struct__LinphoneEvent_1a5b4b1227a72d5223c43bc672aaa5e9e1" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>subscription_state</name></member>
+      <member refid="struct__LinphoneEvent_1acedb68d06429788f96e42c050de9c71a" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>terminating</name></member>
+      <member refid="struct__LinphoneEvent_1aa9b7b4aa5bc742ad89e13146533312de" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>userdata</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
