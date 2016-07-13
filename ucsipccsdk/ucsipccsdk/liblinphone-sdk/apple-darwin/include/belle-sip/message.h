@@ -39,7 +39,7 @@ BELLESIP_EXPORT belle_sip_message_t* belle_sip_message_parse_raw (const char* bu
 
 
 BELLESIP_EXPORT int belle_sip_message_is_request(belle_sip_message_t *msg);
-BELLESIP_EXPORT belle_sip_request_t* belle_sip_request_new();
+BELLESIP_EXPORT belle_sip_request_t* belle_sip_request_new(void);
 BELLESIP_EXPORT belle_sip_request_t* belle_sip_request_parse(const char* raw);
 
 BELLESIP_EXPORT belle_sip_request_t* belle_sip_request_create(belle_sip_uri_t *requri, const char* method,
@@ -119,6 +119,9 @@ BELLESIP_EXPORT void belle_sip_message_remove_first(belle_sip_message_t *msg, co
 BELLESIP_EXPORT void belle_sip_message_remove_last(belle_sip_message_t *msg, const char *header_name);
 
 BELLESIP_EXPORT void belle_sip_message_remove_header(belle_sip_message_t *msg, const char *header_name);
+
+BELLESIP_EXPORT void belle_sip_message_remove_header_from_ptr(belle_sip_message_t *msg, belle_sip_header_t* header);
+
 
 BELLESIP_EXPORT char *belle_sip_message_to_string(belle_sip_message_t *msg);
 

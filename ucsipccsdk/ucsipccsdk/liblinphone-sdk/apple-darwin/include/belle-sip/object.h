@@ -21,6 +21,7 @@
 
 #include "belle-sip/defs.h"
 #include "belle-sip/utils.h"
+#include "belle-sip/list.h"
 
 /*
  * typedefs, macros and functions for object definition and manipulation.
@@ -127,7 +128,7 @@ typedef struct _belle_sip_object belle_sip_object_t;
 
 typedef void (*belle_sip_object_destroy_t)(belle_sip_object_t*);
 typedef void (*belle_sip_object_clone_t)(belle_sip_object_t* obj, const belle_sip_object_t *orig);
-typedef int (*belle_sip_object_marshal_t)(belle_sip_object_t* obj, char* buff, size_t buff_size, size_t *offset);
+typedef belle_sip_error_code (*belle_sip_object_marshal_t)(belle_sip_object_t* obj, char* buff, size_t buff_size, size_t *offset);
 typedef struct _belle_sip_object_vptr *(*belle_sip_object_get_vptr_t)(void);
 
 struct _belle_sip_object_vptr{
@@ -151,8 +152,8 @@ struct _belle_sip_object{
 	char* name;
 	struct weak_ref *weak_refs;
 	struct belle_sip_object_pool *pool;
-	struct _belle_sip_list *pool_iterator;
-	struct _belle_sip_list *data_store;
+	belle_sip_list_t *pool_iterator;
+	belle_sip_list_t *data_store;
 };
 
 
@@ -182,6 +183,8 @@ BELLESIP_EXPORT void belle_sip_object_enable_marshal_check(int enable);
 BELLESIP_EXPORT void belle_sip_object_enable_leak_detector(int enable);
 
 BELLESIP_EXPORT int belle_sip_object_get_object_count(void);
+
+BELLESIP_EXPORT void belle_sip_object_flush_active_objects(void);
 
 BELLESIP_EXPORT void belle_sip_object_dump_active_objects(void);
 
@@ -223,11 +226,12 @@ BELLESIP_EXPORT void belle_sip_object_weak_unref(void *obj, belle_sip_object_des
 /**
  * Set object name.
 **/
-void belle_sip_object_set_name(belle_sip_object_t *obj,const char* name);
+BELLESIP_EXPORT void belle_sip_object_set_name(belle_sip_object_t *obj,const char* name);
+
 /**
  * Get object name.
 **/
-const char* belle_sip_object_get_name(belle_sip_object_t *obj);
+BELLESIP_EXPORT const char* belle_sip_object_get_name(belle_sip_object_t *obj);
 
 /*copy the content of ref object to new object, for the part they have in common in their inheritence diagram*/
 void _belle_sip_object_copy(belle_sip_object_t *newobj, const belle_sip_object_t *ref);
@@ -324,7 +328,7 @@ char *belle_sip_object_describe(void *obj);
 /**
  * Returns a string describing the inheritance diagram and implemented interfaces of an object given its type name.
 **/
-char *belle_sip_object_describe_type_from_name(const char *name);
+BELLESIP_EXPORT char *belle_sip_object_describe_type_from_name(const char *name);
 
 BELLESIP_EXPORT void *belle_sip_object_cast(belle_sip_object_t *obj, belle_sip_type_id_t id, const char *castname, const char *file, int fileno);
 
@@ -436,7 +440,7 @@ BELLE_SIP_BEGIN_DECLS
 **/
 BELLESIP_EXPORT belle_sip_object_pool_t * belle_sip_object_pool_push(void);
 
-belle_sip_object_pool_t * belle_sip_object_pool_get_current();
+belle_sip_object_pool_t * belle_sip_object_pool_get_current(void);
 int belle_sip_object_pool_cleanable(belle_sip_object_pool_t *pool);
 void belle_sip_object_pool_clean(belle_sip_object_pool_t *obj);
 

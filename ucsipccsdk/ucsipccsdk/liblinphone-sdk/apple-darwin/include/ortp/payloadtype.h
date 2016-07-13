@@ -44,13 +44,17 @@ extern "C"{
 #define	PAYLOAD_TYPE_USER_FLAG_1 (1<<5)
 #define	PAYLOAD_TYPE_USER_FLAG_2 (1<<6)
 #define	PAYLOAD_TYPE_USER_FLAG_3 (1<<7)
+#define	PAYLOAD_TYPE_USER_FLAG_4 (1<<8)
 /* ask for more if you need*/
+
+#define PAYLOAD_TYPE_FLAG_CAN_RECV PAYLOAD_TYPE_USER_FLAG_1
+#define PAYLOAD_TYPE_FLAG_CAN_SEND PAYLOAD_TYPE_USER_FLAG_2
 
 #define PAYLOAD_AUDIO_CONTINUOUS 0
 #define PAYLOAD_AUDIO_PACKETIZED 1
 #define PAYLOAD_VIDEO 2
-#define PAYLOAD_TEXT 4
-#define PAYLOAD_OTHER 3  /* ?? */
+#define PAYLOAD_TEXT 3
+#define PAYLOAD_OTHER 4  /* ?? */
 
 #define PAYLOAD_TYPE_AVPF_NONE 0
 #define PAYLOAD_TYPE_AVPF_FIR (1 << 0)
@@ -60,6 +64,9 @@ extern "C"{
 
 struct _PayloadTypeAvpfParams {
 	unsigned char features; /**< A bitmask of PAYLOAD_TYPE_AVPF_* macros. */
+	bool_t rpsi_compatibility; /*< Linphone uses positive feeback for RPSI. However first versions handling
+		AVPF wrongly declared RPSI as negative feedback, so this is kept for compatibility
+		with these versions but will probably be removed at some point in time. */
 	uint16_t trr_interval; /**< The interval in milliseconds between regular RTCP packets. */
 };
 
@@ -93,7 +100,7 @@ typedef struct _PayloadTypeAvpfParams PayloadTypeAvpfParams;
 
 
 ORTP_PUBLIC PayloadType *payload_type_new(void);
-ORTP_PUBLIC PayloadType *payload_type_clone(PayloadType *payload);
+ORTP_PUBLIC PayloadType *payload_type_clone(const PayloadType *payload);
 ORTP_PUBLIC char *payload_type_get_rtpmap(PayloadType *pt);
 ORTP_PUBLIC void payload_type_destroy(PayloadType *pt);
 ORTP_PUBLIC void payload_type_set_recv_fmtp(PayloadType *pt, const char *fmtp);
@@ -124,6 +131,7 @@ ORTP_VAR_PUBLIC PayloadType payload_type_lpc1016;
 ORTP_VAR_PUBLIC PayloadType payload_type_g729;
 ORTP_VAR_PUBLIC PayloadType payload_type_g7231;
 ORTP_VAR_PUBLIC PayloadType payload_type_g7221;
+ORTP_VAR_PUBLIC PayloadType payload_type_cn;
 ORTP_VAR_PUBLIC PayloadType payload_type_g726_40;
 ORTP_VAR_PUBLIC PayloadType payload_type_g726_32;
 ORTP_VAR_PUBLIC PayloadType payload_type_g726_24;
@@ -156,6 +164,8 @@ ORTP_VAR_PUBLIC PayloadType payload_type_aaceld_48k;
 ORTP_VAR_PUBLIC PayloadType payload_type_opus;
 ORTP_VAR_PUBLIC PayloadType payload_type_isac;
 ORTP_VAR_PUBLIC PayloadType payload_type_gsm_efr;
+ORTP_VAR_PUBLIC PayloadType payload_type_codec2;
+ORTP_VAR_PUBLIC PayloadType payload_type_bv16;
 
 /* video */
 ORTP_VAR_PUBLIC PayloadType payload_type_mpv;

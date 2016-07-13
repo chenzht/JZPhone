@@ -62,6 +62,13 @@ BELLESIP_EXPORT unsigned char belle_sip_stack_dns_srv_enabled(const belle_sip_st
 BELLESIP_EXPORT void belle_sip_stack_enable_dns_srv(belle_sip_stack_t *stack, unsigned char enable);
 
 /**
+ * Override system's DNS servers used for DNS resolving by app-supplied list of dns servers.
+ * @param stack the stack
+ * @param servers a list of char*. It is copied internally.
+**/
+BELLESIP_EXPORT void belle_sip_stack_set_dns_servers(belle_sip_stack_t *stack, const belle_sip_list_t *servers);
+
+/**
  * Can be used to simulate network transmission delays, for tests.
 **/
 BELLESIP_EXPORT void belle_sip_stack_set_tx_delay(belle_sip_stack_t *stack, int delay_ms);
@@ -139,16 +146,27 @@ BELLESIP_EXPORT int belle_sip_stack_get_default_dscp(belle_sip_stack_t *stack);
 **/
 BELLESIP_EXPORT int belle_sip_stack_tls_available(belle_sip_stack_t *stack);
 
+/**
+ * Returns TRUE if the content encoding support has been compiled in, FALSE otherwise.
+**/
+BELLESIP_EXPORT int belle_sip_stack_content_encoding_available(belle_sip_stack_t *stack, const char *content_encoding);
+
 /*
  * returns timer config for this stack
- * */
+**/
 BELLESIP_EXPORT const belle_sip_timer_config_t *belle_sip_stack_get_timer_config(const belle_sip_stack_t *stack);
 
 /*
  *
  * set sip timer config to be used for this stack
- * */
+**/
 BELLESIP_EXPORT void belle_sip_stack_set_timer_config(belle_sip_stack_t *stack, const belle_sip_timer_config_t *timer_config);
+
+BELLESIP_EXPORT void belle_sip_stack_set_http_proxy_host(belle_sip_stack_t *stack, const char* proxy_addr);
+BELLESIP_EXPORT void belle_sip_stack_set_http_proxy_port(belle_sip_stack_t *stack, int port);
+BELLESIP_EXPORT const char *belle_sip_stack_get_http_proxy_host(const belle_sip_stack_t *stack);
+BELLESIP_EXPORT int belle_sip_stack_get_http_proxy_port(const belle_sip_stack_t *stack);
+
 
 BELLE_SIP_END_DECLS
 

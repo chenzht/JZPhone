@@ -72,7 +72,7 @@ NSString *const kLinphoneNotifyReceived = @"LinphoneNotifyReceived";
 
 const int kLinphoneAudioVbrCodecDefaultBitrate=36; /*you can override this from linphonerc or linphonerc-factory*/
 
-extern void libmsilbc_init(void);
+//extern void libmsilbc_init(void);
 extern void libmsamr_init(void);
 extern void libmsx264_init(void);
 extern void libmsopenh264_init(void);
@@ -347,12 +347,10 @@ static int check_should_migrate_images(void* data ,int argc,char** argv,char** c
 	NSString *newDbPath = [LinphoneManager documentFile:kLinphoneInternalChatDBFilename];
 	BOOL shouldMigrate  = [[NSFileManager defaultManager] fileExistsAtPath:oldDbPath];
 	BOOL shouldMigrateImages = FALSE;
-	LinphoneProxyConfig* default_proxy;
+	LinphoneProxyConfig* default_proxy = linphone_core_get_default_proxy_config(lc);
 	const char* identity = NULL;
 	BOOL migrated = FALSE;
 	char* attach_stmt = NULL;
-
-	linphone_core_get_default_proxy(lc, &default_proxy);
 
 
 	if( sqlite3_open([newDbPath UTF8String], &newDb) != SQLITE_OK) {
@@ -544,7 +542,7 @@ static void dump_section(const char* section, void* data){
 
 //generic log handler for debug version
 void linphone_iphone_log_handler(int lev, const char *fmt, va_list args){
-	NSString* format = [[NSString alloc] initWithUTF8String:fmt];
+//	NSString* format = [[NSString alloc] initWithUTF8String:fmt];
 //	NSLogv(format, args);
 //	NSString* formatedString = [[NSString alloc] initWithFormat:format arguments:args];
 //
@@ -560,7 +558,7 @@ void linphone_iphone_log_handler(int lev, const char *fmt, va_list args){
 //    });
 //
 //	[formatedString release];
-	[format release];
+//	[format release];
 }
 
 //Error/warning log handler
@@ -1158,8 +1156,7 @@ void networkReachabilityCallBack(SCNetworkReachabilityRef target, SCNetworkReach
 	SCNetworkReachabilityFlags networkDownFlags=kSCNetworkReachabilityFlagsConnectionRequired |kSCNetworkReachabilityFlagsConnectionOnTraffic | kSCNetworkReachabilityFlagsConnectionOnDemand;
 
 	if (theLinphoneCore != nil) {
-		LinphoneProxyConfig* proxy;
-		linphone_core_get_default_proxy(theLinphoneCore, &proxy);
+		LinphoneProxyConfig* proxy = linphone_core_get_default_proxy_config(theLinphoneCore);
 
 		struct NetworkReachabilityContext* ctx = nilCtx ? ((struct NetworkReachabilityContext*)nilCtx) : 0;
 		if ((flags == 0) || (flags & networkDownFlags)) {
@@ -1503,7 +1500,7 @@ static BOOL libStarted = FALSE;
 
     ms_init(); // Need to initialize mediastreamer2 before loading the plugins
 
-    libmsilbc_init();
+//    libmsilbc_init();
 #if defined (HAVE_SILK)
     libmssilk_init();
 #endif
@@ -1524,7 +1521,7 @@ static BOOL libStarted = FALSE;
     /*to make sure we don't loose debug trace*/
     if ([self lpConfigBoolForKey:@"debugenable_preference"]) {
         linphone_core_enable_logs_with_cb((OrtpLogFunc)linphone_iphone_log_handler);
-        ortp_set_log_level_mask(ORTP_DEBUG|ORTP_MESSAGE|ORTP_WARNING|ORTP_ERROR|ORTP_FATAL);
+        ortp_set_log_level_mask("", ORTP_DEBUG|ORTP_MESSAGE|ORTP_WARNING|ORTP_ERROR|ORTP_FATAL);
 		/*must be done before creating linphone core to get its traces too*/
     }
 	linphone_core_set_log_collection_path([[LinphoneManager cacheDirectory] UTF8String]);
@@ -1938,10 +1935,11 @@ static void audioRouteChangeListenerCallback (
 	}
 	[callCenter release];
 
-	LinphoneProxyConfig* proxyCfg;
+	
 	//get default proxy
-	linphone_core_get_default_proxy(theLinphoneCore,&proxyCfg);
-	LinphoneCallParams* lcallParams = linphone_core_create_default_call_parameters(theLinphoneCore);
+    LinphoneCall* call=NULL;
+	LinphoneProxyConfig* proxyCfg = linphone_core_get_default_proxy_config(theLinphoneCore);
+	LinphoneCallParams* lcallParams = linphone_core_create_call_params(theLinphoneCore, call);
 	if([self lpConfigBoolForKey:@"edge_opt_preference"]) {
 		bool low_bandwidth = self.network == network_2g;
 		if(low_bandwidth) {
@@ -1949,7 +1947,7 @@ static void audioRouteChangeListenerCallback (
 		}
 		linphone_call_params_enable_low_bandwidth(lcallParams, low_bandwidth);
 	}
-	LinphoneCall* call=NULL;
+	
 
     BOOL addressIsASCII = [address canBeConvertedToEncoding:[NSString defaultCStringEncoding]];
 
@@ -2023,8 +2021,7 @@ static void audioRouteChangeListenerCallback (
     if(apushNotificationToken != nil) {
         pushNotificationToken = [apushNotificationToken retain];
     }
-    LinphoneProxyConfig *cfg=nil;
-    linphone_core_get_default_proxy(theLinphoneCore, &cfg);
+    LinphoneProxyConfig *cfg = linphone_core_get_default_proxy_config(theLinphoneCore);
     if (cfg ) {
         linphone_proxy_config_edit(cfg);
         [self configurePushTokenForProxyConfig: cfg];
@@ -2086,15 +2083,15 @@ static void audioRouteChangeListenerCallback (
 
 + (int)unreadMessageCount {
     int count = 0;
-    MSList* rooms = linphone_core_get_chat_rooms([LinphoneManager getLc]);
-    MSList* item = rooms;
-    while (item) {
-        LinphoneChatRoom* room = (LinphoneChatRoom*)item->data;
-        if( room ){
-            count += linphone_chat_room_get_unread_messages_count(room);
-        }
-        item = item->next;
-    }
+//    MSList* rooms = linphone_core_get_chat_rooms([LinphoneManager getLc]);
+//    MSList* item = rooms;
+//    while (item) {
+//        LinphoneChatRoom* room = (LinphoneChatRoom*)item->data;
+//        if( room ){
+//            count += linphone_chat_room_get_unread_messages_count(room);
+//        }
+//        item = item->next;
+//    }
 
     return count;
 }
@@ -2144,7 +2141,7 @@ static void audioRouteChangeListenerCallback (
 -(void)setLogsEnabled:(BOOL)enabled {
 	if (enabled) {
 		linphone_core_enable_logs_with_cb((OrtpLogFunc)linphone_iphone_log_handler);
-		ortp_set_log_level_mask(ORTP_DEBUG|ORTP_MESSAGE|ORTP_WARNING|ORTP_ERROR|ORTP_FATAL);
+		ortp_set_log_level_mask("", ORTP_DEBUG|ORTP_MESSAGE|ORTP_WARNING|ORTP_ERROR|ORTP_FATAL);
 		linphone_core_enable_log_collection(enabled);
 	} else {
 		linphone_core_enable_log_collection(enabled);
@@ -2288,8 +2285,7 @@ static void audioRouteChangeListenerCallback (
 -(NSString*) contactFilter {
 	NSString* filter=@"*";
 	if ( [self lpConfigBoolForKey:@"contact_filter_on_default_domain"]) {
-		LinphoneProxyConfig* proxy_cfg;
-		linphone_core_get_default_proxy(theLinphoneCore, &proxy_cfg);
+		LinphoneProxyConfig* proxy_cfg = linphone_core_get_default_proxy_config(theLinphoneCore);
 		if (proxy_cfg && linphone_proxy_config_get_addr(proxy_cfg)) {
 			return [NSString stringWithCString:linphone_proxy_config_get_domain(proxy_cfg)
 									  encoding:[NSString defaultCStringEncoding]];

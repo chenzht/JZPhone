@@ -54,7 +54,7 @@ ORTP_VAR_PUBLIC RtpProfile av_profile;
 ORTP_PUBLIC void rtp_profile_set_payload(RtpProfile *prof, int idx, PayloadType *pt);
 
 /**
- *	Set payload type number @index unassigned in the profile.
+ *	Set payload type number \a index unassigned in the profile.
  *
  *@param profile an RTP profile
  *@param index	the payload type number
@@ -65,13 +65,13 @@ ORTP_PUBLIC void rtp_profile_set_payload(RtpProfile *prof, int idx, PayloadType 
 /* I prefer have this function inlined because it is very often called in the code */
 /**
  *
- *	Gets the payload description of the payload type @index in the profile.
+ *	Gets the payload description of the payload type \a index in the profile.
  *
- *@param profile an RTP profile (a #RtpProfile object)
- *@param index	the payload type number
+ *@param prof an RTP profile (a #_RtpProfile object)
+ *@param idx	the payload type number
  *@return the payload description (a PayloadType object)
 **/
-static ORTP_INLINE PayloadType * rtp_profile_get_payload(RtpProfile *prof, int idx){
+static ORTP_INLINE PayloadType * rtp_profile_get_payload(const RtpProfile *prof, int idx){
 	if (idx<0 || idx>=RTP_PROFILE_MAX_PAYLOADS) {
 		return NULL;
 	}
@@ -81,7 +81,8 @@ ORTP_PUBLIC void rtp_profile_clear_all(RtpProfile *prof);
 ORTP_PUBLIC void rtp_profile_set_name(RtpProfile *prof, const char *name);
 ORTP_PUBLIC PayloadType * rtp_profile_get_payload_from_mime(RtpProfile *profile,const char *mime);
 ORTP_PUBLIC PayloadType * rtp_profile_get_payload_from_rtpmap(RtpProfile *profile, const char *rtpmap);
-ORTP_PUBLIC int rtp_profile_get_payload_number_from_mime(RtpProfile *profile,const char *mime);
+ORTP_PUBLIC int rtp_profile_get_payload_number_from_mime(RtpProfile *profile, const char *mime);
+ORTP_PUBLIC int rtp_profile_get_payload_number_from_mime_and_flag(RtpProfile *profile, const char *mime, int flag);
 ORTP_PUBLIC int rtp_profile_get_payload_number_from_rtpmap(RtpProfile *profile, const char *rtpmap);
 ORTP_PUBLIC int rtp_profile_find_payload_number(RtpProfile *prof,const char *mime,int rate, int channels);
 ORTP_PUBLIC PayloadType * rtp_profile_find_payload(RtpProfile *prof,const char *mime,int rate, int channels);

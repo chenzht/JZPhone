@@ -29,7 +29,9 @@ extern "C"{
 **/
 typedef enum _MSFormatType{
 	MSAudio,
-	MSVideo
+	MSVideo,
+	MSText,
+	MSUnknownMedia
 }MSFormatType;
 
 /**
@@ -63,6 +65,8 @@ struct _MSFmtDescriptor{
 typedef struct _MSFmtDescriptor MSFmtDescriptor;
 
 MS2_PUBLIC const char *ms_fmt_descriptor_to_string(const MSFmtDescriptor *orig);
+
+MS2_PUBLIC bool_t ms_fmt_descriptor_equals(const MSFmtDescriptor *fmt1, const MSFmtDescriptor *fmt2);
 
 
 #ifdef __cplusplus

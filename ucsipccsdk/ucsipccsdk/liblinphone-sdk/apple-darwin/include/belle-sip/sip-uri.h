@@ -29,7 +29,7 @@ BELLE_SIP_BEGIN_DECLS
 /**
  *
  */
-BELLESIP_EXPORT belle_sip_uri_t* belle_sip_uri_new();
+BELLESIP_EXPORT belle_sip_uri_t* belle_sip_uri_new(void);
 
 /**
  *
@@ -219,8 +219,11 @@ BELLESIP_EXPORT int belle_sip_uri_check_components_from_request_uri(const belle_
  */
 BELLESIP_EXPORT int belle_sip_uri_check_components_from_context(const belle_sip_uri_t* uri,const char* method,const char* header_name);
 BELLE_SIP_END_DECLS
+#ifndef BELLE_SIP_USE_STL
+#define BELLE_SIP_USE_STL 1
+#endif
 
-#if defined(__cplusplus) && defined(BELLE_SIP_USE_STL)
+#if __cplusplus >= 201103L && BELLE_SIP_USE_STL
 #include <ostream>
 inline   std::ostream&
 operator<<( std::ostream& __os, const belle_sip_uri_t* uri)
@@ -230,6 +233,43 @@ operator<<( std::ostream& __os, const belle_sip_uri_t* uri)
 	belle_sip_free(uri_as_string);
 	return __os;
 }
+namespace std {
+	template <> struct hash<const belle_sip_uri_t*> {
+		size_t operator()(const belle_sip_uri_t *x ) const {
+			hash<string> H;
+			size_t h=0;
+			if (belle_sip_uri_get_user(x))
+				h = H(belle_sip_uri_get_user(x));
+			if (belle_sip_uri_get_host(x))
+				h ^=H(belle_sip_uri_get_host(x));
+			if (belle_sip_uri_get_port(x)>0) {
+				std::hash<int> H2;
+				h ^=H2(belle_sip_uri_get_port(x));
+			}
+			if (belle_sip_uri_get_transport_param(x)) {
+				h ^=H(belle_sip_uri_get_transport_param(x));
+			}
+			if (belle_sip_uri_is_secure(x))
+				h+=1;
+	
+			return h;
+		}
+	};
+}
+
+#include <functional>
+
+namespace bellesip {
+
+struct UriComparator : public std::binary_function<belle_sip_uri_t*, belle_sip_uri_t*, bool> {
+	bool operator()(const belle_sip_uri_t* lhs, const belle_sip_uri_t* rhs) const {
+		return belle_sip_uri_equals(lhs,rhs);
+	}
+};
+}
+
+
+
 #endif
 
 #endif  /*BELLE_SIP_URI_H_*/

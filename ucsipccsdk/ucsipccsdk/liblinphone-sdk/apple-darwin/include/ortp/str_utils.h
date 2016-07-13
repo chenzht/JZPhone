@@ -44,6 +44,7 @@ typedef struct ortp_recv_addr {
 		struct in_addr ipi_addr;
 		struct in6_addr ipi6_addr;
 	} addr;
+	unsigned short port;
 } ortp_recv_addr_t;
 
 typedef struct msgb
@@ -59,9 +60,9 @@ typedef struct msgb
 #if defined(ORTP_TIMESTAMP)
 	struct timeval timestamp;
 #endif
-	ortp_recv_addr_t recv_addr;
-	struct sockaddr_storage src_addr; /*source address incoming packet used by simulator*/
-	socklen_t src_addrlen; /*source address incoming packet length used by simulator*/
+	ortp_recv_addr_t recv_addr; /*contains the destination address of incoming packets, used for ICE processing*/
+	struct sockaddr_storage net_addr; /*source address of incoming packet, or dest address of outgoing packet, used only by simulator and modifiers*/
+	socklen_t net_addrlen; /*source (dest) address of incoming (outgoing) packet length used by simulator and modifiers*/
 	uint8_t ttl_or_hl;
 } mblk_t;
 
@@ -156,6 +157,29 @@ typedef struct _msgb_allocator{
 ORTP_PUBLIC void msgb_allocator_init(msgb_allocator_t *pa);
 ORTP_PUBLIC mblk_t *msgb_allocator_alloc(msgb_allocator_t *pa, size_t size);
 ORTP_PUBLIC void msgb_allocator_uninit(msgb_allocator_t *pa);
+
+/**
+ * Utility object to determine a maximum or minimum (but not both at the same
+ * time), of a signal during a sliding period of time.
+ */
+typedef struct _ortp_extremum{
+	float current_extremum;
+	float last_stable;
+	uint64_t extremum_time;
+	int period;
+}ortp_extremum;
+
+ORTP_PUBLIC void ortp_extremum_reset(ortp_extremum *obj);
+ORTP_PUBLIC void ortp_extremum_init(ortp_extremum *obj, int period);
+ORTP_PUBLIC void ortp_extremum_record_min(ortp_extremum *obj, uint64_t curtime, float value);
+ORTP_PUBLIC void ortp_extremum_record_max(ortp_extremum *obj, uint64_t curtime, float value);
+ORTP_PUBLIC float ortp_extremum_get_current(ortp_extremum *obj);
+/**
+ * Unlike ortp_extremum_get_current() which can be very fluctuating, ortp_extremum_get_previous() returns the extremum found for the previous period.
+**/
+ORTP_PUBLIC float ortp_extremum_get_previous(ortp_extremum *obj);
+
+ORTP_PUBLIC void ortp_recvaddr_to_sockaddr(ortp_recv_addr_t *recvaddr, struct sockaddr *addr, socklen_t *socklen);
 
 #ifdef __cplusplus
 }

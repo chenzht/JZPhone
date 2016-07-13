@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0B59F41D35E6020008841E /* libbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E51D35E6020008841E /* libbcg729.a */; };
+		AB0B59F51D35E6020008841E /* libbctoolbox-tester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E61D35E6020008841E /* libbctoolbox-tester.a */; };
+		AB0B59F61D35E6020008841E /* libbctoolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E71D35E6020008841E /* libbctoolbox.a */; };
+		AB0B59F71D35E6020008841E /* libbcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E81D35E6020008841E /* libbcunit.a */; };
+		AB0B59F81D35E6020008841E /* libbelcard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E91D35E6020008841E /* libbelcard.a */; };
+		AB0B59F91D35E6020008841E /* libbelr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59EA1D35E6020008841E /* libbelr.a */; };
+		AB0B59FA1D35E6020008841E /* libbv16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59EB1D35E6020008841E /* libbv16.a */; };
+		AB0B59FB1D35E6020008841E /* libcorec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59EC1D35E6020008841E /* libcorec.a */; };
+		AB0B59FC1D35E6020008841E /* libebml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59ED1D35E6020008841E /* libebml2.a */; };
+		AB0B59FD1D35E6020008841E /* libmatroska2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59EE1D35E6020008841E /* libmatroska2.a */; };
+		AB0B59FE1D35E6020008841E /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59EF1D35E6020008841E /* libmbedcrypto.a */; };
+		AB0B59FF1D35E6020008841E /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59F01D35E6020008841E /* libmbedtls.a */; };
+		AB0B5A001D35E6020008841E /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59F11D35E6020008841E /* libmbedx509.a */; };
+		AB0B5A011D35E6020008841E /* libvo-amrwbenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59F21D35E6020008841E /* libvo-amrwbenc.a */; };
+		AB0B5A021D35E6020008841E /* libmswebrtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59F31D35E6020008841E /* libmswebrtc.a */; };
 		ABB900701D23878D00ED431E /* ColorSpaceUtilites.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB900661D23878D00ED431E /* ColorSpaceUtilites.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ABB900711D23878D00ED431E /* FastAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB900691D23878D00ED431E /* FastAddressBook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ABB900721D23878D00ED431E /* LinphoneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9006B1D23878D00ED431E /* LinphoneManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -19,7 +34,6 @@
 		ABB900D21D23889C00ED431E /* libbzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B01D23889C00ED431E /* libbzrtp.a */; };
 		ABB900D31D23889C00ED431E /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B11D23889C00ED431E /* libcunit.a */; };
 		ABB900D41D23889C00ED431E /* libgsm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B21D23889C00ED431E /* libgsm.a */; };
-		ABB900D51D23889C00ED431E /* libilbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B31D23889C00ED431E /* libilbc.a */; };
 		ABB900D61D23889C00ED431E /* liblinphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B41D23889C00ED431E /* liblinphone.a */; };
 		ABB900D71D23889C00ED431E /* liblinphonetester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B51D23889C00ED431E /* liblinphonetester.a */; };
 		ABB900D81D23889C00ED431E /* libmediastreamer_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900B61D23889C00ED431E /* libmediastreamer_base.a */; };
@@ -29,8 +43,6 @@
 		ABB900DC1D23889C00ED431E /* libopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BA1D23889C00ED431E /* libopenh264.a */; };
 		ABB900DD1D23889C00ED431E /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BB1D23889C00ED431E /* libopus.a */; };
 		ABB900DE1D23889C00ED431E /* libortp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BC1D23889C00ED431E /* libortp.a */; };
-		ABB900DF1D23889C00ED431E /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BD1D23889C00ED431E /* libpolarssl.a */; };
-		ABB900E01D23889C00ED431E /* libSKP_SILK_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BE1D23889C00ED431E /* libSKP_SILK_SDK.a */; };
 		ABB900E11D23889C00ED431E /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900BF1D23889C00ED431E /* libspeex.a */; };
 		ABB900E21D23889C00ED431E /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C01D23889C00ED431E /* libspeexdsp.a */; };
 		ABB900E31D23889C00ED431E /* libsrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C11D23889C00ED431E /* libsrtp.a */; };
@@ -39,10 +51,8 @@
 		ABB900E61D23889C00ED431E /* libtunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C41D23889C00ED431E /* libtunnel.a */; };
 		ABB900E71D23889C00ED431E /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C51D23889C00ED431E /* libvpx.a */; };
 		ABB900E81D23889C00ED431E /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C61D23889C00ED431E /* libx264.a */; };
-		ABB900E91D23889C00ED431E /* libxml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C71D23889C00ED431E /* libxml2.a */; };
 		ABB900EA1D23889C00ED431E /* libmsamr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C81D23889C00ED431E /* libmsamr.a */; };
 		ABB900EB1D23889C00ED431E /* libmsbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900C91D23889C00ED431E /* libmsbcg729.a */; };
-		ABB900EC1D23889C00ED431E /* libmsilbc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CA1D23889C00ED431E /* libmsilbc.a */; };
 		ABB900ED1D23889C00ED431E /* libmsopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CB1D23889C00ED431E /* libmsopenh264.a */; };
 		ABB900EE1D23889C00ED431E /* libmssilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CC1D23889C00ED431E /* libmssilk.a */; };
 		ABB900EF1D23889C00ED431E /* libmsx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB900CD1D23889C00ED431E /* libmsx264.a */; };
@@ -70,6 +80,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB0B59E51D35E6020008841E /* libbcg729.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbcg729.a; path = "../liblinphone-sdk/apple-darwin/lib/libbcg729.a"; sourceTree = "<group>"; };
+		AB0B59E61D35E6020008841E /* libbctoolbox-tester.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libbctoolbox-tester.a"; path = "../liblinphone-sdk/apple-darwin/lib/libbctoolbox-tester.a"; sourceTree = "<group>"; };
+		AB0B59E71D35E6020008841E /* libbctoolbox.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbctoolbox.a; path = "../liblinphone-sdk/apple-darwin/lib/libbctoolbox.a"; sourceTree = "<group>"; };
+		AB0B59E81D35E6020008841E /* libbcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbcunit.a; path = "../liblinphone-sdk/apple-darwin/lib/libbcunit.a"; sourceTree = "<group>"; };
+		AB0B59E91D35E6020008841E /* libbelcard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbelcard.a; path = "../liblinphone-sdk/apple-darwin/lib/libbelcard.a"; sourceTree = "<group>"; };
+		AB0B59EA1D35E6020008841E /* libbelr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbelr.a; path = "../liblinphone-sdk/apple-darwin/lib/libbelr.a"; sourceTree = "<group>"; };
+		AB0B59EB1D35E6020008841E /* libbv16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbv16.a; path = "../liblinphone-sdk/apple-darwin/lib/libbv16.a"; sourceTree = "<group>"; };
+		AB0B59EC1D35E6020008841E /* libcorec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcorec.a; path = "../liblinphone-sdk/apple-darwin/lib/libcorec.a"; sourceTree = "<group>"; };
+		AB0B59ED1D35E6020008841E /* libebml2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libebml2.a; path = "../liblinphone-sdk/apple-darwin/lib/libebml2.a"; sourceTree = "<group>"; };
+		AB0B59EE1D35E6020008841E /* libmatroska2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmatroska2.a; path = "../liblinphone-sdk/apple-darwin/lib/libmatroska2.a"; sourceTree = "<group>"; };
+		AB0B59EF1D35E6020008841E /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../liblinphone-sdk/apple-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
+		AB0B59F01D35E6020008841E /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../liblinphone-sdk/apple-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
+		AB0B59F11D35E6020008841E /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../liblinphone-sdk/apple-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
+		AB0B59F21D35E6020008841E /* libvo-amrwbenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libvo-amrwbenc.a"; path = "../liblinphone-sdk/apple-darwin/lib/libvo-amrwbenc.a"; sourceTree = "<group>"; };
+		AB0B59F31D35E6020008841E /* libmswebrtc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmswebrtc.a; path = "../liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins/libmswebrtc.a"; sourceTree = "<group>"; };
 		ABB900591D23872000ED431E /* libucsipccsdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libucsipccsdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB900661D23878D00ED431E /* ColorSpaceUtilites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpaceUtilites.m; sourceTree = "<group>"; };
 		ABB900671D23878D00ED431E /* ColorSpaceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpaceUtilities.h; sourceTree = "<group>"; };
@@ -130,6 +155,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0B59F41D35E6020008841E /* libbcg729.a in Frameworks */,
+				AB0B59F51D35E6020008841E /* libbctoolbox-tester.a in Frameworks */,
+				AB0B59F61D35E6020008841E /* libbctoolbox.a in Frameworks */,
+				AB0B59F71D35E6020008841E /* libbcunit.a in Frameworks */,
+				AB0B59F81D35E6020008841E /* libbelcard.a in Frameworks */,
+				AB0B59F91D35E6020008841E /* libbelr.a in Frameworks */,
+				AB0B59FA1D35E6020008841E /* libbv16.a in Frameworks */,
+				AB0B59FB1D35E6020008841E /* libcorec.a in Frameworks */,
+				AB0B59FC1D35E6020008841E /* libebml2.a in Frameworks */,
+				AB0B59FD1D35E6020008841E /* libmatroska2.a in Frameworks */,
+				AB0B59FE1D35E6020008841E /* libmbedcrypto.a in Frameworks */,
+				AB0B59FF1D35E6020008841E /* libmbedtls.a in Frameworks */,
+				AB0B5A001D35E6020008841E /* libmbedx509.a in Frameworks */,
+				AB0B5A011D35E6020008841E /* libvo-amrwbenc.a in Frameworks */,
+				AB0B5A021D35E6020008841E /* libmswebrtc.a in Frameworks */,
 				ABB900CE1D23889C00ED431E /* libantlr3c.a in Frameworks */,
 				ABB900CF1D23889C00ED431E /* libavcodec.a in Frameworks */,
 				ABB900D01D23889C00ED431E /* libavutil.a in Frameworks */,
@@ -137,7 +177,6 @@
 				ABB900D21D23889C00ED431E /* libbzrtp.a in Frameworks */,
 				ABB900D31D23889C00ED431E /* libcunit.a in Frameworks */,
 				ABB900D41D23889C00ED431E /* libgsm.a in Frameworks */,
-				ABB900D51D23889C00ED431E /* libilbc.a in Frameworks */,
 				ABB900D61D23889C00ED431E /* liblinphone.a in Frameworks */,
 				ABB900D71D23889C00ED431E /* liblinphonetester.a in Frameworks */,
 				ABB900D81D23889C00ED431E /* libmediastreamer_base.a in Frameworks */,
@@ -147,8 +186,6 @@
 				ABB900DC1D23889C00ED431E /* libopenh264.a in Frameworks */,
 				ABB900DD1D23889C00ED431E /* libopus.a in Frameworks */,
 				ABB900DE1D23889C00ED431E /* libortp.a in Frameworks */,
-				ABB900DF1D23889C00ED431E /* libpolarssl.a in Frameworks */,
-				ABB900E01D23889C00ED431E /* libSKP_SILK_SDK.a in Frameworks */,
 				ABB900E11D23889C00ED431E /* libspeex.a in Frameworks */,
 				ABB900E21D23889C00ED431E /* libspeexdsp.a in Frameworks */,
 				ABB900E31D23889C00ED431E /* libsrtp.a in Frameworks */,
@@ -157,10 +194,8 @@
 				ABB900E61D23889C00ED431E /* libtunnel.a in Frameworks */,
 				ABB900E71D23889C00ED431E /* libvpx.a in Frameworks */,
 				ABB900E81D23889C00ED431E /* libx264.a in Frameworks */,
-				ABB900E91D23889C00ED431E /* libxml2.a in Frameworks */,
 				ABB900EA1D23889C00ED431E /* libmsamr.a in Frameworks */,
 				ABB900EB1D23889C00ED431E /* libmsbcg729.a in Frameworks */,
-				ABB900EC1D23889C00ED431E /* libmsilbc.a in Frameworks */,
 				ABB900ED1D23889C00ED431E /* libmsopenh264.a in Frameworks */,
 				ABB900EE1D23889C00ED431E /* libmssilk.a in Frameworks */,
 				ABB900EF1D23889C00ED431E /* libmsx264.a in Frameworks */,
@@ -223,6 +258,21 @@
 		ABB900F01D2388B100ED431E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB0B59E51D35E6020008841E /* libbcg729.a */,
+				AB0B59E61D35E6020008841E /* libbctoolbox-tester.a */,
+				AB0B59E71D35E6020008841E /* libbctoolbox.a */,
+				AB0B59E81D35E6020008841E /* libbcunit.a */,
+				AB0B59E91D35E6020008841E /* libbelcard.a */,
+				AB0B59EA1D35E6020008841E /* libbelr.a */,
+				AB0B59EB1D35E6020008841E /* libbv16.a */,
+				AB0B59EC1D35E6020008841E /* libcorec.a */,
+				AB0B59ED1D35E6020008841E /* libebml2.a */,
+				AB0B59EE1D35E6020008841E /* libmatroska2.a */,
+				AB0B59EF1D35E6020008841E /* libmbedcrypto.a */,
+				AB0B59F01D35E6020008841E /* libmbedtls.a */,
+				AB0B59F11D35E6020008841E /* libmbedx509.a */,
+				AB0B59F21D35E6020008841E /* libvo-amrwbenc.a */,
+				AB0B59F31D35E6020008841E /* libmswebrtc.a */,
 				ABB900AC1D23889C00ED431E /* libantlr3c.a */,
 				ABB900AD1D23889C00ED431E /* libavcodec.a */,
 				ABB900AE1D23889C00ED431E /* libavutil.a */,
