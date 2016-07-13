@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneQualityReporting" kind="struct" prot="public">
+    <compoundname>_LinphoneQualityReporting</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneQualityReporting_1a2b864b83744a3c5e046fc5890b0daf6e" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__session__report" kindref="compound">reporting_session_report_t</ref> *</type>
+        <definition>reporting_session_report_t* _LinphoneQualityReporting::reports[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>reports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="114" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneQualityReporting_1a1573b905be98238f9ddb95af733600e2" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneQualityReporting::was_video_running</definition>
+        <argsstring></argsstring>
+        <name>was_video_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store information on audio and video media streams (RFC 6035) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="115" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneQualityReporting_1ad8076c979f563e358bfa99905e188b47" prot="public" static="no" mutable="no">
+        <type>LinphoneQualityReportingReportSendCb</type>
+        <definition>LinphoneQualityReportingReportSendCb _LinphoneQualityReporting::on_report_sent</definition>
+        <argsstring></argsstring>
+        <name>on_report_sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="116" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="89">
+        <label>reporting_content_metrics</label>
+        <link refid="structreporting__content__metrics"/>
+      </node>
+      <node id="90">
+        <label>reporting_addr</label>
+        <link refid="structreporting__addr"/>
+      </node>
+      <node id="87">
+        <label>_LinphoneQualityReporting</label>
+        <childnode refid="88" relation="usage">
+          <edgelabel>reports</edgelabel>
+        </childnode>
+      </node>
+      <node id="88">
+        <label>reporting_session_report</label>
+        <link refid="structreporting__session__report"/>
+        <childnode refid="89" relation="usage">
+          <edgelabel>local_metrics</edgelabel>
+          <edgelabel>remote_metrics</edgelabel>
+        </childnode>
+        <childnode refid="90" relation="usage">
+          <edgelabel>remote_addr</edgelabel>
+          <edgelabel>local_addr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="113" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="113" bodyend="117"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneQualityReporting_1ad8076c979f563e358bfa99905e188b47" prot="public" virt="non-virtual"><scope>_LinphoneQualityReporting</scope><name>on_report_sent</name></member>
+      <member refid="struct__LinphoneQualityReporting_1a2b864b83744a3c5e046fc5890b0daf6e" prot="public" virt="non-virtual"><scope>_LinphoneQualityReporting</scope><name>reports</name></member>
+      <member refid="struct__LinphoneQualityReporting_1a1573b905be98238f9ddb95af733600e2" prot="public" virt="non-virtual"><scope>_LinphoneQualityReporting</scope><name>was_video_running</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

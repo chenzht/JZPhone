@@ -50,17 +50,17 @@
 + (void)logc:(LinphoneLoggerSeverity) severity format:(const char *)format,... {
     va_list args;
 	va_start (args, format);
-//    if(severity <= LinphoneLoggerDebug) {
-//        ortp_logv(ORTP_DEBUG, format, args);
-//    } else if(severity <= LinphoneLoggerLog) {
-//        ortp_logv(ORTP_MESSAGE, format, args);
-//    } else if(severity <= LinphoneLoggerWarning) {
-//        ortp_logv(ORTP_WARNING, format, args);
-//    } else if(severity <= LinphoneLoggerError) {
-//        ortp_logv(ORTP_ERROR, format, args);
-//    } else if(severity <= LinphoneLoggerFatal) {
-//        ortp_logv(ORTP_FATAL, format, args);
-//    }
+    if(severity <= LinphoneLoggerDebug) {
+        ortp_logv(ORTP_DEBUG, format, args);
+    } else if(severity <= LinphoneLoggerLog) {
+        ortp_logv(ORTP_MESSAGE, format, args);
+    } else if(severity <= LinphoneLoggerWarning) {
+        ortp_logv(ORTP_WARNING, format, args);
+    } else if(severity <= LinphoneLoggerError) {
+        ortp_logv(ORTP_ERROR, format, args);
+    } else if(severity <= LinphoneLoggerFatal) {
+        ortp_logv(ORTP_FATAL, format, args);
+    }
 	va_end (args);
 }
 

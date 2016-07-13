@@ -29,12 +29,11 @@ BELLE_SIP_BEGIN_DECLS
  *
  */
 
-belle_sip_parameters_t* belle_sip_parameters_new(void);
+belle_sip_parameters_t* belle_sip_parameters_new();
 /*
  * remove all parameters */
 BELLESIP_EXPORT void belle_sip_parameters_clean(belle_sip_parameters_t* params);
 
-/*BELLESIP_EXPORT void belle_sip_parameters_destroy(belle_sip_parameters_t* params);*/
 
 BELLESIP_EXPORT const char*	belle_sip_parameters_get_parameter(const belle_sip_parameters_t* obj,const char* name);
 /*

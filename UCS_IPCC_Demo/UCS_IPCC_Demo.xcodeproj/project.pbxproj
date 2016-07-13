@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB0B59E41D35E5730008841E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B59E31D35E5730008841E /* VideoToolbox.framework */; };
-		AB0B5A071D35F4620008841E /* libucsipccsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0B5A061D35F4620008841E /* libucsipccsdk.a */; };
+		AB3B9C701D2A46B6006828F4 /* libucsipccsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B9C6F1D2A46B6006828F4 /* libucsipccsdk.a */; };
 		AB98D4BE1D2614670034FEF0 /* CallOutgoingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB98D4BD1D2614670034FEF0 /* CallOutgoingView.m */; };
 		AB98D4C01D26146C0034FEF0 /* CallOutgoingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB98D4BF1D26146C0034FEF0 /* CallOutgoingView.xib */; };
 		AB98D4C31D2617230034FEF0 /* CallIncomingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB98D4C21D2617230034FEF0 /* CallIncomingView.m */; };
@@ -506,11 +505,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB0B59E31D35E5730008841E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		AB0B5A031D35F45C0008841E /* UCSIPCCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCClass.h; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-fzkxtmriljqanuagzfigpfwjjoqr/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCClass.h"; sourceTree = "<group>"; };
-		AB0B5A041D35F45C0008841E /* UCSIPCCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCDelegate.h; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-fzkxtmriljqanuagzfigpfwjjoqr/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCDelegate.h"; sourceTree = "<group>"; };
-		AB0B5A051D35F45C0008841E /* UCSIPCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCManager.h; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-fzkxtmriljqanuagzfigpfwjjoqr/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCManager.h"; sourceTree = "<group>"; };
-		AB0B5A061D35F4620008841E /* libucsipccsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libucsipccsdk.a; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-fzkxtmriljqanuagzfigpfwjjoqr/Build/Products/Debug-iphoneos/libucsipccsdk.a"; sourceTree = "<group>"; };
+		AB3B9C6F1D2A46B6006828F4 /* libucsipccsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libucsipccsdk.a; path = "../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-bsjgtdcovigvmvdcrybbvdtxvife/Build/Products/Debug-iphoneos/libucsipccsdk.a"; sourceTree = "<group>"; };
+		AB3B9C711D2A46C4006828F4 /* UCSIPCCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCClass.h; path = "../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-bsjgtdcovigvmvdcrybbvdtxvife/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCClass.h"; sourceTree = "<group>"; };
+		AB3B9C721D2A46C4006828F4 /* UCSIPCCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCDelegate.h; path = "../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-bsjgtdcovigvmvdcrybbvdtxvife/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCDelegate.h"; sourceTree = "<group>"; };
+		AB3B9C731D2A46C4006828F4 /* UCSIPCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSIPCCManager.h; path = "../../../../../Library/Developer/Xcode/DerivedData/UCS_IPCC-bsjgtdcovigvmvdcrybbvdtxvife/Build/Products/Debug-iphoneos/include/ucsipccsdk/UCSIPCCManager.h"; sourceTree = "<group>"; };
 		AB98D4BC1D2614670034FEF0 /* CallOutgoingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutgoingView.h; sourceTree = "<group>"; };
 		AB98D4BD1D2614670034FEF0 /* CallOutgoingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutgoingView.m; sourceTree = "<group>"; };
 		AB98D4BF1D26146C0034FEF0 /* CallOutgoingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallOutgoingView.xib; sourceTree = "<group>"; };
@@ -1039,15 +1037,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0B59E41D35E5730008841E /* VideoToolbox.framework in Frameworks */,
 				ABB900AB1D23887C00ED431E /* libxml2.tbd in Frameworks */,
+				AB3B9C701D2A46B6006828F4 /* libucsipccsdk.a in Frameworks */,
 				ABB900A91D23887000ED431E /* libresolv.tbd in Frameworks */,
 				ABB900A71D23886900ED431E /* libstdc++.6.tbd in Frameworks */,
 				ABB900A51D23886200ED431E /* libc++.tbd in Frameworks */,
 				ABB900A31D23885A00ED431E /* libsqlite3.tbd in Frameworks */,
 				ABB900A11D23885400ED431E /* libiconv.tbd in Frameworks */,
 				ABB9009F1D23884D00ED431E /* libz.tbd in Frameworks */,
-				AB0B5A071D35F4620008841E /* libucsipccsdk.a in Frameworks */,
 				ABB900891D2387F000ED431E /* AddressBook.framework in Frameworks */,
 				ABB9008A1D2387F000ED431E /* AddressBookUI.framework in Frameworks */,
 				ABB9008B1D2387F000ED431E /* AssetsLibrary.framework in Frameworks */,
@@ -1120,7 +1117,6 @@
 		ABB9009D1D23883100ED431E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB0B59E31D35E5730008841E /* VideoToolbox.framework */,
 				ABB900AA1D23887C00ED431E /* libxml2.tbd */,
 				ABB900A81D23887000ED431E /* libresolv.tbd */,
 				ABB900A61D23886900ED431E /* libstdc++.6.tbd */,
@@ -1155,10 +1151,10 @@
 		ABB900FA1D23914A00ED431E /* IPCC_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				AB0B5A061D35F4620008841E /* libucsipccsdk.a */,
-				AB0B5A031D35F45C0008841E /* UCSIPCCClass.h */,
-				AB0B5A041D35F45C0008841E /* UCSIPCCDelegate.h */,
-				AB0B5A051D35F45C0008841E /* UCSIPCCManager.h */,
+				AB3B9C711D2A46C4006828F4 /* UCSIPCCClass.h */,
+				AB3B9C721D2A46C4006828F4 /* UCSIPCCDelegate.h */,
+				AB3B9C731D2A46C4006828F4 /* UCSIPCCManager.h */,
+				AB3B9C6F1D2A46B6006828F4 /* libucsipccsdk.a */,
 			);
 			path = IPCC_SDK;
 			sourceTree = "<group>";
@@ -2366,7 +2362,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jozo.UCS-IPCC-Demo2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jozo.UCS-IPCC-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2381,7 +2377,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jozo.UCS-IPCC-Demo2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jozo.UCS-IPCC-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

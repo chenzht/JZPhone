@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneFriend" kind="struct" prot="public">
+    <compoundname>_LinphoneFriend</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a9ba6c12ea115c5c6906afb986c29014d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1ga5af5a516ac253e3cda4f51b599a5385b" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneFriend::uri</definition>
+        <argsstring></argsstring>
+        <name>uri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="546" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a76f42047dff59eb02092dd127206d2e3" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneFriend::insub</definition>
+        <argsstring></argsstring>
+        <name>insub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="547" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a12aa59ec1b424216cac418efbc6796d9" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneFriend::outsub</definition>
+        <argsstring></argsstring>
+        <name>outsub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="548" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="548" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a57f1f1a29161039d97844e3affaef1b2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__buddy__list_1gaf6e5d308b0b6e0ed6506e060ce51190e" kindref="member">LinphoneSubscribePolicy</ref></type>
+        <definition>LinphoneSubscribePolicy _LinphoneFriend::pol</definition>
+        <argsstring></argsstring>
+        <name>pol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="549" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="549" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a137b213bcaac25199135188434e2ae8e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__buddy__list_1gad98268f00fb29b50b22b3c3da566e366" kindref="member">LinphonePresenceModel</ref> *</type>
+        <definition>LinphonePresenceModel* _LinphoneFriend::presence</definition>
+        <argsstring></argsstring>
+        <name>presence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="550" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="550" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a9f61def752091ccf977550c8383b24bb" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneFriend::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="551" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="551" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a3263fb66942b3cd7ca9f52fac5dfda46" prot="public" static="no" mutable="no">
+        <type>BuddyInfo *</type>
+        <definition>BuddyInfo* _LinphoneFriend::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="552" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="552" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a43e02c89118578015fe2e07e1c5aed9a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneFriend::refkey</definition>
+        <argsstring></argsstring>
+        <name>refkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="553" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a166c535df23ff1c05216ed51711b6adc" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneFriend::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="554" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a190374cc24687f6770e40893211bc1ec" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneFriend::subscribe</definition>
+        <argsstring></argsstring>
+        <name>subscribe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="555" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="555" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a6ec419fcb9b9902baca8c4537ddf6b96" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneFriend::subscribe_active</definition>
+        <argsstring></argsstring>
+        <name>subscribe_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="556" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="556" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a978e32e25665623eba4444adbda571af" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneFriend::inc_subscribe_pending</definition>
+        <argsstring></argsstring>
+        <name>inc_subscribe_pending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="557" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="557" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a2a9296d2df372d2423047fbc3e96c018" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneFriend::commit</definition>
+        <argsstring></argsstring>
+        <name>commit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="558" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="558" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneFriend_1a39fb647be7147ea4f0aeaf90aab80818" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneFriend::initial_subscribes_sent</definition>
+        <argsstring></argsstring>
+        <name>initial_subscribes_sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="559" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="68">
+        <label>_LinphoneFriend</label>
+        <childnode refid="69" relation="usage">
+          <edgelabel>presence</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>_LinphonePresenceModel</label>
+        <link refid="struct__LinphonePresenceModel"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="545" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="545" bodyend="560"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneFriend_1a2a9296d2df372d2423047fbc3e96c018" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>commit</name></member>
+      <member refid="struct__LinphoneFriend_1a978e32e25665623eba4444adbda571af" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>inc_subscribe_pending</name></member>
+      <member refid="struct__LinphoneFriend_1a3263fb66942b3cd7ca9f52fac5dfda46" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>info</name></member>
+      <member refid="struct__LinphoneFriend_1a39fb647be7147ea4f0aeaf90aab80818" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>initial_subscribes_sent</name></member>
+      <member refid="struct__LinphoneFriend_1a76f42047dff59eb02092dd127206d2e3" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>insub</name></member>
+      <member refid="struct__LinphoneFriend_1a9f61def752091ccf977550c8383b24bb" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>lc</name></member>
+      <member refid="struct__LinphoneFriend_1a12aa59ec1b424216cac418efbc6796d9" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>outsub</name></member>
+      <member refid="struct__LinphoneFriend_1a57f1f1a29161039d97844e3affaef1b2" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>pol</name></member>
+      <member refid="struct__LinphoneFriend_1a137b213bcaac25199135188434e2ae8e" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>presence</name></member>
+      <member refid="struct__LinphoneFriend_1a43e02c89118578015fe2e07e1c5aed9a" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>refkey</name></member>
+      <member refid="struct__LinphoneFriend_1a190374cc24687f6770e40893211bc1ec" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>subscribe</name></member>
+      <member refid="struct__LinphoneFriend_1a6ec419fcb9b9902baca8c4537ddf6b96" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>subscribe_active</name></member>
+      <member refid="struct__LinphoneFriend_1a166c535df23ff1c05216ed51711b6adc" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>up</name></member>
+      <member refid="struct__LinphoneFriend_1a9ba6c12ea115c5c6906afb986c29014d" prot="public" virt="non-virtual"><scope>_LinphoneFriend</scope><name>uri</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

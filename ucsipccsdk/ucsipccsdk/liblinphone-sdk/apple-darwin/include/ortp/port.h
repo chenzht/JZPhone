@@ -22,7 +22,7 @@
 #define ORTP_PORT_H
 
 
-#if !defined(_WIN32) && !defined(_WIN32_WCE)
+#if !defined(WIN32) && !defined(_WIN32_WCE)
 /********************************/
 /* definitions for UNIX flavour */
 /********************************/
@@ -76,6 +76,8 @@ typedef pthread_cond_t ortp_cond_t;
 #define ORTP_PUBLIC
 #define ORTP_INLINE			inline
 
+#define WINAPI_FAMILY_PARTITION(x) 1
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -123,20 +125,10 @@ unsigned long __ortp_thread_self(void);
 #include <stdarg.h>
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#ifdef _MSC_VER
-#include <io.h>
-#endif
 
-#if defined(__MINGW32__) || !defined(WINAPI_FAMILY_PARTITION) || !defined(WINAPI_PARTITION_DESKTOP)
-#define ORTP_WINDOWS_DESKTOP 1
-#elif defined(WINAPI_FAMILY_PARTITION)
-#if defined(WINAPI_PARTITION_DESKTOP) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-#define ORTP_WINDOWS_DESKTOP 1
-#elif defined(WINAPI_PARTITION_PHONE_APP) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PHONE_APP)
-#define ORTP_WINDOWS_PHONE 1
-#elif defined(WINAPI_PARTITION_APP) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-#define ORTP_WINDOWS_UNIVERSAL 1
-#endif
+#if defined(__MINGW32__) || !defined(WINAPI_FAMILY_PARTITION)
+// Only use with x being WINAPI_PARTITION_DESKTOP to test if building on desktop
+#define WINAPI_FAMILY_PARTITION(x) 1
 #endif
 
 #ifdef _MSC_VER
@@ -153,6 +145,8 @@ unsigned long __ortp_thread_self(void);
 #ifndef _WINSOCKAPI_
 #define _WINSOCKAPI_
 #endif
+
+#define strtok_r strtok_s
 
 typedef  unsigned __int64 uint64_t;
 typedef  __int64 int64_t;
@@ -171,7 +165,7 @@ ORTP_PUBLIC char* strtok_r(char *str, const char *delim, char **nextp);
 #define vsnprintf	_vsnprintf
 
 typedef SOCKET ortp_socket_t;
-#ifdef ORTP_WINDOWS_DESKTOP
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef HANDLE ortp_cond_t;
 typedef HANDLE ortp_mutex_t;
 #else
@@ -247,16 +241,12 @@ const char * ortp_strerror(DWORD value);
 #endif
 
 ORTP_PUBLIC const char *getWinSocketError(int error);
-#ifndef getSocketErrorCode
 #define getSocketErrorCode() WSAGetLastError()
-#endif
-#ifndef getSocketError
 #define getSocketError() getWinSocketError(WSAGetLastError())
-#endif
 
-#ifndef F_OK
-#define F_OK 00 /* Visual Studio does not define F_OK */
-#endif
+#define snprintf _snprintf
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
 
 
 #ifdef __cplusplus
@@ -272,10 +262,7 @@ char * WSAAPI gai_strerror(int errnum);
 
 #endif
 
-#ifndef _BOOL_T_
-#define _BOOL_T_
 typedef unsigned char bool_t;
-#endif /* _BOOL_T_ */
 #undef TRUE
 #undef FALSE
 #define TRUE 1
@@ -322,16 +309,12 @@ ORTP_PUBLIC char *ortp_strcat_vprintf(char *dst, const char *fmt, va_list ap);
 ORTP_PUBLIC int ortp_file_exist(const char *pathname);
 
 ORTP_PUBLIC void ortp_get_cur_time(ortpTimeSpec *ret);
-void _ortp_get_cur_time(ortpTimeSpec *ret, bool_t realtime);
 ORTP_PUBLIC uint64_t ortp_get_cur_time_ms(void);
-ORTP_PUBLIC void ortp_sleep_ms(int ms);
-ORTP_PUBLIC void ortp_sleep_until(const ortpTimeSpec *ts);
-ORTP_PUBLIC int ortp_timespec_compare(const ortpTimeSpec *s1, const ortpTimeSpec *s2);
 ORTP_PUBLIC unsigned int ortp_random(void);
 
 /* portable named pipes  and shared memory*/
 #if !defined(_WIN32_WCE)
-#ifdef _WIN32
+#ifdef WIN32
 typedef HANDLE ortp_pipe_t;
 #define ORTP_PIPE_INVALID INVALID_HANDLE_VALUE
 #else
@@ -358,9 +341,6 @@ ORTP_PUBLIC int ortp_pipe_write(ortp_pipe_t p, const uint8_t *buf, int len);
 ORTP_PUBLIC void *ortp_shm_open(unsigned int keyid, int size, int create);
 ORTP_PUBLIC void ortp_shm_close(void *memory);
 
-ORTP_PUBLIC	bool_t ortp_is_multicast_addr(const struct sockaddr *addr);
-	
-	
 #endif
 
 #ifdef __cplusplus
@@ -369,7 +349,7 @@ ORTP_PUBLIC	bool_t ortp_is_multicast_addr(const struct sockaddr *addr);
 #endif
 
 
-#if (defined(_WIN32) || defined(_WIN32_WCE)) && !defined(ORTP_STATIC)
+#if (defined(WIN32) || defined(_WIN32_WCE)) && !defined(ORTP_STATIC)
 #ifdef ORTP_EXPORTS
    #define ORTP_VAR_PUBLIC    extern __declspec(dllexport)
 #else
@@ -379,9 +359,6 @@ ORTP_PUBLIC	bool_t ortp_is_multicast_addr(const struct sockaddr *addr);
    #define ORTP_VAR_PUBLIC    extern
 #endif
 
-#ifndef IN6_IS_ADDR_MULTICAST
-#define IN6_IS_ADDR_MULTICAST(i)	(((uint8_t *) (i))[0] == 0xff)
-#endif
 
 /*define __ios when we are compiling for ios.
  The TARGET_OS_IPHONE macro is stupid, it is defined to 0 when compiling on mac os x.

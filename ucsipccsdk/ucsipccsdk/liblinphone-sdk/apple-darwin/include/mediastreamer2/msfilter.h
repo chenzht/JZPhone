@@ -85,7 +85,6 @@ enum _MSFilterInterfaceId{
 	MSFilterAudioCaptureInterface,/**<Interface for audio capture filters*/
 	MSFilterAudioPlaybackInterface,/**Interface for audio playback filters.*/
 	MSFilterAudioEncoderInterface,/**<Video encoder interface*/
-	MSFilterVoidInterface,/**<Void source/sink interface*/
 };
 
 /**
@@ -133,10 +132,7 @@ typedef enum _MSFilterCategory MSFilterCategory;
  * Filter's flags controlling special behaviours.
 **/
 enum _MSFilterFlags{
-	MS_FILTER_IS_PUMP = 1, /**< The filter must be called in process function every tick.*/
-	/*...*/
-	/*private flags: don't use it in filters.*/
-	MS_FILTER_IS_ENABLED = 1<<31 /*<Flag to specify if a filter is enabled or not. Only enabled filters are returned by function ms_filter_get_encoder */
+	MS_FILTER_IS_PUMP = 1 /**< The filter must be called in process function every tick.*/
 };
 
 /**
@@ -242,51 +238,54 @@ extern "C"{
  * supported.
  *
  * @param desc    a filter description.
- * @deprecated use ms_factory_register_filter().
  */
-MS2_PUBLIC MS2_DEPRECATED void ms_filter_register(MSFilterDesc *desc);
+MS2_PUBLIC void ms_filter_register(MSFilterDesc *desc);
 
 /**
  * Retrieve capture filter that supports encoding to codec name.
  *
  * @param mime    A string indicating the codec.
  *
- * @return a MSFilterDesc if successfull, NULL otherwise.
- * @deprecated use ms_factory_get_encoding_capturer().
+ * Returns: a MSFilterDesc if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilterDesc * ms_filter_get_encoding_capturer(const char *mime);
+MS2_PUBLIC MSFilterDesc * ms_filter_get_encoding_capturer(const char *mime);
 
 /**
  * Retrieve render filter that supports decoding to codec name.
  *
  * @param mime    A string indicating the codec.
  *
- * @returns a MSFilterDesc if successfull, NULL otherwise.
- * @deprecated use ms_factory_get_decoding_renderer()
+ * Returns: a MSFilterDesc if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilterDesc * ms_filter_get_decoding_renderer(const char *mime);
+MS2_PUBLIC MSFilterDesc * ms_filter_get_decoding_renderer(const char *mime);
 
 /**
  * Retrieve encoders according to codec name.
  *
+ * Internal supported codecs:
+ *    PCMU, PCMA, speex, gsm
+ * Existing Public plugins:
+ *    iLBC
  *
  * @param mime    A string indicating the codec.
  *
- * @return a MSFilterDesc if successfull, NULL otherwise.
- * @deprecated use ms_factory_get_encoder().
+ * Returns: a MSFilterDesc if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilterDesc * ms_filter_get_encoder(const char *mime);
+MS2_PUBLIC MSFilterDesc * ms_filter_get_encoder(const char *mime);
 
 /**
  * Retrieve decoders according to codec name.
  *
+ * Internal supported codecs:
+ *    PCMU, PCMA, speex, gsm
+ * Existing Public plugins:
+ *    iLBC
  *
  * @param mime    A string indicating the codec.
  *
- * @return a MSFilterDesc if successfull, NULL otherwise.
- * @deprecated use ms_factory_get_decoder().
+ * Returns: a MSFilterDesc if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilterDesc * ms_filter_get_decoder(const char *mime);
+MS2_PUBLIC MSFilterDesc * ms_filter_get_decoder(const char *mime);
 
 /**
  * Lookup a mediastreamer2 filter using its name.
@@ -295,70 +294,76 @@ MS2_PUBLIC MS2_DEPRECATED MSFilterDesc * ms_filter_get_decoder(const char *mime)
  * This function can be useful to query the presence of a filter loaded as a plugin, for example.
  *
  * @param filter_name The filter name.
- * @return a MSFilterDesc or NULL if no match.
- * @deprecated use ms_factory_lookup_filter_by_name().
 **/
-MS2_PUBLIC MS2_DEPRECATED MSFilterDesc *ms_filter_lookup_by_name(const char *filter_name);
+MS2_PUBLIC MSFilterDesc *ms_filter_lookup_by_name(const char *filter_name);
 
 /**
  * Returns a list of filter descriptions implementing a given interface.
  * The list itself must be freed by the caller of this function, but not the MSFilterDesc pointed by the list elements.
  * @param id a filter interface id
  * @return a newly allocated MSList of #MSFilterDesc.
- * @deprecated use ms_factory_lookup_filter_by_interface().
 **/
-MS2_PUBLIC MS2_DEPRECATED MSList *ms_filter_lookup_by_interface(MSFilterInterfaceId id);
+MSList *ms_filter_lookup_by_interface(MSFilterInterfaceId id);
 
 /**
  * Create encoder filter according to codec name.
- 
+ *
+ * Internal supported codecs:
+ *    PCMU, PCMA, speex, gsm
+ * Existing Public plugins:
+ *    iLBC
+ *
  * @param mime    A string indicating the codec.
  *
- * @return a MSFilter if successfull, NULL otherwise.
- * @deprecated use ms_factory_create_encoder().
+ * Returns: a MSFilter if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilter * ms_filter_create_encoder(const char *mime);
+MS2_PUBLIC MSFilter * ms_filter_create_encoder(const char *mime);
 
 /**
  * Create decoder filter according to codec name.
  *
+ * Internal supported codecs:
+ *    PCMU, PCMA, speex, gsm
+ * Existing Public plugins:
+ *    iLBC
  *
  * @param mime    A string indicating the codec.
  *
- * @return a MSFilter if successfull, NULL otherwise.
- * @deprecated use ms_factory_create_decoder().
+ * Returns: a MSFilter if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilter * ms_filter_create_decoder(const char *mime);
+MS2_PUBLIC MSFilter * ms_filter_create_decoder(const char *mime);
 
 /**
- * Check if both an encoder and a decoder filter exists for a codec name.
+ * Check if a encode or decode filter exists for a codec name.
+ *
+ * Internal supported codecs:
+ *    PCMU, PCMA, speex, gsm
+ * Existing Public plugins:
+ *    iLBC
  *
  * @param mime    A string indicating the codec.
  *
- * @return TRUE if successfull, FALSE otherwise.
- * @deprecated use ms_factory_codec_supported().
+ * Returns: TRUE if successfull, FALSE otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED bool_t ms_filter_codec_supported(const char *mime);
+MS2_PUBLIC bool_t ms_filter_codec_supported(const char *mime);
 
 /**
  * Create decoder filter according to a filter's MSFilterId.
  *
  * @param id     A MSFilterId identifier for the filter.
  *
- * @returns a MSFilter if successfull, NULL otherwise.
- * @deprecated use ms_factory_create_filter().
+ * Returns: a MSFilter if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilter *ms_filter_new(MSFilterId id);
+MS2_PUBLIC MSFilter *ms_filter_new(MSFilterId id);
 
 /**
  * Create decoder filter according to a filter's name.
  *
  * @param name   A name for the filter.
  *
- * @return a MSFilter if successfull, NULL otherwise.
- * @deprecated use ms_factory_create_filter_from_name().
+ * Returns: a MSFilter if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilter *ms_filter_new_from_name(const char *name);
+MS2_PUBLIC MSFilter *ms_filter_new_from_name(const char *name);
 
 /**
  * Create decoder filter according to a filter's description.
@@ -368,10 +373,9 @@ MS2_PUBLIC MS2_DEPRECATED MSFilter *ms_filter_new_from_name(const char *name);
  *
  * @param desc   A MSFilterDesc for the filter.
  *
- * @return a MSFilter if successfull, NULL otherwise.
- * @deprecated use ms_factory_create_filter_from_desc()
+ * Returns: a MSFilter if successfull, NULL otherwise.
  */
-MS2_PUBLIC MS2_DEPRECATED MSFilter *ms_filter_new_from_desc(MSFilterDesc *desc);
+MS2_PUBLIC MSFilter *ms_filter_new_from_desc(MSFilterDesc *desc);
 
 /**
  * Link one OUTPUT pin from a filter to an INPUT pin of another filter.
@@ -579,26 +583,26 @@ MS2_PUBLIC int ms_connection_helper_unlink(MSConnectionHelper *h, MSFilter *f, i
  * \brief Enable processing time measurements statistics for filters.
  *
 **/
-MS2_PUBLIC MS2_DEPRECATED void ms_filter_enable_statistics(bool_t enabled);
+MS2_PUBLIC void ms_filter_enable_statistics(bool_t enabled);
 
 
 /**
  * \brief Reset processing time statistics for filters.
  *
 **/
-MS2_PUBLIC MS2_DEPRECATED void ms_filter_reset_statistics(void);
+MS2_PUBLIC void ms_filter_reset_statistics(void);
 
 /**
  * \brief Retrieves statistics for running filters.
  * Returns a list of MSFilterStats
 **/
-MS2_PUBLIC MS2_DEPRECATED const MSList * ms_filter_get_statistics(void);
+MS2_PUBLIC const MSList * ms_filter_get_statistics(void);
 
 /**
  * \brief Logs runtime statistics for running filters.
  *
 **/
-MS2_PUBLIC MS2_DEPRECATED void ms_filter_log_statistics(void);
+MS2_PUBLIC void ms_filter_log_statistics(void);
 
 
 
@@ -678,7 +682,7 @@ the method index (_cnt_) and the argument size */
 #define MS_FILTER_GET_LATENCY	MS_FILTER_BASE_METHOD(11,int)
 
 typedef struct _MSPinFormat{
-	uint16_t pin;
+	int pin;
 	const MSFmtDescriptor *fmt;
 }MSPinFormat;
 

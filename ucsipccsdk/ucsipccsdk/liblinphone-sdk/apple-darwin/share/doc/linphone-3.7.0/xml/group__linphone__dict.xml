@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="group__linphone__dict" kind="group">
+    <compoundname>linphone_dict</compoundname>
+    <title>Linphone_dict</title>
+    <innerclass refid="structlp__config__to__dict" prot="public">lp_config_to_dict</innerclass>
+    <innerclass refid="structlp__config__from__dict" prot="public">lp_config_from_dict</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__linphone__dict_1gab8a3f164cc62713fc22e9aa2d170e0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneDictionary *</type>
+        <definition>LinphoneDictionary* linphone_dictionary_new</definition>
+        <argsstring>()</argsstring>
+        <name>linphone_dictionary_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="35" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga2d52e58814ed9d0a829100c0a5f0f347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneDictionary *</type>
+        <definition>LinphoneDictionary* linphone_dictionary_clone</definition>
+        <argsstring>(const LinphoneDictionary *src)</argsstring>
+        <name>linphone_dictionary_clone</name>
+        <param>
+          <type>const LinphoneDictionary *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="40" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga4f11f8a7c5a05f028b7002ebb6c22880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneDictionary *</type>
+        <definition>LinphoneDictionary* linphone_dictionary_ref</definition>
+        <argsstring>(LinphoneDictionary *obj)</argsstring>
+        <name>linphone_dictionary_ref</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="49" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga8987448a89abb06888456434f1e41aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_unref</definition>
+        <argsstring>(LinphoneDictionary *obj)</argsstring>
+        <name>linphone_dictionary_unref</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="54" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga826a3e0896bb97d26624ad0394b7182e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_set_int</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, int value)</argsstring>
+        <name>linphone_dictionary_set_int</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="59" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gaaa3a244b4fb2b6fe4340439184ecf8e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_dictionary_get_int</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, int default_value)</argsstring>
+        <name>linphone_dictionary_get_int</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="64" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gac573fea62de69f281091542da17009de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_set_string</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, const char *value)</argsstring>
+        <name>linphone_dictionary_set_string</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="69" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga3b0554204438a9b92d5d3f1a6835e712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_dictionary_get_string</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, const char *default_value)</argsstring>
+        <name>linphone_dictionary_get_string</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="74" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga6a2bec5189a4db6b16ba93c507aaa206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_set_int64</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, int64_t value)</argsstring>
+        <name>linphone_dictionary_set_int64</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="79" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gadbfb063ede3de88cb30b32a107c49f62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t linphone_dictionary_get_int64</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key, int64_t default_value)</argsstring>
+        <name>linphone_dictionary_get_int64</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="84" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gae934a9a458bd96f34b8c346c8f049cae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_dictionary_remove</definition>
+        <argsstring>(LinphoneDictionary *obj, const char *key)</argsstring>
+        <name>linphone_dictionary_remove</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="89" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga59723b7c932f562575718f38ff179441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_clear</definition>
+        <argsstring>(LinphoneDictionary *obj)</argsstring>
+        <name>linphone_dictionary_clear</name>
+        <param>
+          <type>LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="94" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gaf60258e3657b5c7d9c9a0027f9a169ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_dictionary_haskey</definition>
+        <argsstring>(const LinphoneDictionary *obj, const char *key)</argsstring>
+        <name>linphone_dictionary_haskey</name>
+        <param>
+          <type>const LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="99" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1gabb4207a87a6174018fbbf83211bd0907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_dictionary_foreach</definition>
+        <argsstring>(const LinphoneDictionary *obj, void(*apply_func)(const char *, void *, void *), void *userdata)</argsstring>
+        <name>linphone_dictionary_foreach</name>
+        <param>
+          <type>const LinphoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>void(*)(const char *, void *, void *)</type>
+          <declname>apply_func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="104" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga72daec84dffda0177a847b6db56040c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lp_config_section_to_dict_cb</definition>
+        <argsstring>(const char *key, struct lp_config_to_dict *userdata)</argsstring>
+        <name>lp_config_section_to_dict_cb</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>struct lp_config_to_dict *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="115" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga2b34635519119512c9c99fd4813c02a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneDictionary *</type>
+        <definition>LinphoneDictionary* lp_config_section_to_dict</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section)</argsstring>
+        <name>lp_config_section_to_dict</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a config section into a dictionary. <simplesect kind="return"><para>a #LinphoneDictionary with all the keys from a section, or NULL if the section doesn&apos;t exist </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="121" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="121" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga78fccc0119e151469c03c1d9806b55b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lp_config_dict_dump_cb</definition>
+        <argsstring>(const char *key, void *value, void *userdata)</argsstring>
+        <name>lp_config_dict_dump_cb</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="143" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__dict_1ga7d5d0600002c3cca6423d08b8a5baaa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_load_dict_to_section</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const LinphoneDictionary *dict)</argsstring>
+        <name>lp_config_load_dict_to_section</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const LinphoneDictionary *</type>
+          <declname>dict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a dictionary into a section of the lpconfig. If the section doesn&apos;t exist it is created. Overwrites existing keys, creates non-existing keys. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" line="149" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/dict.c" bodystart="149" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

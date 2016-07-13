@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__CallCallbackObj" kind="struct" prot="public">
+    <compoundname>_CallCallbackObj</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__CallCallbackObj_1aeb449e5772f9827d52836153523dbdbd" prot="public" static="no" mutable="no">
+        <type>LinphoneCallCbFunc</type>
+        <definition>LinphoneCallCbFunc _CallCallbackObj::_func</definition>
+        <argsstring></argsstring>
+        <name>_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="145" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CallCallbackObj_1a49a32c881873ff0d893cd1c0137a448d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _CallCallbackObj::_user_data</definition>
+        <argsstring></argsstring>
+        <name>_user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="146" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="144" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="143" bodyend="147"/>
+    <listofallmembers>
+      <member refid="struct__CallCallbackObj_1aeb449e5772f9827d52836153523dbdbd" prot="public" virt="non-virtual"><scope>_CallCallbackObj</scope><name>_func</name></member>
+      <member refid="struct__CallCallbackObj_1a49a32c881873ff0d893cd1c0137a448d" prot="public" virt="non-virtual"><scope>_CallCallbackObj</scope><name>_user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

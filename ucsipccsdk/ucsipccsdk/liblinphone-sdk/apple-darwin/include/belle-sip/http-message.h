@@ -32,11 +32,8 @@ BELLE_SIP_BEGIN_DECLS
  * @param ... optional list of belle_sip_header_t* to be included in the request, ending with NULL.
  */
 BELLESIP_EXPORT belle_http_request_t *belle_http_request_create(const char *method, belle_generic_uri_t *uri, ...);
-BELLESIP_EXPORT belle_http_request_t* belle_http_request_new(void);
+BELLESIP_EXPORT belle_http_request_t* belle_http_request_new();
 BELLESIP_EXPORT belle_http_request_t* belle_http_request_parse(const char* raw);
-
-BELLESIP_EXPORT int belle_http_request_is_cancelled(const belle_http_request_t *req);
-BELLESIP_EXPORT void belle_http_request_cancel(belle_http_request_t *req);
 
 BELLESIP_EXPORT belle_generic_uri_t* belle_http_request_get_uri(const belle_http_request_t* request);
 BELLESIP_EXPORT void belle_http_request_set_uri(belle_http_request_t* request, belle_generic_uri_t* uri);

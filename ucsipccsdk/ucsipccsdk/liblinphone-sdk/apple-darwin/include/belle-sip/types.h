@@ -22,14 +22,6 @@
 #include "belle-sip/object.h"
 #include "belle-sip/dict.h"
 
-#ifndef BELLESIP_DEPRECATED
-#if defined(_MSC_VER)
-	#define BELLESIP_DEPRECATED __declspec(deprecated)
-#else
-	#define BELLESIP_DEPRECATED __attribute__ ((deprecated))
-#endif
-#endif
-
 /**
  * This enum declares all object types used in belle-sip (see belle_sip_object_t)
 **/
@@ -132,17 +124,14 @@ BELLE_SIP_DECLARE_TYPES_BEGIN(belle_sip,1)
 	BELLE_SIP_TYPE_ID(belle_http_channel_context_t),
 	BELLE_SIP_TYPE_ID(belle_generic_uri_t),
 	BELLE_SIP_TYPE_ID(belle_http_callbacks_t),
-	BELLE_SIP_TYPE_ID(belle_tls_crypto_config_t),
+	BELLE_SIP_TYPE_ID(belle_tls_verify_policy_t),
 	BELLE_SIP_TYPE_ID(belle_http_header_authorization_t),
 	BELLE_SIP_TYPE_ID(belle_sip_body_handler_t),
 	BELLE_SIP_TYPE_ID(belle_sip_memory_body_handler_t),
 	BELLE_SIP_TYPE_ID(belle_sip_user_body_handler_t),
 	BELLE_SIP_TYPE_ID(belle_sip_file_body_handler_t),
 	BELLE_SIP_TYPE_ID(belle_sip_multipart_body_handler_t),
-	BELLE_SIP_TYPE_ID(belle_sip_header_event_t),
-	BELLE_SIP_TYPE_ID(belle_sip_header_supported_t),
-	BELLE_SIP_TYPE_ID(belle_sip_header_content_disposition_t),
-	BELLE_SIP_TYPE_ID(belle_sip_header_accept_t)
+	BELLE_SIP_TYPE_ID(belle_sip_header_event_t)
 BELLE_SIP_DECLARE_TYPES_END
 
 
@@ -175,8 +164,7 @@ typedef struct _belle_sip_uri belle_sip_uri_t;
 typedef struct _belle_sip_parameters belle_sip_parameters_t;
 typedef struct belle_sip_param_pair belle_sip_param_pair_t;
 typedef struct _belle_sip_header belle_sip_header_t;
-typedef struct belle_tls_crypto_config belle_tls_crypto_config_t;
-typedef struct belle_tls_crypto_config belle_tls_verify_policy_t; /* belle_tls_verify_policy_t is deprecated, just for backward compatibility */
+typedef struct belle_tls_verify_policy belle_tls_verify_policy_t;
 typedef struct belle_sip_body_handler belle_sip_body_handler_t;
 typedef struct belle_sip_memory_body_handler belle_sip_memory_body_handler_t;
 typedef struct belle_sip_user_body_handler belle_sip_user_body_handler_t;

@@ -144,4 +144,4 @@ LINPHONE_PUBLIC bool_t linphone_buffer_is_empty(const LinphoneBuffer *buffer);
 }
 #endif
 
-#endif /* LINPHONE_BUFFER_H_ */
+#endif /* LINPHONE_CONTENT_H_ */

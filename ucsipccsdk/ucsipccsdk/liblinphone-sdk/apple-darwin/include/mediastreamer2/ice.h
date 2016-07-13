@@ -20,9 +20,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef ice_h
 #define ice_h
 
-#include <mediastreamer2/mscommon.h>
-#include <mediastreamer2/stun.h>
-#include <ortp/ortp.h>
+#include "mscommon.h"
+#include "ortp/stun_udp.h"
+#include "ortp/stun.h"
+#include "ortp/ortp.h"
 
 
 /**
@@ -55,12 +56,10 @@ typedef enum {
  * See the terminology in paragraph 3 of the RFC 5245 for more details.
  */
 typedef enum {
-	ICT_CandidateInvalid = -1,
 	ICT_HostCandidate,
 	ICT_ServerReflexiveCandidate,
 	ICT_PeerReflexiveCandidate,
-	ICT_RelayedCandidate,
-	ICT_CandidateTypeMax
+	ICT_RelayedCandidate
 } IceCandidateType;
 
 /**
@@ -104,8 +103,6 @@ struct _IceCheckList;
  */
 typedef struct _IceSession {
 	struct _IceCheckList * streams[ICE_SESSION_MAX_CHECK_LISTS];	/**< Table of IceChecklist structure pointers. Each element represents a media stream */
-	MSStunAuthRequestedCb stun_auth_requested_cb;	/**< Callback called when authentication is requested */
-	void *stun_auth_requested_userdata;	/**< Userdata to pass to the STUN authentication requested callback */
 	char *local_ufrag;	/**< Local username fragment for the session (assigned during the session creation) */
 	char *local_pwd;	/**< Local password for the session (assigned during the session creation) */
 	char *remote_ufrag;	/**< Remote username fragment for the session (provided via SDP by the peer) */
@@ -113,48 +110,31 @@ typedef struct _IceSession {
 	IceRole role;	/**< Role played by the agent for this session */
 	IceSessionState state;	/**< State of the session */
 	uint64_t tie_breaker;	/**< Random number used to resolve role conflicts (see paragraph 5.2 of the RFC 5245) */
-	int32_t ta;	/**< Duration of timer for sending connectivity checks in ms */
-	int event_value;	/** Value of the event to send */
+	uint32_t ta;	/**< Duration of timer for sending connectivity checks in ms */
+	uint8_t max_connectivity_checks;	/**< Configuration parameter to limit the number of connectivity checks performed by the agent (default is 100) */
+	uint8_t keepalive_timeout;	/**< Configuration parameter to define the timeout between each keepalive packets (default is 15s) */
 	MSTimeSpec event_time;	/**< Time when an event must be sent */
+	int event_value;	/** Value of the event to send */
+	bool_t send_event;	/**< Boolean value telling whether an event must be sent or not */
 	struct sockaddr_storage ss;	/**< STUN server address to use for the candidates gathering process */
 	socklen_t ss_len;	/**< Length of the STUN server address to use for the candidates gathering process */
 	MSTimeSpec gathering_start_ts;
 	MSTimeSpec gathering_end_ts;
-	IceCandidateType default_types[ICT_CandidateTypeMax];
-	bool_t check_message_integrity; /*set to false for backward compatibility only*/
-	bool_t send_event;	/**< Boolean value telling whether an event must be sent or not */
-	uint8_t max_connectivity_checks;	/**< Configuration parameter to limit the number of connectivity checks performed by the agent (default is 100) */
-	uint8_t keepalive_timeout;	/**< Configuration parameter to define the timeout between each keepalive packets (default is 15s) */
-	bool_t forced_relay;	/**< Force use of relay by modifying the local and reflexive candidates */
-	bool_t turn_enabled;	/**< TURN protocol enabled */
-	bool_t short_turn_refresh;	/**< Short TURN refresh for tests */
 } IceSession;
 
-typedef struct _IceStunServerRequestTransaction {
+typedef struct _IceStunServerCheckTransaction {
 	UInt96 transactionID;
 	MSTimeSpec request_time;
 	MSTimeSpec response_time;
-} IceStunServerRequestTransaction;
+} IceStunServerCheckTransaction;
 
-typedef struct _IceStunServerRequest {
-	struct _IceCheckList *cl;
-	RtpTransport *rtptp;
-	MSTurnContext *turn_context;
-	struct addrinfo *source_ai;
-	MSList *transactions;	/**< List of IceStunServerRequestTransaction structures. */
+typedef struct _IceStunServerCheck {
+	ortp_socket_t sock;
+	int srcport;
+	MSList *transactions;	/**< List of IceStunServerCheckTransaction structures. */
 	MSTimeSpec next_transmission_time;
-	MSStunAddress peer_address;
-	uint16_t channel_number;
-	uint16_t stun_method;
-	bool_t gathering;
 	bool_t responded;
-	bool_t to_remove;
-} IceStunServerRequest;
-
-typedef struct _IceStunRequestRoundTripTime {
-	int nb_responses;
-	int sum;
-} IceStunRequestRoundTripTime;
+} IceStunServerCheck;
 
 /**
  * Structure representing an ICE transport address.
@@ -162,8 +142,7 @@ typedef struct _IceStunRequestRoundTripTime {
 typedef struct _IceTransportAddress {
 	char ip[64];
 	int port;
-	int family;
-	// TODO: Handling of transport type: TCP, UDP...
+	// TODO: Handling of IP version (4 or 6) and transport type: TCP, UDP...
 } IceTransportAddress;
 
 /**
@@ -188,15 +167,13 @@ typedef struct _IceCandidatePair {
 	IceCandidatePairState state;	/**< State of the candidate pair */
 	uint64_t priority;	/**< Priority of the candidate pair */
 	MSTimeSpec transmission_time;	/**< Time when the connectivity check for the candidate pair has been sent */
-	int32_t rto;	/**< Duration of the retransmit timer for the connectivity check sent for the candidate pair in ms */
+	uint32_t rto;	/**< Duration of the retransmit timer for the connectivity check sent for the candidate pair in ms */
 	uint8_t retransmissions;	/**< Number of retransmissions for the connectivity check sent for the candidate pair */
 	IceRole role;	/**< Role of the agent when the connectivity check has been sent for the candidate pair */
 	bool_t is_default;	/**< Boolean value telling whether this candidate pair is a default candidate pair or not */
 	bool_t use_candidate;	/**< Boolean value telling if the USE-CANDIDATE attribute must be set for the connectivity checks send for the candidate pair */
 	bool_t is_nominated;	/**< Boolean value telling whether this candidate pair is nominated or not */
 	bool_t wait_transaction_timeout;	/**< Boolean value telling to create a new binding request on retransmission timeout */
-	bool_t retry_with_dummy_message_integrity; /** use to tell to retry with dummy message integrity. Useful to keep backward compatibility with older version*/
-	bool_t use_dummy_hmac; /*don't compute real hmac. used for backward compatibility*/
 } IceCandidatePair;
 
 /**
@@ -228,12 +205,10 @@ typedef struct _IceTransaction {
  */
 typedef struct _IceCheckList {
 	IceSession *session;	/**< Pointer to the ICE session */
-	MSTurnContext *rtp_turn_context;	/**< TURN context for RTP socket */
-	MSTurnContext *rtcp_turn_context;	/**< TURN context for RTCP socket */
 	RtpSession *rtp_session;	/**< Pointer to the RTP session associated with this ICE check list */
 	char *remote_ufrag;	/**< Remote username fragment for this check list (provided via SDP by the peer) */
 	char *remote_pwd;	/**< Remote password for this check list (provided via SDP by the peer) */
-	MSList *stun_server_requests;	/**< List of IceStunServerRequest structures */
+	MSList *stun_server_checks;	/**< List of IceStunServerCheck structures */
 	MSList *local_candidates;	/**< List of IceCandidate structures */
 	MSList *remote_candidates;	/**< List of IceCandidate structures */
 	MSList *pairs;	/**< List of IceCandidatePair structures */
@@ -255,7 +230,6 @@ typedef struct _IceCheckList {
 	bool_t nomination_delay_running;	/**< Boolean value telling whether the nomination process has been delayed or not */
 	MSTimeSpec gathering_start_time;	/**< Time when the gathering process was started */
 	MSTimeSpec nomination_delay_start_time;	/**< Time when the nomination process has been delayed */
-	IceStunRequestRoundTripTime rtt;
 } IceCheckList;
 
 
@@ -273,14 +247,6 @@ extern "C"{
  */
 MS2_PUBLIC IceSession * ice_session_new(void);
 
-
-/**
- * Set the prefered type for default candidates, as defined in rfc5245#section-4.1.4.
- * The type table can be terminated by the ICT_CandidateInvalid element, may it contain less elements
- * than the number of types available.
- **/
-MS2_PUBLIC void ice_session_set_default_candidates_types(IceSession *session,
-					const IceCandidateType types[ICT_CandidateTypeMax]);
 /**
  * Destroy a previously allocated ICE session.
  *
@@ -321,7 +287,7 @@ MS2_PUBLIC bool_t ice_check_list_candidates_gathered(const IceCheckList *cl);
  * @param n The number of the check list to access
  * @return A pointer to the nth check list of the session if it exists, NULL otherwise
  */
-MS2_PUBLIC IceCheckList *ice_session_check_list(const IceSession *session, int n);
+MS2_PUBLIC IceCheckList *ice_session_check_list(const IceSession *session, unsigned int n);
 
 /**
  * Get the local username fragment of an ICE session.
@@ -364,7 +330,7 @@ MS2_PUBLIC const char * ice_session_remote_pwd(const IceSession *session);
 MS2_PUBLIC IceSessionState ice_session_state(const IceSession *session);
 
 /**
- * Get the role of the agent for an ICE session.
+ * Gte the role of the agent for an ICE session.
  *
  * @param session A pointer to a session
  * @return The role of the agent for the session
@@ -415,7 +381,7 @@ MS2_PUBLIC void ice_session_set_remote_credentials(IceSession *session, const ch
  *
  * This function is to be called once the remote credentials have been received via SDP.
  */
-MS2_PUBLIC const char* ice_check_list_get_remote_ufrag(const IceCheckList *cl);
+MS2_PUBLIC const char* ice_check_list_set_remote_ufrag(const IceCheckList *cl);
 
 /**
  * get the remote pwd of an ICE check list.
@@ -424,7 +390,7 @@ MS2_PUBLIC const char* ice_check_list_get_remote_ufrag(const IceCheckList *cl);
  *
  * This function is to be called once the remote credentials have been received via SDP.
  */
-MS2_PUBLIC const char* ice_check_list_get_remote_pwd(const IceCheckList *cl);
+MS2_PUBLIC const char* ice_check_list_set_remote_pwd(const IceCheckList *cl);
 
 /**
  * Define the maximum number of connectivity checks that will be performed by the agent.
@@ -502,9 +468,8 @@ MS2_PUBLIC bool_t ice_session_candidates_gathered(const IceSession *session);
  * @param session A pointer to a session
  * @param ss The STUN server address
  * @param ss_len The length of the STUN server address
- * @return TRUE if the gathering is in progress, FALSE if no gathering is happening.
  */
-MS2_PUBLIC bool_t ice_session_gather_candidates(IceSession *session, const struct sockaddr * ss, socklen_t ss_len);
+MS2_PUBLIC void ice_session_gather_candidates(IceSession *session, const struct sockaddr * ss, socklen_t ss_len);
 
 /**
  * Tell the duration of the gathering process for an ICE session in ms.
@@ -513,31 +478,6 @@ MS2_PUBLIC bool_t ice_session_gather_candidates(IceSession *session, const struc
  * @return -1 if gathering has not been run, the duration of the gathering process in ms otherwise.
  */
 MS2_PUBLIC int ice_session_gathering_duration(IceSession *session);
-
-/**
- * Enable forced relay for tests.
- * The local and reflexive candidates are changed so that these paths do not work to force the use of the relay.
- * @param session A pointer to a session.
- * @param enable A boolean value telling whether to force relay or not.
- */
-MS2_PUBLIC void ice_session_enable_forced_relay(IceSession *session, bool_t enable);
-
-/**
- * Enable short TURN refresh for tests.
- * This changes the delay to send allocation refresh, create permission, and channel bind requests.
- * @param session A pointer to a session
- * @param enable A boolean value telling whether to use short turn refresh.
- */
-MS2_PUBLIC void ice_session_enable_short_turn_refresh(IceSession *session, bool_t enable);
-
-/**
- * Enable TURN protol.
- * @param session A pointer to a session
- * @param enable A boolean value telling whether to enable TURN protocol or not.
- */
-MS2_PUBLIC void ice_session_enable_turn(IceSession *session, bool_t enable);
-
-MS2_PUBLIC void ice_session_set_stun_auth_requested_cb(IceSession *session, MSStunAuthRequestedCb cb, void *userdata);
 
 /**
  * Tell the average round trip time during the gathering process for an ICE session in ms.
@@ -561,7 +501,7 @@ MS2_PUBLIC void ice_session_select_candidates(IceSession *session);
  *
  * @param session A pointer to a session
  */
-MS2_PUBLIC void ice_session_restart(IceSession *session, IceRole role);
+MS2_PUBLIC void ice_session_restart(IceSession *session);
 
 /**
  * Get the state of an ICE check list.
@@ -658,31 +598,37 @@ MS2_PUBLIC void ice_check_list_set_remote_credentials(IceCheckList *cl, const ch
  * Get the default local candidate for an ICE check list.
  *
  * @param cl A pointer to a check list
- * @param rtp_candidate A pointer to store the RTP default local candidate
- * @param rtcp_candidate A pointer to store the RTCP default local candidate
+ * @param rtp_addr A pointer to store the RTP address
+ * @param rtp_port A pointer to store the RTP port
+ * @param rtcp_addr A pointer to store the RTCP address
+ * @param rtcp_port A pointer to store the RTCP port
  * @return TRUE if the information have been successfully retrieved, FALSE otherwise
  */
-MS2_PUBLIC bool_t ice_check_list_default_local_candidate(const IceCheckList *cl, IceCandidate **rtp_candidate, IceCandidate **rtcp_candidate);
+MS2_PUBLIC bool_t ice_check_list_default_local_candidate(const IceCheckList *cl, const char **rtp_addr, int *rtp_port, const char **rtcp_addr, int *rtcp_port);
 
 /**
  * Get the selected valid local candidate for an ICE check list.
  *
  * @param cl A pointer to a check list
- * @param rtp_candidate A pointer to store the RTP valid local candidate
- * @param rtcp_candidate A pointer to store the RTCP valid local candidate
+ * @param rtp_addr A pointer to store the RTP address
+ * @param rtp_port A pointer to store the RTP port
+ * @param rtcp_addr A pointer to store the RTCP address
+ * @param rtcp_port A pointer to store the RTCP port
  * @return TRUE if the information have been successfully retrieved, FALSE otherwise
  */
-MS2_PUBLIC bool_t ice_check_list_selected_valid_local_candidate(const IceCheckList *cl, IceCandidate **rtp_candidate, IceCandidate **rtcp_candidate);
+MS2_PUBLIC bool_t ice_check_list_selected_valid_local_candidate(const IceCheckList *cl, const char **rtp_addr, int *rtp_port, const char **rtcp_addr, int *rtcp_port);
 
 /**
  * Get the selected valid remote candidate for an ICE check list.
  *
  * @param cl A pointer to a check list
- * @param rtp_candidate A pointer to store the RTP valid remote candidate
- * @param rtcp_candidate A pointer to store the RTCP valid remote candidate
+ * @param rtp_addr A pointer to store the RTP address
+ * @param rtp_port A pointer to store the RTP port
+ * @param rtcp_addr A pointer to store the RTCP address
+ * @param rtcp_port A pointer to store the RTCP port
  * @return TRUE if the information have been successfully retrieved, FALSE otherwise
  */
-MS2_PUBLIC bool_t ice_check_list_selected_valid_remote_candidate(const IceCheckList *cl, IceCandidate **rtp_candidate, IceCandidate **rtcp_candidate);
+MS2_PUBLIC bool_t ice_check_list_selected_valid_remote_candidate(const IceCheckList *cl, const char **rtp_addr, int *rtp_port, const char **rtcp_addr, int *rtcp_port);
 
 /**
  * Get the type of the selected valid candidate for an ICE check list.
@@ -712,7 +658,6 @@ MS2_PUBLIC const char * ice_candidate_type(const IceCandidate *candidate);
  *
  * @param cl A pointer to a check list
  * @param type The type of the local candidate to add as a string (must be one of: "host", "srflx", "prflx" or "relay")
- * @param family The address family of the local candidate (AF_INET or AF_INET6)
  * @param ip The IP address of the local candidate as a string (eg. 192.168.0.10)
  * @param port The port of the local candidate
  * @param componentID The component ID of the local candidate (usually 1 for RTP and 2 for RTCP)
@@ -720,14 +665,13 @@ MS2_PUBLIC const char * ice_candidate_type(const IceCandidate *candidate);
  *
  * This function is to be called when gathering local candidates.
  */
-MS2_PUBLIC IceCandidate * ice_add_local_candidate(IceCheckList *cl, const char *type, int family, const char *ip, int port, uint16_t componentID, IceCandidate *base);
+MS2_PUBLIC IceCandidate * ice_add_local_candidate(IceCheckList *cl, const char *type, const char *ip, int port, uint16_t componentID, IceCandidate *base);
 
 /**
  * Add a remote candidate to an ICE check list.
  *
  * @param cl A pointer to a check list
  * @param type The type of the remote candidate to add as a string (must be one of: "host", "srflx", "prflx" or "relay")
- * @param family The address family of the remote candidate (AF_INET or AF_INET6)
  * @param ip The IP address of the remote candidate as a string (eg. 192.168.0.10)
  * @param port The port of the remote candidate
  * @param componentID The component ID of the remote candidate (usually 1 for RTP and 2 for RTCP)
@@ -737,14 +681,13 @@ MS2_PUBLIC IceCandidate * ice_add_local_candidate(IceCheckList *cl, const char *
  *
  * This function is to be called once the remote candidate list has been received via SDP.
  */
-MS2_PUBLIC IceCandidate * ice_add_remote_candidate(IceCheckList *cl, const char *type, int family, const char *ip, int port, uint16_t componentID, uint32_t priority, const char * const foundation, bool_t is_default);
+MS2_PUBLIC IceCandidate * ice_add_remote_candidate(IceCheckList *cl, const char *type, const char *ip, int port, uint16_t componentID, uint32_t priority, const char * const foundation, bool_t is_default);
 
 /**
  * Add a losing pair to an ICE check list.
  *
  * @param cl A pointer to a check list
  * @param componentID The component ID of the candidates of the pair to add
- * @param family The address family of the candidates (AF_INET or AF_INET6)
  * @param local_addr The address of the local candidate of the pair to add
  * @param local_port The port of the local candidate of the pair to add
  * @param remote_addr The address of the remote candidate of the pair to add
@@ -752,7 +695,7 @@ MS2_PUBLIC IceCandidate * ice_add_remote_candidate(IceCheckList *cl, const char 
  *
  * This function is to be called when a RE-INVITE with an SDP containing a remote-candidates attribute is received.
  */
-MS2_PUBLIC void ice_add_losing_pair(IceCheckList *cl, uint16_t componentID, int family, const char *local_addr, int local_port, const char *remote_addr, int remote_port);
+MS2_PUBLIC void ice_add_losing_pair(IceCheckList *cl, uint16_t componentID, const char *local_addr, int local_port, const char *remote_addr, int remote_port);
 
 /**
  * Get the number of losing candidate pairs for an ICE session.
@@ -779,15 +722,6 @@ MS2_PUBLIC void ice_check_list_unselect_valid_pairs(IceCheckList *cl);
  * It is to be called automatically when the gathering process finishes.
  */
 MS2_PUBLIC void ice_session_set_base_for_srflx_candidates(IceSession *session);
-
-/**
- * Remove local and remote RTCP candidates from an ICE check list.
- * 
- * @param cl A pointer to a check list
- *
- * This function MUST be called before calling ice_session_start_connectivity_checks(). It is useful when using rtcp-mux.
- */
-MS2_PUBLIC void ice_check_list_remove_rtcp_candidates(IceCheckList *cl);
 
 /**
  * Compute the foundations of the local candidates of an ICE session.
@@ -841,16 +775,6 @@ MS2_PUBLIC void ice_session_start_connectivity_checks(IceSession *session);
  * @param session A pointer to a session
  */
 MS2_PUBLIC void ice_session_check_mismatch(IceSession *session);
-
-
-/**
- * Disable/enable strong message integrity check. Used for backward compatibility only
- * default value is enabled
- * @param session A pointer to a session
- * @param enable value
- *
- */
-MS2_PUBLIC void ice_session_enable_message_integrity_check(IceSession *session,bool_t enable);
 
 /**
  * Core ICE check list processing.
@@ -927,7 +851,6 @@ MS2_PUBLIC void ice_dump_check_list(const IceCheckList *cl);
  * Dump the triggered checks queue of an ICE check list in the traces (debug function).
  */
 MS2_PUBLIC void ice_dump_triggered_checks_queue(const IceCheckList *cl);
-
 
 #ifdef __cplusplus
 }

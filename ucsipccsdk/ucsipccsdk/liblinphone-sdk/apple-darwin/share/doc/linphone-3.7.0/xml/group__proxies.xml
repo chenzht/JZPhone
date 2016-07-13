@@ -1,0 +1,2706 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="group__proxies" kind="group">
+    <compoundname>proxies</compoundname>
+    <title>Managing proxies</title>
+    <innerclass refid="structdial__plan" prot="public">dial_plan</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__proxies_1gaea1b64a739b1faf0b490fe0f52cfe65e" prot="public" static="no">
+        <name>_LinphoneRegistrationState</name>
+        <enumvalue id="group__proxies_1ggaea1b64a739b1faf0b490fe0f52cfe65ea07341285f0270fe6e3b1e21949725d54" prot="public">
+          <name>LinphoneRegistrationNone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Initial state for registrations </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaea1b64a739b1faf0b490fe0f52cfe65eae20dab1677f285ef32006cc86f8ea630" prot="public">
+          <name>LinphoneRegistrationProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaea1b64a739b1faf0b490fe0f52cfe65ea73e009ef868a552c580b179578b87366" prot="public">
+          <name>LinphoneRegistrationOk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration is successful </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaea1b64a739b1faf0b490fe0f52cfe65eaf08a66584f81f4bbc9bfd1e3166c348d" prot="public">
+          <name>LinphoneRegistrationCleared</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Unregistration succeeded </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaea1b64a739b1faf0b490fe0f52cfe65eaa9861e7fe94dd55d5e9f7e58119abe5d" prot="public">
+          <name>LinphoneRegistrationFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration failed </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LinphoneRegistrationState describes proxy registration states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="830" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="830" bodyend="836"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" prot="public" static="no">
+        <type>struct _LinphoneProxyConfig</type>
+        <definition>typedef struct _LinphoneProxyConfig LinphoneProxyConfig</definition>
+        <argsstring></argsstring>
+        <name>LinphoneProxyConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LinphoneProxyConfig object represents a proxy configuration to be used by the LinphoneCore object. Its fields must not be used directly in favour of the accessors methods. Once created and filled properly the LinphoneProxyConfig can be given to LinphoneCore with <ref refid="group__proxies_1gaccdcbca377b771625aeea9c251b597c7" kindref="member">linphone_core_add_proxy_config()</ref>. This will automatically triggers the registration, if enabled.</para><para>The proxy configuration are persistent to restarts because they are saved in the configuration file. As a consequence, after <ref refid="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" kindref="member">linphone_core_new()</ref> there might already be a list of configured proxy that can be examined with <ref refid="group__proxies_1gad167a93dd8d6b6fa9b9d36c9ce7cc3fc" kindref="member">linphone_core_get_proxy_config_list()</ref>.</para><para>The default proxy (see linphone_core_set_default_proxy() ) is the one of the list that is used by default for calls. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="795" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" prot="public" static="no">
+        <type>enum <ref refid="group__proxies_1gaea1b64a739b1faf0b490fe0f52cfe65e" kindref="member">_LinphoneRegistrationState</ref></type>
+        <definition>typedef enum _LinphoneRegistrationState LinphoneRegistrationState</definition>
+        <argsstring></argsstring>
+        <name>LinphoneRegistrationState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LinphoneRegistrationState describes proxy registration states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="836" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__proxies_1ga7cd5545dba861ebf21d6be1ae34d72ec" prot="public" static="no">
+        <type>struct dial_plan</type>
+        <definition>typedef struct dial_plan dial_plan_t</definition>
+        <argsstring></argsstring>
+        <name>dial_plan_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="601" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__proxies_1ga5b8e43253c7a987e74f85a3c002b34ed" prot="public" static="yes" mutable="no">
+        <type>dial_plan_t const</type>
+        <definition>dial_plan_t const dial_plans[]</definition>
+        <argsstring>[]</argsstring>
+        <name>dial_plans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="605" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__proxies_1gac5e1bddd52282d48028f5106c1ec215b" prot="public" static="yes" mutable="no">
+        <type>dial_plan_t</type>
+        <definition>dial_plan_t most_common_dialplan</definition>
+        <argsstring></argsstring>
+        <name>most_common_dialplan</name>
+        <initializer>={ &quot;generic&quot; ,&quot;&quot;, &quot;&quot;, 10, &quot;00&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="831" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="831" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__proxies_1ga8ff876ddd266a66e315fe0576537fb77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_primary_contact</definition>
+        <argsstring>(LinphoneCore *lc, const char *contact)</argsstring>
+        <name>linphone_core_set_primary_contact</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the local &quot;from&quot; identity.</para><para>This data is used in absence of any proxy configuration or when no default proxy configuration is set. See LinphoneProxyConfig </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="1742" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="1742" bodyend="1758"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga147c072e33bdf5d44a3b95b28b4b27a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_primary_contact</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_primary_contact</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default identity when no proxy configuration is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="1792" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="1792" bodyend="1804"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gace31b80363e608291ec7df0ccb0b4cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_guess_hostname</definition>
+        <argsstring>(LinphoneCore *lc, bool_t val)</argsstring>
+        <name>linphone_core_set_guess_hostname</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells LinphoneCore to guess local hostname automatically in primary contact. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="1811" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="1811" bodyend="1813"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga1db010bcc9027f1e2aead2e2ddc51eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_get_guess_hostname</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_guess_hostname</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if hostname part of primary contact is guessed automatically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="1820" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="1820" bodyend="1822"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gae1788b49053b46190f7b305d8d21d6af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__linphone__address_1ga5af5a516ac253e3cda4f51b599a5385b" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* linphone_core_get_primary_contact_parsed</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_primary_contact_parsed</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as <ref refid="group__proxies_1ga147c072e33bdf5d44a3b95b28b4b27a1" kindref="member">linphone_core_get_primary_contact()</ref> but the result is a LinphoneAddress object instead of const char* </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="1830" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="1830" bodyend="1832"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga33972bf5275874d28cf0eb59f1d34d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_core_get_identity</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_identity</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default identity SIP address.</para><para>This is an helper function:</para><para>If no default proxy is set, this will return the primary contact ( see <ref refid="group__proxies_1ga147c072e33bdf5d44a3b95b28b4b27a1" kindref="member">linphone_core_get_primary_contact()</ref> ). If a default proxy is set it returns the registered identity on the proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" line="2721" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="2721" bodyend="2729"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gae79c79371d71750ee987757d59785ed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_registration_state_to_string</definition>
+        <argsstring>(LinphoneRegistrationState cs)</argsstring>
+        <name>linphone_registration_state_to_string</name>
+        <param>
+          <type><ref refid="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" kindref="member">LinphoneRegistrationState</ref></type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Human readable version of the <ref refid="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" kindref="member">LinphoneRegistrationState</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="842" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1598" bodyend="1617"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaaedcf1a592cedba55ad05167abd2d7ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig * linphone_proxy_config_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>linphone_proxy_config_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000074"><xreftitle>Deprecated</xreftitle><xrefdescription><para>, use <ref refid="group__proxies_1ga165451afd911ce954c3c7a0880fe52f5" kindref="member">linphone_core_create_proxy_config</ref> instead Creates an empty proxy config. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="843" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga32a8b4aee41d54c8a503e13fc55ab076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig * linphone_proxy_config_ref</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_ref</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="850" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga813af731d0baf61dd6b25590344b62a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_unref</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_unref</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release reference to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="856" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabb1e3eae0dab32c619d7aaf30e9724f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* linphone_proxy_config_get_user_data</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the user pointer associated with the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user pointer associated with the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="863" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1565" bodyend="1567"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4258acbc13b3ba3ab36ff9ce06bffa9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_user_data</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, void *ud)</argsstring>
+        <name>linphone_proxy_config_set_user_data</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user pointer to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user pointer to associate with the proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="870" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1561" bodyend="1563"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga147377ddae32abf4d3b3777cf0120aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_set_server_addr</definition>
+        <argsstring>(LinphoneProxyConfig *obj, const char *server_addr)</argsstring>
+        <name>linphone_proxy_config_set_server_addr</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>server_addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the proxy address</para><para>Examples of valid sip proxy address are:<itemizedlist>
+<listitem><para>IP address: sip:87.98.157.38</para></listitem><listitem><para>IP address with port: sip:87.98.157.38:5062</para></listitem><listitem><para>hostnames : sip:sip.example.net </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="872" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="229" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf18076ceb04bc4e779c6e1096e2ef412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_set_identity</definition>
+        <argsstring>(LinphoneProxyConfig *obj, const char *identity)</argsstring>
+        <name>linphone_proxy_config_set_identity</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>identity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the user identity as a SIP address.</para><para>This identity is normally formed with display name, username and domain, such as: Alice &lt;sip:<ulink url="mailto:alice@example.net">alice@example.net</ulink>&gt; The REGISTER messages will have from and to set to this identity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="873" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="264" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga38de87f4addfcddafd50ba8ffcf99d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_set_route</definition>
+        <argsstring>(LinphoneProxyConfig *obj, const char *route)</argsstring>
+        <name>linphone_proxy_config_set_route</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>route</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a SIP route. When a route is set, all outgoing calls will go to the route&apos;s destination if this proxy is the default one (see linphone_core_set_default_proxy() ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="874" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="299" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga88ede893e465dde212c2ce976357a942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_expires</definition>
+        <argsstring>(LinphoneProxyConfig *obj, int expires)</argsstring>
+        <name>linphone_proxy_config_set_expires</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>expires</declname>
+          <defname>val</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the registration expiration time in seconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="875" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadca1a0fe47bceff0e58d7057672519b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_enable_register</definition>
+        <argsstring>(LinphoneProxyConfig *obj, bool_t val)</argsstring>
+        <name>linphone_proxy_config_enable_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates either or not, REGISTRATION must be issued for this <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> . <linebreak/>
+ In case this <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> has been added to <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref>, follows the <ref refid="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" kindref="member">linphone_proxy_config_edit()</ref> rule. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, registration will be engaged</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Indicates whether a REGISTER request must be sent to the proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="884" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="343" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_edit</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_edit</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts editing a proxy configuration.</para><para>Because proxy configuration must be consistent, applications MUST call <ref refid="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" kindref="member">linphone_proxy_config_edit()</ref> before doing any attempts to modify proxy configuration (such as identity, proxy address and so on). Once the modifications are done, then the application must call <ref refid="group__proxies_1ga9b59d963af64ee243dfa4643a85c0cdc" kindref="member">linphone_proxy_config_done()</ref> to commit the changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="886" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="380" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga9b59d963af64ee243dfa4643a85c0cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_done</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_done</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Commits modification made to the proxy configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="887" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="986" bodyend="1009"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga111a1c43aa8aac3b2b95274b5a02be64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_enable_publish</definition>
+        <argsstring>(LinphoneProxyConfig *obj, bool_t val)</argsstring>
+        <name>linphone_proxy_config_enable_publish</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates either or not, PUBLISH must be issued for this <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> . <linebreak/>
+ In case this <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> has been added to <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref>, follows the <ref refid="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" kindref="member">linphone_proxy_config_edit()</ref> rule. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, publish will be engaged </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="895" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="355" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga01a187b4da6b635bf32de85aa2d8d970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_publish_expires</definition>
+        <argsstring>(LinphoneProxyConfig *obj, int expires)</argsstring>
+        <name>linphone_proxy_config_set_publish_expires</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>expires</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the publish expiration time in second. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>proxy config </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expires</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in second </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="902" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1658" bodyend="1660"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga414e8084dbade11f329797871e993ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_get_publish_expires</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_publish_expires</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the publish expiration time in second. Default value is the registration expiration value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>expires in second </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="909" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1661" bodyend="1668"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadf8ce7a15604a3b8469e7149f992d916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_dial_escape_plus</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, bool_t val)</argsstring>
+        <name>linphone_proxy_config_set_dial_escape_plus</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether liblinphone should replace &quot;+&quot; by international calling prefix in dialed numbers (passed to <ref refid="group__call__control_1gaaea662739cc3825eaa80d8ac264a883c" kindref="member">linphone_core_invite</ref> ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="911" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="537" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga34cc952a4053bd82f65f8de965e239dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_dial_prefix</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, const char *prefix)</argsstring>
+        <name>linphone_proxy_config_set_dial_prefix</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a dialing prefix to be automatically prepended when inviting a number with <ref refid="group__call__control_1gaaea662739cc3825eaa80d8ac264a883c" kindref="member">linphone_core_invite()</ref>; This dialing prefix shall usually be the country code of the country where the user is living. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="912" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="515" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacc39ea2058541b920b54606d06aed37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_enable_quality_reporting</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, bool_t enable)</argsstring>
+        <name>linphone_proxy_config_enable_quality_reporting</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether quality statistics during call should be stored and sent to a collector according to RFC 6035. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to sotre quality statistics and sent them to the collector, false to disable it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="919" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="550" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gafa768bc49afd9c987d5676328ae71771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_quality_reporting_enabled</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_quality_reporting_enabled</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether quality statistics during call should be stored and sent to a collector according to RFC 6035. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if quality repotring is enabled, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="926" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="554" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga5eb818aafb8cca230f40617ef3e18bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_quality_reporting_collector</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, const char *collector)</argsstring>
+        <name>linphone_proxy_config_set_quality_reporting_collector</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>collector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the SIP address of the collector end-point when using quality reporting. This SIP address should be used on server-side to process packets directly then discard packets. Collector address should be a non existing account and should not received any packets. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">collector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SIP address of the collector end-point. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="935" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="567" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga97ca801f66f550cf6777afb085c6fc15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_quality_reporting_collector</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_quality_reporting_collector</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the SIP address of the collector end-point when using quality reporting. This SIP address should be used on server-side to process packets directly then discard packets. Collector address should be a non existing account and should not received any packets. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The SIP address of the collector end-point. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="944" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="585" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6ff5e18be0bb45830b2a9031f1c53fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_quality_reporting_interval</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, uint8_t interval)</argsstring>
+        <name>linphone_proxy_config_set_quality_reporting_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interval between 2 interval reports sending when using quality reporting. If call exceed interval size, an interval report will be sent to the collector. On call termination, a session report will be sent for the remaining period. Value must be 0 (disabled) or positive. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in seconds, 0 means interval reports are disabled. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="953" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="559" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gab6eb2d0f234a917a55fff2e7dea55da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_get_quality_reporting_interval</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_quality_reporting_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interval between interval reports when using quality reporting. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interval in seconds, 0 means interval reports are disabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="961" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="563" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaac2fff66bf2f9f74e44bae98972b507b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" kindref="member">LinphoneRegistrationState</ref></type>
+        <definition>LinphoneRegistrationState linphone_proxy_config_get_state</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_state</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the registration state of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The registration state of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="968" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1594" bodyend="1596"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaed2155106b24f7e418b67c2774b6a0c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_is_registered</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_is_registered</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a boolean indicating that the user is sucessfully registered on the proxy. <xrefsect id="deprecated_1_deprecated000076"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__proxies_1gaac2fff66bf2f9f74e44bae98972b507b" kindref="member">linphone_proxy_config_get_state()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="970" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="217" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga0a2faacf65fe1ef97618bafb78bd855e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_domain</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_domain</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the domain name of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The domain name of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="977" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="290" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaeeb37e88116182ec7c1bee24b873204e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_realm</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_realm</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the realm of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The realm of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="984" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1011" bodyend="1014"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4279d99d9f33955bfb3249467d7e98c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_realm</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, const char *realm)</argsstring>
+        <name>linphone_proxy_config_set_realm</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>realm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the realm of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">realm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New realm value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The realm of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="991" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1015" bodyend="1021"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga86aab63aeafc9313276b099d1b75d028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_route</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_route</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the route set for this proxy configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="993" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1055" bodyend="1057"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gafebbeb5de42c1cfac8f134714111f10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_identity</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_identity</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the SIP identity that belongs to this proxy configuration.</para><para>The SIP identity is a SIP address (Display Name &lt;sip:username@domain&gt; ) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="994" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1064" bodyend="1066"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabac8c9c35d934ff9dfdf0fabae1bcbf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_publish_enabled</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_publish_enabled</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if PUBLISH request is enabled for this proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="995" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1071" bodyend="1073"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6d3b361f9379d97c84a856a0b84d1b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_server_addr</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_server_addr</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the proxy&apos;s SIP address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="996" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1078" bodyend="1080"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga06bc12ed3f1048ee8e93e797fc5aa23e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_get_expires</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_expires</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the duration of registration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="998" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1085" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gae9a9f097eda6371c7af0fa9760b62686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_register_enabled</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_register_enabled</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if registration to the proxy is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="999" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1092" bodyend="1094"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaa25934d6fe1edbe0dde366d9a3487247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_refresh_register</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_refresh_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refresh a proxy registration. This is useful if for example you resuming from suspend, thus IP address may have changed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1000" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="500" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaadf6d4a7596fd46aa446c5d10a1b4bcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_pause_register</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_pause_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prevent a proxy config from refreshing its registration. This is useful to let registrations to expire naturally (or) when the application wants to keep control on when refreshes are sent. However, linphone_core_set_network_reachable(lc,TRUE) will always request the proxy configs to refresh their registrations. The refreshing operations can be resumed with <ref refid="group__proxies_1gaa25934d6fe1edbe0dde366d9a3487247" kindref="member">linphone_proxy_config_refresh_register()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1001" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="367" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2127731464f3fe066e33998446ca19b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_contact_parameters</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_contact_parameters</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns previously set contact parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1002" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1135" bodyend="1137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad49d99765334a9546739ef6e1ed9160b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_contact_parameters</definition>
+        <argsstring>(LinphoneProxyConfig *obj, const char *contact_params)</argsstring>
+        <name>linphone_proxy_config_set_contact_parameters</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set optional contact parameters that will be added to the contact information sent in the registration. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contact_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string contaning the additional parameters in text form, like &quot;myparam=something;myparam2=something_else&quot;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The main use case for this function is provide the proxy additional information regarding the user agent, like for example unique identifier or apple push id. As an example, the contact address in the SIP register sent will look like &lt;sip:<ulink url="mailto:joe@15.128.128.93">joe@15.128.128.93</ulink>:50421&gt;;apple-push-id=43143-DFE23F-2323-FA2232. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1003" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1104" bodyend="1112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga71f8c3c8cf936cbd0ee891ff97f6c174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_contact_uri_parameters</definition>
+        <argsstring>(LinphoneProxyConfig *obj, const char *contact_uri_params)</argsstring>
+        <name>linphone_proxy_config_set_contact_uri_parameters</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact_uri_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set optional contact parameters that will be added to the contact information sent in the registration, inside the URI. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contact_uri_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string containing the additional parameters in text form, like &quot;myparam=something;myparam2=something_else&quot;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The main use case for this function is provide the proxy additional information regarding the user agent, like for example unique identifier or apple push id. As an example, the contact address in the SIP register sent will look like &lt;sip:<ulink url="mailto:joe@15.128.128.93">joe@15.128.128.93</ulink>:50421;apple-push-id=43143-DFE23F-2323-FA2232&gt;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1004" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1122" bodyend="1130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gac41ebb472326499083aaba80a722e899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_contact_uri_parameters</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_contact_uri_parameters</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns previously set contact URI parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1005" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1142" bodyend="1144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad01c81760731dec8dfc7893bb88d9cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>struct _LinphoneCore * linphone_proxy_config_get_core</definition>
+        <argsstring>(const LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_get_core</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object to which is associated the <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object to which is associated the <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1012" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1146" bodyend="1148"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga5f7d7b51c71f544c40e76a64bd81da04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_get_dial_escape_plus</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_dial_escape_plus</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether liblinphone should replace &quot;+&quot; by &quot;00&quot; in dialed numbers (passed to <ref refid="group__call__control_1gaaea662739cc3825eaa80d8ac264a883c" kindref="member">linphone_core_invite</ref> ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1014" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="546" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3df8c8bbe169364504a7e4b7c39c75c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * linphone_proxy_config_get_dial_prefix</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_dial_prefix</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns dialing prefix. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1015" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="528" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga245ddcd6772adad4ac8ecc64a10494ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__misc_1gabe82a1a1ffc3d6b4e0b51a03028513b7" kindref="member">LinphoneReason</ref></type>
+        <definition>LinphoneReason linphone_proxy_config_get_error</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_error</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reason why registration failed when the proxy config state is LinphoneRegistrationFailed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The reason why registration failed for this proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1022" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1619" bodyend="1621"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacee7b20f44e48bfb1a2ccbc00eada052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__misc_1ga8f3b35ce44e1284465ac2859ffbb9db7" kindref="member">LinphoneErrorInfo</ref> *</type>
+        <definition>const LinphoneErrorInfo* linphone_proxy_config_get_error_info</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_error_info</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get detailed information why registration failed when the proxy config state is LinphoneRegistrationFailed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The details why registration failed for this proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1029" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1623" bodyend="1625"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2505c0225f920e0c3e933de24662bd8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_proxy_config_get_transport</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_transport</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the transport from either service route, route or addr. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The transport as a string (I.E udp, tcp, tls, dtls) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1036" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1630" bodyend="1651"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4439fde3e342d6dff849904348fa0a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_destroy</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_destroy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a proxy config. <xrefsect id="deprecated_1_deprecated000075"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>: LinphoneProxyConfig that have been removed from LinphoneCore with <ref refid="group__proxies_1gaa29f31211db5b4320eba0d215030639b" kindref="member">linphone_core_remove_proxy_config()</ref> must not be freed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1040" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga7edff4b44460cbbffb172b83054c9dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_sip_setup</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, const char *type)</argsstring>
+        <name>linphone_proxy_config_set_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1041" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1451" bodyend="1459"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga504a5ae5149c4a65a0bc84a0e9d291a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SipSetupContext *</type>
+        <definition>SipSetupContext * linphone_proxy_config_get_sip_setup_context</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_sip_setup_context</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1042" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1461" bodyend="1463"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga166e7f2e4703ae10aeeb611909d60b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SipSetup *</type>
+        <definition>SipSetup * linphone_proxy_config_get_sip_setup</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1043" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1409" bodyend="1415"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga81859303cbfbf1c86cbd5c346df69ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_is_phone_number</definition>
+        <argsstring>(LinphoneProxyConfig *proxy, const char *username)</argsstring>
+        <name>linphone_proxy_config_is_phone_number</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Detect if the given input is a phone number or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>proxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> argument, unused yet but may contain useful data. Can be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to parse. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if input is a phone number, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1051" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="882" bodyend="899"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga743329b10e73baa4611f4e304ab6f7c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_normalize_number</definition>
+        <argsstring>(LinphoneProxyConfig *proxy, const char *username, char *result, size_t result_len)</argsstring>
+        <name>linphone_proxy_config_normalize_number</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>result_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Normalize a human readable phone number into a basic string. 888-444-222 becomes 888444222 or +33888444222 depending on the <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> argument. This function will always generate a normalized username; if input is not a phone number, output will be a copy of input. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>proxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object containing country code and/or escape symbol. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to parse </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the newly normalized number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the normalized number <emphasis>result</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if a phone number was recognized, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1063" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="930" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga361a02178ca3ef43fb20bd9814254288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_privacy</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, LinphonePrivacyMask privacy)</argsstring>
+        <name>linphone_proxy_config_set_privacy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>LinphonePrivacyMask</type>
+          <declname>privacy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set default privacy policy for all calls routed through this proxy. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object to be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>privacy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphonePrivacy to configure privacy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1071" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1652" bodyend="1654"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga94721646dad94bb19ff9bc560d74de77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphonePrivacyMask</type>
+        <definition>LinphonePrivacyMask linphone_proxy_config_get_privacy</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_privacy</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get default privacy policy for all calls routed through this proxy. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Privacy mode </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1077" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1655" bodyend="1657"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga80967171aab9c0564676d5faec831ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_file_transfer_server</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, const char *server_url)</argsstring>
+        <name>linphone_proxy_config_set_file_transfer_server</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>server_url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the http file transfer server to be used for content type application/vnd.gsma.rcs-ft-http+xml <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object to be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>server_url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL of the file server like <ulink url="https://file.linphone.org/upload.php">https://file.linphone.org/upload.php</ulink> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1083" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga46a8c15232a6edb8450132210e4b664f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_proxy_config_get_file_transfer_server</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_file_transfer_server</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the http file transfer server to be used for content type application/vnd.gsma.rcs-ft-http+xml <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>URL of the file server like <ulink url="https://file.linphone.org/upload.php">https://file.linphone.org/upload.php</ulink> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1089" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3813a3e0e3ba76b84811300e2972605a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_enable_avpf</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, bool_t enable)</argsstring>
+        <name>linphone_proxy_config_enable_avpf</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether AVPF/SAVPF must be used for calls using this proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable AVPF/SAVF, false to disable it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000034"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__proxies_1ga3bbd52c26bdbc7df7fb84f804101a6d8" kindref="member">linphone_proxy_config_set_avpf_mode()</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1097" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1670" bodyend="1672"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga118eccd24901b763b342a4cbeab42c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_avpf_enabled</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_avpf_enabled</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether AVPF/SAVPF is being used for calls using this proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if AVPF/SAVPF is enabled, false otherwise. </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000035"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__proxies_1ga3bbd52c26bdbc7df7fb84f804101a6d8" kindref="member">linphone_proxy_config_set_avpf_mode()</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1105" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1674" bodyend="1679"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga676e7545e2a09ab61c86a700d78b7082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_avpf_rr_interval</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, uint8_t interval)</argsstring>
+        <name>linphone_proxy_config_set_avpf_rr_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interval between regular RTCP reports when using AVPF/SAVPF. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in seconds (between 0 and 5 seconds). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1112" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1689" bodyend="1692"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaafe4fa6cdcddaac450ad9a999109f642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t linphone_proxy_config_get_avpf_rr_interval</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_avpf_rr_interval</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interval between regular RTCP reports when using AVPF/SAVPF. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interval in seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1119" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1694" bodyend="1696"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaabd040abc63ac202ea4a7ed0bbb81108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__media__parameters_1gae3f5b086ee43662c6ab6ec5c3df3682c" kindref="member">LinphoneAVPFMode</ref></type>
+        <definition>LinphoneAVPFMode linphone_proxy_config_get_avpf_mode</definition>
+        <argsstring>(const LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_get_avpf_mode</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get enablement status of RTCP feedback (also known as AVPF profile). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the enablement mode, which can be LinphoneAVPFDefault (use LinphoneCore&apos;s mode), LinphoneAVPFEnabled (avpf is enabled), or LinphoneAVPFDisabled (disabled). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1126" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1681" bodyend="1683"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3bbd52c26bdbc7df7fb84f804101a6d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_set_avpf_mode</definition>
+        <argsstring>(LinphoneProxyConfig *cfg, LinphoneAVPFMode mode)</argsstring>
+        <name>linphone_proxy_config_set_avpf_mode</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__media__parameters_1gae3f5b086ee43662c6ab6ec5c3df3682c" kindref="member">LinphoneAVPFMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the use of RTCP feedback (also known as AVPF profile). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the enablement mode, which can be LinphoneAVPFDefault (use LinphoneCore&apos;s mode), LinphoneAVPFEnabled (avpf is enabled), or LinphoneAVPFDisabled (disabled). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="1133" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1685" bodyend="1687"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga130795ea67730f7b01f7b51fe6bdb44f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_refresh_registers</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_refresh_registers</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force registration refresh to be initiated upon next iterate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="3022" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.c" bodystart="6372" bodyend="6385"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacaeded08c87fd606cd7f176f423a89b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _linphone_proxy_config_destroy</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>_linphone_proxy_config_destroy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="143" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="171" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadd5d520ee4de9542b5c6984494b41032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</definition>
+        <argsstring>(LinphoneProxyConfig)</argsstring>
+        <name>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6ae168b4bd01c75063d76aadf44be0ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_INSTANCIATE_VPTR</definition>
+        <argsstring>(LinphoneProxyConfig, belle_sip_object_t,(belle_sip_object_destroy_t) _linphone_proxy_config_destroy, NULL, NULL, FALSE)</argsstring>
+        <name>BELLE_SIP_INSTANCIATE_VPTR</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref></type>
+        </param>
+        <param>
+          <type>belle_sip_object_t</type>
+        </param>
+        <param>
+          <type>(belle_sip_object_destroy_t)</type>
+          <declname>_linphone_proxy_config_destroy</declname>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>FALSE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga165451afd911ce954c3c7a0880fe52f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig* linphone_core_create_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_create_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a proxy config with default values from Linphone core. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> with default values set </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="154" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf1c63afc00d71e84a1b089283154b0c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _linphone_proxy_config_release_ops</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>_linphone_proxy_config_release_ops</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="160" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadbc196ed9ce7bd252880de8947136e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _linphone_proxy_config_release</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>_linphone_proxy_config_release</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="199" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga682a1a4bd5661dcefc69c5fd7604256a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_proxy_config_check</definition>
+        <argsstring>(LinphoneCore *lc, LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_check</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="324" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="324" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga98010d49ab47e02a23dec7effbb51610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_apply</definition>
+        <argsstring>(LinphoneProxyConfig *obj, LinphoneCore *lc)</argsstring>
+        <name>linphone_proxy_config_apply</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="394" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="394" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga07ccf3d7cfeffa54483b8efcec270d71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_stop_refreshing</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_stop_refreshing</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="399" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="399" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6bcf60f5a5b19e2fb7d3c6c85fde7e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__linphone__address_1ga5af5a516ac253e3cda4f51b599a5385b" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* guess_contact_for_register</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>guess_contact_for_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="410" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="410" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga9e94dccf4072107299db09802040a1eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _linphone_proxy_config_unregister</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>_linphone_proxy_config_unregister</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unregister without moving the register_enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="451" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="451" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad7257abaf69d5889125af5febe7f81d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void linphone_proxy_config_register</definition>
+        <argsstring>(LinphoneProxyConfig *obj)</argsstring>
+        <name>linphone_proxy_config_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="457" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="457" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga38c2e82076bbde91124ae8867320a43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_dial_plan_lookup_ccc_from_e164</definition>
+        <argsstring>(const char *e164)</argsstring>
+        <name>linphone_dial_plan_lookup_ccc_from_e164</name>
+        <param>
+          <type>const char *</type>
+          <declname>e164</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from an e164 number, ex: +33952650121 will return 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e164</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phone number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="833" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="833" bodyend="858"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadf2204eb2ab519f7b40be868387b9e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_dial_plan_lookup_ccc_from_iso</definition>
+        <argsstring>(const char *iso)</argsstring>
+        <name>linphone_dial_plan_lookup_ccc_from_iso</name>
+        <param>
+          <type>const char *</type>
+          <declname>iso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from ISO 3166-1 alpha-2 code, ex: FR returns 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iso</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>country code alpha2 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="859" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="859" bodyend="867"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga8d7f95f3192b6be1d45817099f2e31c3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lookup_dial_plan</definition>
+        <argsstring>(const char *ccc, dial_plan_t *plan)</argsstring>
+        <name>lookup_dial_plan</name>
+        <param>
+          <type>const char *</type>
+          <declname>ccc</declname>
+        </param>
+        <param>
+          <type>dial_plan_t *</type>
+          <declname>plan</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="869" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="869" bodyend="880"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga89f3641c31bfdb48b76c71a82da29462" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char* flatten_number</definition>
+        <argsstring>(const char *number)</argsstring>
+        <name>flatten_number</name>
+        <param>
+          <type>const char *</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="901" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="901" bodyend="912"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga1c493f11f75685afa8d4f5112e7e5d43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void replace_plus</definition>
+        <argsstring>(const char *src, char *dest, size_t destlen, const char *icp)</argsstring>
+        <name>replace_plus</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destlen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>icp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="914" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="914" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga474d83c56314481c0c4b2ea284d7ff1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_proxy_config_send_publish</definition>
+        <argsstring>(LinphoneProxyConfig *proxy, LinphonePresenceModel *presence)</argsstring>
+        <name>linphone_proxy_config_send_publish</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1gad98268f00fb29b50b22b3c3da566e366" kindref="member">LinphonePresenceModel</ref> *</type>
+          <declname>presence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1023" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1023" bodyend="1050"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaccdcbca377b771625aeea9c251b597c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_add_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc, LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_core_add_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a proxy configuration. This will start registration on the proxy, if registration is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1154" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1154" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaa29f31211db5b4320eba0d215030639b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_remove_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc, LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_core_remove_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a proxy configuration.</para><para>LinphoneCore will then automatically unregister and place the proxy configuration on a deleted list. For that reason, a removed proxy does NOT need to be freed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1173" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1173" bodyend="1194"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3a9d4801bf073c349fe4f4de65aba432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_clear_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_clear_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase all proxies from config. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1200" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1200" bodyend="1208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6d8c772014ee3afed4865c8e5e2cb910" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int linphone_core_get_default_proxy_config_index</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_default_proxy_config_index</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1210" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1210" bodyend="1216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4df28789d61c5d2e4b562094b46ed319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_default_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc, LinphoneProxyConfig *config)</argsstring>
+        <name>linphone_core_set_default_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the default proxy.</para><para>This default proxy must be part of the list of already entered LinphoneProxyConfig. Toggling it as default will make LinphoneCore use the identity associated with the proxy configuration in all incoming and outgoing calls. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy configuration to use as the default one. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1227" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1227" bodyend="1239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga919b5770a51d23c0ef8c6af8e5ae1104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_default_proxy_index</definition>
+        <argsstring>(LinphoneCore *lc, int index)</argsstring>
+        <name>linphone_core_set_default_proxy_index</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1241" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1241" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gac77d836d546848289f16716cb2db12f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_default_proxy</definition>
+        <argsstring>(LinphoneCore *lc, LinphoneProxyConfig **config)</argsstring>
+        <name>linphone_core_get_default_proxy</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> **</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default proxy configuration, that is the one used to determine the current identity. <xrefsect id="deprecated_1_deprecated000077"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__proxies_1gab379acf922a163434face124106e33da" kindref="member">linphone_core_get_default_proxy_config()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1250" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1250" bodyend="1253"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gab379acf922a163434face124106e33da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig* linphone_core_get_default_proxy_config</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_default_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default proxy configuration, that is the one used to determine the current identity. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The default proxy configuration. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1260" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1260" bodyend="1262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad167a93dd8d6b6fa9b9d36c9ce7cc3fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSList *</type>
+        <definition>const MSList* linphone_core_get_proxy_config_list</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_proxy_config_list</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an unmodifiable list of entered proxy configurations. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> objects. <mslist>LinphoneProxyConfig</mslist>  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1269" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1269" bodyend="1271"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga80a86ff65166621410c25817a29b3c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_write_to_config_file</definition>
+        <argsstring>(LpConfig *config, LinphoneProxyConfig *obj, int index)</argsstring>
+        <name>linphone_proxy_config_write_to_config_file</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1273" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1273" bodyend="1316"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gab7397f067ba4c1ea6ea830b3790dbe76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig* linphone_proxy_config_new_from_config_file</definition>
+        <argsstring>(LinphoneCore *lc, int index)</argsstring>
+        <name>linphone_proxy_config_new_from_config_file</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1332" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1332" bodyend="1373"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2effcb9c0ea84a2b3bb47ef11680977b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void linphone_proxy_config_activate_sip_setup</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_activate_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1375" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1375" bodyend="1407"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaacfa44aae8d1fcbfaf800f9ccdb8733a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>static bool_t can_register</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>can_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1417" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1417" bodyend="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad0d1e78a1091b01614bf4e79c0062ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_proxy_config_update</definition>
+        <argsstring>(LinphoneProxyConfig *cfg)</argsstring>
+        <name>linphone_proxy_config_update</name>
+        <param>
+          <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1433" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1433" bodyend="1449"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__proxies_1ga2929b27c5f57444aa2656e27bbedd1b0" prot="public" static="no">
+        <name>linphone_proxy_config_expires</name>
+        <initializer><ref refid="group__proxies_1ga88ede893e465dde212c2ce976357a942" kindref="member">linphone_proxy_config_set_expires</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="877" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga07e7f3ea8e067e3741bf6dcd6871675e" prot="public" static="no">
+        <name>linphone_proxy_config_enableregister</name>
+        <initializer><ref refid="group__proxies_1gadca1a0fe47bceff0e58d7057672519b6" kindref="member">linphone_proxy_config_enable_register</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="885" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="885" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1gac4313bfe50cf4bf57c50584beb4aef10" prot="public" static="no">
+        <name>linphone_proxy_config_get_addr</name>
+        <initializer><ref refid="group__proxies_1ga6d3b361f9379d97c84a856a0b84d1b66" kindref="member">linphone_proxy_config_get_server_addr</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" line="997" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/linphonecore.h" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga887770d5312e00b1bf98a05a3f72f85e" prot="public" static="no">
+        <name>CONFIGURE_STRING_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>{\
+	char* default_value = linphone_proxy_config_get_##param(obj)?ms_strdup(linphone_proxy_config_get_##param(obj)):NULL;\
+	linphone_proxy_config_set_##param(obj,<ref refid="group__misc_1ga9657ebf1d68b43184a796c9bdc68c29a" kindref="member">lp_config_get_string</ref>(config,key,param_name,default_value)); \
+	if ( default_value) ms_free(default_value); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1319" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga1a51185cadf2eb9e2999c3ec3543e31d" prot="public" static="no">
+        <name>CONFIGURE_BOOL_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>linphone_proxy_config_enable_##param(obj,<ref refid="group__misc_1ga36d08c0cbc78d88fd4f043e61e9b9637" kindref="member">lp_config_get_int</ref>(config,key,param_name,linphone_proxy_config_##param##_enabled(obj)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1326" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1gac9ad016c4968c8807f31e2d009c3517f" prot="public" static="no">
+        <name>CONFIGURE_INT_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>linphone_proxy_config_set_##param(obj,<ref refid="group__misc_1ga36d08c0cbc78d88fd4f043e61e9b9637" kindref="member">lp_config_get_int</ref>(config,key,param_name,linphone_proxy_config_get_##param(obj)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" line="1329" column="9" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/proxy.c" bodystart="1329" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>User registration is controled by <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> settings.<linebreak/>
+ Each <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> object can be configured with registration informations like <ref refid="group__proxies_1ga147377ddae32abf4d3b3777cf0120aed" kindref="member">proxy address </ref> , <ref refid="group__proxies_1gaf18076ceb04bc4e779c6e1096e2ef412" kindref="member">user id </ref>, <ref refid="_1ga2929b27c5f57444aa2656e27bbedd1b0" kindref="member">refresh period </ref>, and so on. <linebreak/>
+ A created proxy config using <ref refid="group__proxies_1gaaedcf1a592cedba55ad05167abd2d7ce" kindref="member">linphone_proxy_config_new()</ref>, once configured, must be added to <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> using function <ref refid="group__proxies_1gaccdcbca377b771625aeea9c251b597c7" kindref="member">linphone_core_add_proxy_config()</ref>. <linebreak/>
+ It is recommended to set a default <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">proxy config </ref> using function linphone_core_set_default_proxy(). Once done, if <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">a proxy config </ref> has been configured with attribute <ref refid="group__proxies_1gadca1a0fe47bceff0e58d7057672519b6" kindref="member">enable register </ref> , next call to <ref refid="group__initializing_1ga7bdac8ac386483fc4e0876e4c5d13755" kindref="member">linphone_core_iterate()</ref> triggers a SIP register. <linebreak/>
+ Registration status is reported by LinphoneCoreRegistrationStateChangedCb. <linebreak/>
+ <linebreak/>
+ This pseudo code demonstrates basic registration operations: <linebreak/>
+<programlisting><codeline><highlight class="normal"><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref>*<sp/>proxy_cfg;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*create<sp/>proxy<sp/>config*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">proxy_cfg<sp/>=<sp/><ref refid="group__proxies_1gaaedcf1a592cedba55ad05167abd2d7ce" kindref="member">linphone_proxy_config_new</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*parse<sp/>identity*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__linphone__address_1ga5af5a516ac253e3cda4f51b599a5385b" kindref="member">LinphoneAddress</ref><sp/>*from<sp/>=<sp/><ref refid="group__linphone__address_1ga301c9884c0bc8b1050fe790d424e0b49" kindref="member">linphone_address_new</ref>(</highlight><highlight class="stringliteral">&quot;sip:toto@sip.titi.com&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">LinphoneAuthInfo<sp/>*info;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(password!=NULL){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info=<ref refid="group__authentication_1ga034dd18662e329c0dcd6a56d2b3d24fa" kindref="member">linphone_auth_info_new</ref>(<ref refid="group__linphone__address_1ga4fa5a4927c1d2f3a6b7c6824e35a87bf" kindref="member">linphone_address_get_username</ref>(from),NULL,</highlight><highlight class="stringliteral">&quot;secret&quot;</highlight><highlight class="normal">,NULL,NULL);<sp/></highlight><highlight class="comment">/*create<sp/>authentication<sp/>structure<sp/>from<sp/>identity*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__authentication_1ga62ac5bb34f0342f7edc733c42473b7aa" kindref="member">linphone_core_add_auth_info</ref>(lc,info);<sp/></highlight><highlight class="comment">/*add<sp/>authentication<sp/>info<sp/>to<sp/>LinphoneCore*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>configure<sp/>proxy<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1gaf18076ceb04bc4e779c6e1096e2ef412" kindref="member">linphone_proxy_config_set_identity</ref>(proxy_cfg,identity);<sp/></highlight><highlight class="comment">/*set<sp/>identity<sp/>with<sp/>user<sp/>name<sp/>and<sp/>domain*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>server_addr<sp/>=<sp/><ref refid="group__linphone__address_1ga95a356f26c67ed4ee88db878b617c65f" kindref="member">linphone_address_get_domain</ref>(from);<sp/></highlight><highlight class="comment">/*extract<sp/>domain<sp/>address<sp/>from<sp/>identity*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1ga147377ddae32abf4d3b3777cf0120aed" kindref="member">linphone_proxy_config_set_server_addr</ref>(proxy_cfg,server_addr);<sp/></highlight><highlight class="comment">/*<sp/>we<sp/>assume<sp/>domain<sp/>=<sp/>proxy<sp/>server<sp/>address*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1gadca1a0fe47bceff0e58d7057672519b6" kindref="member">linphone_proxy_config_enable_register</ref>(proxy_cfg,TRUE);<sp/></highlight><highlight class="comment">/*activate<sp/>registration<sp/>for<sp/>this<sp/>proxy<sp/>config*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__linphone__address_1ga5777f2976c71a48cf2b3f03c61818f13" kindref="member">linphone_address_destroy</ref>(from);<sp/></highlight><highlight class="comment">/*release<sp/>resource*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1gaccdcbca377b771625aeea9c251b597c7" kindref="member">linphone_core_add_proxy_config</ref>(lc,proxy_cfg);<sp/></highlight><highlight class="comment">/*add<sp/>proxy<sp/>config<sp/>to<sp/>linphone<sp/>core*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">linphone_core_set_default_proxy(lc,proxy_cfg);<sp/></highlight><highlight class="comment">/*set<sp/>to<sp/>default<sp/>proxy*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> <linebreak/>
+ Registration sate call back: <programlisting><codeline><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registration_state_changed(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>_LinphoneCore<sp/>*lc,<sp/><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref><sp/>*cfg,<sp/><ref refid="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" kindref="member">LinphoneRegistrationState</ref><sp/>cstate,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;New<sp/>registration<sp/>state<sp/>%s<sp/>for<sp/>user<sp/>id<sp/>[%s]<sp/>at<sp/>proxy<sp/>[%s]\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<ref refid="group__proxies_1gae79c79371d71750ee987757d59785ed7" kindref="member">linphone_registration_state_to_string</ref>(cstate)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<ref refid="group__proxies_1gafebbeb5de42c1cfac8f134714111f10e" kindref="member">linphone_proxy_config_get_identity</ref>(cfg)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,linphone_proxy_config_get_addr(cfg));</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <linebreak/>
+<bold>Authentication:</bold> <linebreak/>
+Most of the time, registration requires <ref refid="group__authentication" kindref="compound">authentication</ref> to succeed. #LinphoneAuthInfo info must be either added to <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> using function <ref refid="group__authentication_1ga62ac5bb34f0342f7edc733c42473b7aa" kindref="member">linphone_core_add_auth_info()</ref> before <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> is added to Linphone core, or on demand from call back <ref refid="group__initializing_1ga68f11a87b3633ca9d28cff6e34658fd1" kindref="member">LinphoneCoreAuthInfoRequestedCb</ref>. <linebreak/>
+ <linebreak/>
+<bold>Unregistration:</bold> <linebreak/>
+ Unregistration or any changes to <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> must be first started by a call to function <ref refid="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" kindref="member">linphone_proxy_config_edit()</ref> and validated by function <ref refid="group__proxies_1ga9b59d963af64ee243dfa4643a85c0cdc" kindref="member">linphone_proxy_config_done()</ref> <linebreak/>
+ This pseudo code shows how to unregister a user associated to a <ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> <programlisting><codeline><highlight class="normal"><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref>*<sp/>proxy_cfg;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1gac77d836d546848289f16716cb2db12f6" kindref="member">linphone_core_get_default_proxy</ref>(lc,&amp;proxy_cfg);<sp/></highlight><highlight class="comment">/*<sp/>get<sp/>default<sp/>proxy<sp/>config*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1ga37cac414aba9e8e4135c1f208c0175f8" kindref="member">linphone_proxy_config_edit</ref>(proxy_cfg);<sp/></highlight><highlight class="comment">/*start<sp/>editing<sp/>proxy<sp/>configuration*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1gadca1a0fe47bceff0e58d7057672519b6" kindref="member">linphone_proxy_config_enable_register</ref>(proxy_cfg,FALSE);<sp/></highlight><highlight class="comment">/*de-activate<sp/>registration<sp/>for<sp/>this<sp/>proxy<sp/>config*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__proxies_1ga9b59d963af64ee243dfa4643a85c0cdc" kindref="member">linphone_proxy_config_done</ref>(proxy_cfg);<sp/></highlight><highlight class="comment">/*initiate<sp/>REGISTER<sp/>with<sp/>expire<sp/>=<sp/>0*/</highlight></codeline>
+</programlisting> <linebreak/>
+ A complete tutorial can be found at : <ref refid="group__registration__tutorials" kindref="compound">Registration tutorial</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

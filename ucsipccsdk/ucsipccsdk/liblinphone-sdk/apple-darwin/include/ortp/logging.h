@@ -28,10 +28,6 @@
 
 #include <ortp/port.h>
 
-#ifndef ORTP_LOG_DOMAIN
-#define ORTP_LOG_DOMAIN NULL
-#endif
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -39,26 +35,25 @@ extern "C"
 
 typedef enum {
 	ORTP_DEBUG=1,
-	ORTP_TRACE=1<<1,
-	ORTP_MESSAGE=1<<2,
-	ORTP_WARNING=1<<3,
-	ORTP_ERROR=1<<4,
-	ORTP_FATAL=1<<5,
+	ORTP_MESSAGE=1<<1,
+	ORTP_WARNING=1<<2,
+	ORTP_ERROR=1<<3,
+	ORTP_FATAL=1<<4,
+	ORTP_TRACE=1<<5,
 	ORTP_LOGLEV_END=1<<6
 } OrtpLogLevel;
 
 
-typedef void (*OrtpLogFunc)(const char *domain, OrtpLogLevel lev, const char *fmt, va_list args);
+typedef void (*OrtpLogFunc)(OrtpLogLevel lev, const char *fmt, va_list args);
 
 ORTP_PUBLIC void ortp_set_log_file(FILE *file);
 ORTP_PUBLIC void ortp_set_log_handler(OrtpLogFunc func);
-ORTP_PUBLIC OrtpLogFunc ortp_get_log_handler(void);
 
-ORTP_PUBLIC void ortp_logv_out(const char *domain, OrtpLogLevel level, const char *fmt, va_list args);
+ORTP_VAR_PUBLIC OrtpLogFunc ortp_logv_out;
 
-#define ortp_log_level_enabled(domain, level)	(ortp_get_log_level_mask(domain) & (level))
+#define ortp_log_level_enabled(level)	(ortp_get_log_level_mask() & (level))
 
-ORTP_PUBLIC void ortp_logv(const char *domain, OrtpLogLevel level, const char *fmt, va_list args);
+ORTP_PUBLIC void ortp_logv(int level, const char *fmt, va_list args);
 
 /**
  * Flushes the log output queue.
@@ -66,13 +61,8 @@ ORTP_PUBLIC void ortp_logv(const char *domain, OrtpLogLevel level, const char *f
  */
 ORTP_PUBLIC void ortp_logv_flush(void);
 
-/**
- * Activate all log level greater or equal than specified level argument.
-**/
-ORTP_PUBLIC void ortp_set_log_level(const char *domain, OrtpLogLevel level);
-
-ORTP_PUBLIC void ortp_set_log_level_mask(const char *domain, int levelmask);
-ORTP_PUBLIC unsigned int ortp_get_log_level_mask(const char *domain);
+ORTP_PUBLIC void ortp_set_log_level_mask(int levelmask);
+ORTP_PUBLIC int ortp_get_log_level_mask(void);
 
 /**
  * Tell oRTP the id of the thread used to output the logs.
@@ -95,7 +85,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_debug(const char *fmt,...)
 {
   va_list args;
   va_start (args, fmt);
-  ortp_logv(ORTP_LOG_DOMAIN, ORTP_DEBUG, fmt, args);
+  ortp_logv(ORTP_DEBUG, fmt, args);
   va_end (args);
 }
 #else
@@ -115,7 +105,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_debug(const char *fmt,...)
 static ORTP_INLINE void CHECK_FORMAT_ARGS(2,3) ortp_log(OrtpLogLevel lev, const char *fmt,...) {
 	va_list args;
 	va_start (args, fmt);
-	ortp_logv(ORTP_LOG_DOMAIN, lev, fmt, args);
+	ortp_logv(lev, fmt, args);
 	va_end (args);
 }
 
@@ -123,7 +113,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_message(const char *fmt,...)
 {
 	va_list args;
 	va_start (args, fmt);
-	ortp_logv(ORTP_LOG_DOMAIN, ORTP_MESSAGE, fmt, args);
+	ortp_logv(ORTP_MESSAGE, fmt, args);
 	va_end (args);
 }
 
@@ -131,7 +121,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_warning(const char *fmt,...)
 {
 	va_list args;
 	va_start (args, fmt);
-	ortp_logv(ORTP_LOG_DOMAIN, ORTP_WARNING, fmt, args);
+	ortp_logv(ORTP_WARNING, fmt, args);
 	va_end (args);
 }
 
@@ -141,7 +131,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_error(const char *fmt,...)
 {
 	va_list args;
 	va_start (args, fmt);
-	ortp_logv(ORTP_LOG_DOMAIN, ORTP_ERROR, fmt, args);
+	ortp_logv(ORTP_ERROR, fmt, args);
 	va_end (args);
 }
 
@@ -149,7 +139,7 @@ static ORTP_INLINE void CHECK_FORMAT_ARGS(1,2) ortp_fatal(const char *fmt,...)
 {
 	va_list args;
 	va_start (args, fmt);
-	ortp_logv(ORTP_LOG_DOMAIN, ORTP_FATAL, fmt, args);
+	ortp_logv(ORTP_FATAL, fmt, args);
 	va_end (args);
 }
 

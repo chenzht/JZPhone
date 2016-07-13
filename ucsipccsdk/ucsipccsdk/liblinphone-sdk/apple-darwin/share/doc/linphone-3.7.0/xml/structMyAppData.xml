@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="structMyAppData" kind="struct" prot="public">
+    <compoundname>MyAppData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMyAppData_1aff9bc592b5ab219061cb741c16d5f15e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1ga4befcba96583d9e9d9f2b775cccfb2b7" kindref="member">LinphoneEvent</ref> *</type>
+        <definition>LinphoneEvent* MyAppData::ev</definition>
+        <argsstring></argsstring>
+        <name>ev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/help/notify.c" line="54" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/help/notify.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/help/notify.c" line="53" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/help/notify.c" bodystart="53" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structMyAppData_1aff9bc592b5ab219061cb741c16d5f15e" prot="public" virt="non-virtual"><scope>MyAppData</scope><name>ev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

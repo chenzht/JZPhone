@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__LinphoneChatMessageCbs" kind="struct" prot="public">
+    <compoundname>_LinphoneChatMessageCbs</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1aecb95b9e855d921a3a22c3baefd29c12" prot="public" static="no" mutable="no">
+        <type>belle_sip_object_t</type>
+        <definition>belle_sip_object_t _LinphoneChatMessageCbs::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="150" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1aa63868c8e23c02df2c49fd61beb21a2d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneChatMessageCbs::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="151" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1a1fd633fa279e573d3432ea28300afec7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__chatroom_1gacda1c332c2636452d689fe97e26b9498" kindref="member">LinphoneChatMessageCbsMsgStateChangedCb</ref></type>
+        <definition>LinphoneChatMessageCbsMsgStateChangedCb _LinphoneChatMessageCbs::msg_state_changed</definition>
+        <argsstring></argsstring>
+        <name>msg_state_changed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="152" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1a104024d55ee8628d3cc563c5bc09eb9b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__chatroom_1ga0e47a40d9386176dc33ea0abac18033d" kindref="member">LinphoneChatMessageCbsFileTransferRecvCb</ref></type>
+        <definition>LinphoneChatMessageCbsFileTransferRecvCb _LinphoneChatMessageCbs::file_transfer_recv</definition>
+        <argsstring></argsstring>
+        <name>file_transfer_recv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to store file received attached to a <ref refid="group__chatroom_1gada79c4417919389b5247e254279f7833" kindref="member">LinphoneChatMessage</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="153" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1a551341cbbfb81b1658d19362d3033a3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__chatroom_1ga93aada2b382a8f23109332f1b8288286" kindref="member">LinphoneChatMessageCbsFileTransferSendCb</ref></type>
+        <definition>LinphoneChatMessageCbsFileTransferSendCb _LinphoneChatMessageCbs::file_transfer_send</definition>
+        <argsstring></argsstring>
+        <name>file_transfer_send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to collect file chunk to be sent for a <ref refid="group__chatroom_1gada79c4417919389b5247e254279f7833" kindref="member">LinphoneChatMessage</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="154" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatMessageCbs_1a82ba7fd738c125bb37871110a8c5df38" prot="public" static="no" mutable="no">
+        <type><ref refid="group__chatroom_1ga5cd72ca55981770ba3c99353d08b94ec" kindref="member">LinphoneChatMessageCbsFileTransferProgressIndicationCb</ref></type>
+        <definition>LinphoneChatMessageCbsFileTransferProgressIndicationCb _LinphoneChatMessageCbs::file_transfer_progress_indication</definition>
+        <argsstring></argsstring>
+        <name>file_transfer_progress_indication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to indicate file transfer progress </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="155" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" line="149" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/private.h" bodystart="149" bodyend="156"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneChatMessageCbs_1aecb95b9e855d921a3a22c3baefd29c12" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>base</name></member>
+      <member refid="struct__LinphoneChatMessageCbs_1a82ba7fd738c125bb37871110a8c5df38" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>file_transfer_progress_indication</name></member>
+      <member refid="struct__LinphoneChatMessageCbs_1a104024d55ee8628d3cc563c5bc09eb9b" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>file_transfer_recv</name></member>
+      <member refid="struct__LinphoneChatMessageCbs_1a551341cbbfb81b1658d19362d3033a3f" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>file_transfer_send</name></member>
+      <member refid="struct__LinphoneChatMessageCbs_1a1fd633fa279e573d3432ea28300afec7" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>msg_state_changed</name></member>
+      <member refid="struct__LinphoneChatMessageCbs_1aa63868c8e23c02df2c49fd61beb21a2d" prot="public" virt="non-virtual"><scope>_LinphoneChatMessageCbs</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

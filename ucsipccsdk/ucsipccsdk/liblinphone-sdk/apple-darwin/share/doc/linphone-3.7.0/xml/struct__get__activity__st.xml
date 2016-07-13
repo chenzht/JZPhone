@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.7">
+  <compounddef id="struct__get__activity__st" kind="struct" prot="public">
+    <compoundname>_get_activity_st</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__get__activity__st_1a0ec8991ebb52035c88ef25e049d47be3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _get_activity_st::requested_idx</definition>
+        <argsstring></argsstring>
+        <name>requested_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" line="349" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__get__activity__st_1a3b12693576feff4ba00473d20162c7ac" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _get_activity_st::current_idx</definition>
+        <argsstring></argsstring>
+        <name>current_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" line="350" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__get__activity__st_1a68aabcdf8de4df43eccd245838b4f70d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__buddy__list_1gadb1476058b69c4da5e94c7e0d55fd244" kindref="member">LinphonePresenceActivity</ref> *</type>
+        <definition>LinphonePresenceActivity* _get_activity_st::activity</definition>
+        <argsstring></argsstring>
+        <name>activity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" line="351" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" line="348" column="1" bodyfile="/Users/Shared/Jenkins/Home/workspace/linphone-ios/submodules/linphone/coreapi/presence.c" bodystart="348" bodyend="352"/>
+    <listofallmembers>
+      <member refid="struct__get__activity__st_1a68aabcdf8de4df43eccd245838b4f70d" prot="public" virt="non-virtual"><scope>_get_activity_st</scope><name>activity</name></member>
+      <member refid="struct__get__activity__st_1a3b12693576feff4ba00473d20162c7ac" prot="public" virt="non-virtual"><scope>_get_activity_st</scope><name>current_idx</name></member>
+      <member refid="struct__get__activity__st_1a0ec8991ebb52035c88ef25e049d47be3" prot="public" virt="non-virtual"><scope>_get_activity_st</scope><name>requested_idx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
